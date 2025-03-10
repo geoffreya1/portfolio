@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <title>Test</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+    <title>Titre de la page</title>
+    <link rel="stylesheet" href="CSS/accueil.css">
+    <link rel="stylesheet" href="CSS/main.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <header>
+        <p class="logo">GEOFFREY AUDOUIN</p>
+        <nav class="nav">
+            <ul>
+                <li><a href="page.html">Qui suis-je</a></li>
+            <li><a href="realisations.html">Mes réalisations</a></li>
+            <li><a href="pass.html">Mes voyages</a></li>
+            <li><a href="voypass.html">Mes passions</a></li>
+            </ul>
+        </nav>
+        <button class="burger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <script>
+        const burger = document.querySelector('.burger');
+        const nav = document.querySelector('.nav');
+    
+        burger.addEventListener('click', () => {
+            nav.classList.toggle('open');
+        });
+    </script>
+    
+
+
+    <section>
+        <div class="banniere">
+            <div class="header-left">
+                <h1 class="titre-header">
+                    Mon portfolio
+                </h1>
+                <p class="soustitre-header">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                </p>
+            </div>
+
+            <div class="header-right">
+                <img src="image/infog.webp" alt="">
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <section class="cardlist">
+        <!-- <h2 class="test">Test</h2> -->
+        <div id="cards">
+            <div id="card1" class="categ">
+
+            </div>
+            <div id="card2" class="categ">
+                <h3>test2</h3>
+            </div>
+            <div id="card3" class="categ">
+                <h3>test3</h3>
+            </div>
+            <div id="card4" class="categ">
+                <h3>test3</h3>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <section class="apropos">
+
+        <h2 class="couleur-h2">A propos</h2>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy</p>
+
+        <div class="box-apropos">
+
+            <div class="left">
+
+                <img src="image/video.webp">
+
+            </div>
+            <div class="right">
+
+                <h3>boite droite</h3>
+                <p>texte boite droitetexte boite droitetexte boite droitetexte boite droitetexte boite droitetexte boite
+                    droitetexte boite droitetexte boite droitetexte boite </p>
+                <p>texte boite droitetexte boite droitetexte boite droitetexte boite droitetexte boite droitetexte boite
+                    droitetexte boite droitetexte boite droitetexte boite </p>
+
+
+                <div bouton-apropos>
+
+                    <a href="page.html" class="btn-apropos">
+                        En voir plus <span class="arrow">→</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+
+
+
+
+    <!-- <section>
+    <h2 class="ref">reference</h2>
+</section>
+ -->
+
+
+
+
+
+    <section class="me-contacter">
+
+
+        <form class="contact-form">
+
+            <div class="imput-group">
+
+                <div class="form-row">
+
+                    <input type="text" placeholder="Nom"></input>
+                    <input type="text" placeholder="Prénom"></input>
+                </div>
+                <div class="form-row">
+                    <input type="text" placeholder="Mail"></input>
+                    <input type="text" placeholder="Object"></input>
+
+                </div>
+                <div class="form-row">
+                    <textarea type="text" placeholder="Votre message"></textarea>
+
+                </div>
+                <div class="form-row">
+
+                    <button class="btn-contact" type="Envoyer">Envoyer</button>
+
+                </div>
+            </div>
+
+        </form>
+
+
+    </section>
+
+
+
+
+
+
+
+
+    <footer></footer>
+
+</body>
+
+</html>
+
+<!-- infographie / photos / vidéos / sites wex / emailing / réseaux sociaux -->

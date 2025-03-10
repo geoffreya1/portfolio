@@ -1,0 +1,343 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}   
+
+img {
+
+
+    object-fit: cover;
+    /* Remplir le conteneur sans déformation */
+}
+
+/* PAGE PASS */
+
+/* header{
+    position: fixed;
+    background-color: white;
+    max-width: 100%;
+    width: 100%;
+} */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.box-apropos-pass {
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.left-voy {
+
+    width: 50%;
+    max-width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+}
+
+
+
+.left-voy img {
+
+    width: 100%;
+    height: 500px;
+    max-width: 500px;
+    border-radius: 25px;
+
+
+}
+
+.left-voy {
+
+    width: 50%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+}
+
+
+
+.left-voy img {
+
+    width: 100%;
+    height: 500px;
+    max-width: 500px;
+    border-radius: 25px;
+
+
+}
+
+
+.bg-pass {
+    background-image: url(../image/airport-terminal.webp);
+    height: 800px;
+
+    background-size: cover;
+}
+
+
+
+.bloc-voy {
+
+    display: flex;
+    max-width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    margin-top: -50px;
+    flex-wrap: wrap;
+
+}
+
+
+.box-voy,
+.box-voy2,
+.box-voy3,
+.box-voy4 {
+
+    max-width: 100%;
+    width: 300px;
+    height: 200px;
+    background-color: #5ebec4;
+    gap: 100px;
+    margin-bottom: 100px;
+    border-radius: 25px;
+    text-align: center;
+
+}
+
+.box-voy {
+
+    background-image: url(../image/nyc.webp);
+    background-size: cover;
+    background-position: center;
+}
+
+.box-voy2 {
+
+    background-image: url(../image/bangkok.webp);
+    background-size: cover;
+    background-position: center;
+}
+
+.box-voy3 {
+
+    background-image: url(../image/berlin.webp);
+    background-size: cover;
+    background-position: center;
+}
+
+.box-voy4 {
+
+    background-image: url(../image/maroc.webp);
+    background-size: cover;
+    background-position: center;
+}
+
+
+.box-voy h3 {
+
+    color: #d4d4d4;
+}
+
+
+
+/* a traiter */
+
+
+.left {
+
+    width: 50%;
+    max-width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+}
+
+
+
+.left img {
+
+    width: 100%;
+    height: 500px;
+    max-width: 500px;
+    border-radius: 25px;
+
+
+}
+
+.right img {
+
+    width: 100%;
+    height: 500px;
+    max-width: 500px;
+    border-radius: 25px;
+    object-fit: cover;
+
+
+}
+
+.right {
+
+    width: 50%;
+    max-width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    min-width: 350px;
+    justify-content: center;
+    text-align: left;
+    padding: 50px;
+
+}
+
+
+.right p {
+
+    text-align: left;
+    max-width: 100%;
+
+
+}
+
+.left p {
+
+    text-align: left;
+    max-width: 100%;
+
+}
+
+.right h3 {
+
+    align-self: flex-start;
+}
+
+
+
+.btn-apropos {
+
+    width: 100%;
+    height: 500px;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 20px;
+    color: white;
+
+}
+
+
+.apropos {
+
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.apropos p {
+
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+
+
+@media screen and (max-width : 1060px) {
+
+    .apropos,
+    .box-apropos-pass {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width : 1060) {
+    .left-voy {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+
+
+
+
+.box-afr {
+    display: flex;
+    max-width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0px;
+}
+
+
+.afr-left,
+.afr-right {
+    flex: 1 1 50%;
+    max-width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+
+}
+
+.afr-left h3 {
+    align-self: flex-start;
+}
+
+
+.afr-right p {
+
+    text-align: left;
+}
+
+.afr-right img {
+    width: 100%;
+    height: 500px;
+    max-width: 500px;
+    border-radius: 25px;
+}
+
+.afr-left p {
+
+    text-align: left;
+    max-width: 100%;
+
+}
+
+.right h3 {
+
+    align-self: flex-start;
+}
