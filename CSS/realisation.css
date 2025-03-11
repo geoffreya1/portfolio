@@ -340,11 +340,11 @@
 }
 
 .infographie iframe {
-    height: 500px;
+    height: auto;
     width: 100%; 
     max-width: 500px; 
     border: none; 
-    object-fit: contain;
+    overflow: hidden;
 }
 
 
@@ -358,17 +358,22 @@
         height: 300px; 
         width: 90%; 
         max-width: none;
+        padding-bottom: 50px;
+        padding-left: 20px;
+        padding-right: 20px;
+        
     }
 }
 
 @media (max-width: 480px) {
     .infographie iframe {
-        height: 250px; /* Réduit encore plus la hauteur des iframes pour les très petits écrans */
-        width: 100%; /* Remplie toute la largeur disponible */
+        height: 250px; 
+        width: 100%; 
+        padding-bottom: 50px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
-
-
 
 @media screen and (max-width : 1400px) {
     .real-items{
