@@ -426,3 +426,13 @@
 
     } 
 }
+
+@media screen and (max-width : 780px) {
+
+    .real-items{
+
+        margin-left: 30px;
+        margin-right :30px;
+    }
+    
+}
