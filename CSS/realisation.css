@@ -347,7 +347,12 @@
     overflow: hidden;
 }
 
-
+@media (max-width: 700px) {
+    .infographie iframe {
+        width: 100%; /* S'assure que l'iframe occupe toute la largeur de l'écran sans dépassement */
+        height: 300px; /* Ajuste la hauteur pour les petits écrans */
+    }
+}
 @media (max-width: 768px) {
     .infographie {
         flex-direction: column;
