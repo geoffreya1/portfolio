@@ -406,16 +406,15 @@
 }
 
 @media screen and (max-width : 1400px) {
-    video{
+    .video{
        
         display: flex;
         flex-direction: column;
         justify-content: center;
         text-align: center;
         place-items: center;
-        
-    }
-    
+
+    } 
 }
 
 
@@ -455,16 +454,6 @@
     
 }
 
-
-@media screen and (max-width  : 1400px){ 
-    .video{
-     max-width: 100%;
-     display : flex;
-     text-align: center;
-     margin-top: 20px;
-
-    } 
-}
 
 
 @media screen and (max-width  : 1400px){ 
