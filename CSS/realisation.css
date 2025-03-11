@@ -330,7 +330,18 @@
     cursor: pointer;
 }
 
+.infographie{
+    justify-content: center;
+    display: flex;
+    gap: 50px;
+}
 
+.infographie iframe{
+
+   
+    height: 500px;
+    
+}
 
 
 @media screen and (max-width : 1400px) {
