@@ -185,6 +185,7 @@ img {
     height: 500px;
     max-width: 500px;
     border-radius: 25px;
+    object-fit: cover;
 
 
 }
@@ -195,7 +196,7 @@ img {
     height: 500px;
     max-width: 500px;
     border-radius: 25px;
-    object-fit: cover;
+    
 
 
 }
@@ -284,7 +285,7 @@ img {
         flex-direction: column;
         text-align: center;
         width: 100%;
-        object-fit: cover;
+      
     }
 }
 
