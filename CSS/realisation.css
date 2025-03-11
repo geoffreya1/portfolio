@@ -330,18 +330,43 @@
     cursor: pointer;
 }
 
-.infographie{
+
+.infographie {
     justify-content: center;
     display: flex;
     gap: 50px;
+    flex-wrap: wrap;
+    padding: 20px;
 }
 
-.infographie iframe{
-
-   
+.infographie iframe {
     height: 500px;
-    
+    width: 100%; 
+    max-width: 600px; 
+    border: none; 
 }
+
+
+@media (max-width: 768px) {
+    .infographie {
+        flex-direction: column;
+        gap: 20px; 
+    }
+
+    .infographie iframe {
+        height: 300px; 
+        width: 90%; 
+        max-width: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .infographie iframe {
+        height: 250px; /* Réduit encore plus la hauteur des iframes pour les très petits écrans */
+        width: 100%; /* Remplie toute la largeur disponible */
+    }
+}
+
 
 
 @media screen and (max-width : 1400px) {
