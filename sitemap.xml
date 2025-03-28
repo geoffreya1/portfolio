@@ -5,5 +5,35 @@
         <lastmod>2025-03-28</lastmod>
         <priority>1.0</priority>
     </url>
+        <url>
+        <loc>https://geoffreya1.github.io/portfolio/accueil.html</loc>
+        <lastmod>2025-03-28</lastmod>
+        <priority>1.0</priority>
+    </url>
+        <url>
+        <loc>https://geoffreya1.github.io/portfolio/qui-suis-je.html</loc>
+        <lastmod>2025-03-28</lastmod>
+        <priority>1.0</priority>
+    </url>
+        <url>
+        <loc>https://geoffreya1.github.io/portfolio/realisations.html</loc>
+        <lastmod>2025-03-28</lastmod>
+        <priority>1.0</priority>
+    </url>
+        <url>
+        <loc>https://geoffreya1.github.io/portfolio/voyages.html</loc>
+        <lastmod>2025-03-28</lastmod>
+        <priority>1.0</priority>
+    </url>
+        <url>
+        <loc>https://geoffreya1.github.io/portfolio/Voypass.html</loc>
+        <lastmod>2025-03-28</lastmod>
+        <priority>1.0</priority>
+    </url>
+         <url>
+        <loc>https://geoffreya1.github.io/portfolio/galery.html</loc>
+        <lastmod>2025-03-28</lastmod>
+        <priority>1.0</priority>
+    </url>
     <!-- Ajoute d'autres pages de ton site ici si nécessaire -->
 </urlset>
