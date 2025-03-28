@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://tonutilisateur.github.io/sitemap.xml
