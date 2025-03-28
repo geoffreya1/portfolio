@@ -1,3 +1,3 @@
 User-agent: *
-Disallow:
-Sitemap: https://tonutilisateur.github.io/sitemap.xml
+Disallow: 
+Sitemap: https://geoffreya1.github.io/portfolio/sitemap.xml
