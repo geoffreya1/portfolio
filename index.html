@@ -214,7 +214,7 @@ function sendEmail(){
     const objet = document.getElementById('objet').value;
     const message = document.getElementById('message').value;
 
-    const mailtoLink = `mailto:tonmail@example.com?subject=${encodeURIComponent(objet)}&body=${encodeURIComponent('Nom: ' + nom + '\nPrénom: ' + prenom + '\nEmail: ' + email + '\n\nMessage:\n' + message)}`;
+    const mailtoLink = `mailto:geoffreyaudouin2@gmail.com?subject=${encodeURIComponent(objet)}&body=${encodeURIComponent('Nom: ' + nom + '\nPrénom: ' + prenom + '\nEmail: ' + email + '\n\nMessage:\n' + message)}`;
 
     window.location.href = mailtoLink;
 }
