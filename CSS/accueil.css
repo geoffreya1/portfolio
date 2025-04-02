@@ -74,7 +74,7 @@
 }
 
 .header-right img {
-    max-width: 60%;
+    max-width: 100%;
     /* L'image ne doit pas dépasser la largeur de la div */
     border-radius: 35px;
 
