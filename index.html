@@ -187,34 +187,40 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
     <section class="me-contacter">
+<form class="contact-form" onsubmit="sendEmail(); return false;">
+    <div class="input-group">
+        <div class="form-row">
+            <input id="nom" type="text" placeholder="Nom" required>
+            <input id="prenom" type="text" placeholder="Prénom" required>
+        </div>
+        <div class="form-row">
+            <input id="email" type="email" placeholder="Mail" required>
+            <input id="objet" type="text" placeholder="Objet" required>
+        </div>
+        <div class="form-row">
+            <textarea id="message" placeholder="Votre message" required></textarea>
+        </div>
+        <div class="form-row">
+            <button class="btn-contact" type="submit">Envoyer</button>
+        </div>
+    </div>
+</form>
 
+<script>
+function sendEmail(){
+    const nom = document.getElementById('nom').value;
+    const prenom = document.getElementById('prenom').value;
+    const email = document.getElementById('email').value;
+    const objet = document.getElementById('objet').value;
+    const message = document.getElementById('message').value;
 
-        <form class="contact-form">
+    const mailtoLink = `mailto:tonmail@example.com?subject=${encodeURIComponent(objet)}&body=${encodeURIComponent('Nom: ' + nom + '\nPrénom: ' + prenom + '\nEmail: ' + email + '\n\nMessage:\n' + message)}`;
 
-            <div class="imput-group">
+    window.location.href = mailtoLink;
+}
+</script>
 
-                <div class="form-row">
-
-                    <input type="text" placeholder="Nom"></input>
-                    <input type="text" placeholder="Prénom"></input>
-                </div>
-                <div class="form-row">
-                    <input type="text" placeholder="Mail"></input>
-                    <input type="text" placeholder="Object"></input>
-
-                </div>
-                <div class="form-row">
-                    <textarea type="text" placeholder="Votre message"></textarea>
-
-                </div>
-                <div class="form-row">
-
-                    <button class="btn-contact" type="Envoyer">Envoyer</button>
-
-                </div>
-            </div>
-
-        </form>
+     
 
 
     </section>
