@@ -55,53 +55,31 @@
     </script>
 
 
-  <main>
+   <main>
     <section class="gallery">
       <!-- Exemple d'élément de galerie -->
-      <div class="gallery-item" data-category="nature">
-        <a href="#img1"><img src="image/4Z8A5255-scaled.jpg.webp" alt="Nature 1"><span class="overlay"><i class="fa fa-search"></i></span></a>
+      <div class="gallery-item">
+        <div class="thumb" style="background-image:url('https://via.placeholder.com/600x400');"></div>
+        <div class="caption">Example 1</div>
       </div>
-      <div class="gallery-item" data-category="voyage">
-        <a href="#img2"><img src="image/4Z8A5255-scaled.jpg.webp" alt="Voyage 1"><span class="overlay"><i class="fa fa-search"></i></span></a>
+      <div class="gallery-item">
+        <div class="thumb" style="background-image:url('https://via.placeholder.com/600x400');"></div>
+        <div class="caption">Example 2</div>
       </div>
-      <div class="gallery-item" data-category="portrait">
-        <a href="#img3"><img src="image/4Z8A5255-scaled.jpg.webp" alt="Portrait 1"><span class="overlay"><i class="fa fa-search"></i></span></a>
+      <div class="gallery-item">
+        <div class="thumb" style="background-image:url('https://via.placeholder.com/600x400');"></div>
+        <div class="caption">Example 3</div>
       </div>
-      <!-- Répétez selon vos besoins -->
+      <div class="gallery-item">
+        <div class="thumb" style="background-image:url('https://via.placeholder.com/600x400');"></div>
+        <div class="caption">Example 4</div>
+      </div>
+      <!-- dupliquez au besoin -->
     </section>
-
-    <!-- Lightbox modale CSS-only -->
-    <div id="img1" class="lightbox">
-      <a href="#" class="close"><i class="fa fa-times"></i></a>
-      <img src="image/4Z8A5255-scaled.jpg.webp" alt="Nature 1">
-    </div>
-    <div id="img2" class="lightbox">
-      <a href="#" class="close"><i class="fa fa-times"></i></a>
-      <img src="image/4Z8A5255-scaled.jpg.webp" alt="Voyage 1">
-    </div>
-    <div id="img3" class="lightbox">
-      <a href="#" class="close"><i class="fa fa-times"></i></a>
-      <img src="image/4Z8A5255-scaled.jpg.webp" alt="Portrait 1">
-    </div>
   </main>
 
   <footer>
-    <p>&copy; 2025 Ma Galerie. Tous droits réservés.</p>
+    <p>&copy; 2025 Ma Galerie.</p>
   </footer>
-
-  <!-- Filtrage simple avec JS -->
-  <script>
-    document.querySelectorAll('.filters button').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const filter = btn.getAttribute('data-filter');
-        document.querySelectorAll('.filters li').forEach(li => li.classList.remove('active'));
-        btn.parentElement.classList.add('active');
-        document.querySelectorAll('.gallery-item').forEach(item => {
-          if (filter === '*' || item.dataset.category === filter) item.style.display = '';
-          else item.style.display = 'none';
-        });
-      });
-    });
-  </script>
 </body>
 </html>
