@@ -1,72 +1,75 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
-
 <head>
-    <title>Test</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Anton&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-        rel="stylesheet">
-
-    <title>Titre de la page</title>
-    <meta name="robots" content="index, follow">
-
-    
-    <link rel="stylesheet" href="CSS/main.css">
-    <link rel="stylesheet" href="CSS/galery.css">
-    <script src="script.js"></script>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3CH32N4V7L"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-3CH32N4V7L');
-</script>
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ma Galerie</title>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Font Awesome pour icônes -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+  <header>
+    <h1>Ma Galerie</h1>
+    <nav>
+      <ul class="filters">
+        <li class="active"><button data-filter="*">Tout</button></li>
+        <li><button data-filter="nature">Nature</button></li>
+        <li><button data-filter="voyage">Voyage</button></li>
+        <li><button data-filter="portrait">Portrait</button></li>
+      </ul>
+    </nav>
+  </header>
 
-    <header>
-
-<a href="index.html"><p class="logo">GEOFFREY AUDOUIN</p></a>
-
-        <nav class="nav">
-            <li><a href="qui-suis-je.html">Qui suis-je</a></li>
-            <li><a href="realisations.html">Mes réalisations</a></li>
-            <li><a href="voyages.html">Mes voyages</a></li>
-            <li><a href="Voypass.html">Mes passions</a></li>
-          
-        </nav>
-
-
-    </header>
-
-    <div class="gallery">
-      <!-- Exemples d'images. Remplacez les sources par vos propres liens -->
-      <div class="gallery-item">
-        <img src="photo1.jpg" alt="Description de la photo 1">
+  <main>
+    <section class="gallery">
+      <!-- Exemple d'élément de galerie -->
+      <div class="gallery-item" data-category="nature">
+        <a href="#img1"><img src="https://via.placeholder.com/600x400" alt="Nature 1"><span class="overlay"><i class="fa fa-search"></i></span></a>
       </div>
-      <div class="gallery-item">
-        <img src="photo2.jpg" alt="Description de la photo 2">
+      <div class="gallery-item" data-category="voyage">
+        <a href="#img2"><img src="https://via.placeholder.com/600x400" alt="Voyage 1"><span class="overlay"><i class="fa fa-search"></i></span></a>
       </div>
-      <div class="gallery-item">
-        <img src="photo3.jpg" alt="Description de la photo 3">
+      <div class="gallery-item" data-category="portrait">
+        <a href="#img3"><img src="https://via.placeholder.com/600x400" alt="Portrait 1"><span class="overlay"><i class="fa fa-search"></i></span></a>
       </div>
-      <!-- Ajoutez autant de <div class="gallery-item"> que nécessaire -->
+      <!-- Répétez selon vos besoins -->
+    </section>
+
+    <!-- Lightbox modale CSS-only -->
+    <div id="img1" class="lightbox">
+      <a href="#" class="close"><i class="fa fa-times"></i></a>
+      <img src="https://via.placeholder.com/1200x800" alt="Nature 1">
     </div>
+    <div id="img2" class="lightbox">
+      <a href="#" class="close"><i class="fa fa-times"></i></a>
+      <img src="https://via.placeholder.com/1200x800" alt="Voyage 1">
+    </div>
+    <div id="img3" class="lightbox">
+      <a href="#" class="close"><i class="fa fa-times"></i></a>
+      <img src="https://via.placeholder.com/1200x800" alt="Portrait 1">
+    </div>
+  </main>
 
+  <footer>
+    <p>&copy; 2025 Ma Galerie. Tous droits réservés.</p>
+  </footer>
 
-
-
-
-    </body>
+  <!-- Filtrage simple sans JS (uniquement CSS hack) -->
+  <script>
+    document.querySelectorAll('.filters button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.getAttribute('data-filter');
+        document.querySelectorAll('.filters li').forEach(li => li.classList.remove('active'));
+        btn.parentElement.classList.add('active');
+        document.querySelectorAll('.gallery-item').forEach(item => {
+          if (filter === '*' || item.dataset.category === filter) item.style.display = '';
+          else item.style.display = 'none';
+        });
+      });
+    });
+  </script>
+</body>
+</html>
