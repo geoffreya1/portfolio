@@ -13,13 +13,11 @@ body {
     color: #333;
 }
 
-
-
 /* Vidéos - Section */
 .real-video {
     display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
+    flex-direction: column; /* Aligner les vidéos verticalement */
+    gap: 40px; /* Espace entre chaque vidéo */
     justify-content: center;
     padding: 50px 20px;
 }
