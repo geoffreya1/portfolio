@@ -48,7 +48,7 @@ body {
 }
 
 .video iframe {
-    width: 100%;
+    width: 600px;
     height: 315px;
     border: none;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
