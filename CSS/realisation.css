@@ -350,26 +350,84 @@
 }
 
 
-@media screen and (max-width : 1400px) {
-    .real-video{
-        display: flex;
+/* Mobile-responsive styles */
+@media screen and (max-width: 768px) {
+    header {
         flex-direction: column;
-        height: auto;
-        
+        text-align: center;
     }
+
+    .burger {
+        display: flex;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    nav.open {
+        display: flex;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-top: 15px;
+    }
+
+    .real-video {
+        flex-direction: column;
+    }
+.real-video {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    padding: 50px 20px;
+}
+
+.titre-video {
+    max-width: 600px;
+    text-align: left;
+}
+
+.titre-video h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.titre-video p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.video {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video iframe {
+    width: 600px;
+    height: 315px;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+}
     
 }
 
-@media screen and (max-width : 1400px) {
-    video{
-       
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        place-items: center;
-        
-    }
+
     
 }
 
@@ -414,32 +472,7 @@
 
 
 
-@media screen and (max-width  : 1400px){ 
-    .video{
-     max-width: 100%;
-     display : flex;
-     text-align: center;
-     margin-top: 20px;
 
-    } 
-}
-
-@media screen and (max-width: 480px) {
-    .video {
-        width: 100%; /* Utilisez toute la largeur disponible */
-        margin-top: 70px;
-        display: block; /* Pour s'assurer que c'est un bloc */
-        margin-left: auto; /* Centrer l'élément */
-        margin-right: auto; /* Centrer l'élément */
-    }
-
-    /* Pour l'iframe */
-    .video iframe {
-        width: 90%; /* Assurez-vous qu'il occupe toute la largeur de son parent */
-        height: 333px; /* Garder les proportions de l'iframe */
-        
-    }
-}
 
 
 
@@ -484,6 +517,8 @@
     border: none; 
     overflow: hidden;
 }
+
+
 
 @media (max-width: 700px) {
     .infographie iframe {
