@@ -1,5 +1,4 @@
-/* Réinitialisation globale */
-* {
+ {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -13,11 +12,13 @@ body {
     color: #333;
 }
 
+
+
 /* Vidéos - Section */
 .real-video {
     display: flex;
-    flex-direction: column; /* Aligner les vidéos verticalement */
-    gap: 40px; /* Espace entre chaque vidéo */
+    flex-wrap: wrap;
+    gap: 30px;
     justify-content: center;
     padding: 50px 20px;
 }
@@ -43,6 +44,7 @@ body {
     max-width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .video iframe {
