@@ -201,13 +201,22 @@
 }
 
 .ph-left{
-    text-align: center;
-  width: 50%;
+  max-width: 600px;
+    text-align: left;
 }
 
 .ph-left p{
-    text-align: left;
+   font-size: 1.1em;
+    margin-bottom: 20px;
+    color: #555;
 }
+
+.ph-left h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
 
 .grille-photo{
     max-width: 100%;
