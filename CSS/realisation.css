@@ -156,8 +156,10 @@
 }
 
 .titre-video{
-    width: 50%;
+   
+     justify-content: center;
     text-align: center;
+    margin-top: 100px;
    
 }
 
