@@ -13,56 +13,7 @@ body {
     color: #333;
 }
 
-/* Header (inchangé, comme dans ton code initial) */
-header {
-    background: #333;
-    color: #fff;
-    padding: 20px 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 
-header .logo {
-    font-size: 1.8em;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-nav ul {
-    display: flex;
-    list-style-type: none;
-}
-
-nav ul li {
-    margin-left: 30px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.1em;
-    text-transform: uppercase;
-    font-weight: 500;
-}
-
-nav ul li a:hover {
-    color: #ff7e5f;
-}
-
-.burger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.burger span {
-    width: 25px;
-    height: 4px;
-    background: #fff;
-    margin: 4px 0;
-}
 
 /* Vidéos - Section */
 .real-video {
