@@ -110,16 +110,25 @@ body {
     .real-video {
         flex-direction: column;
     }
+.real-video {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    padding: 50px 20px;
+}
 
-    .titre-video h3 {
-        font-size: 1.6em;
-    }
+.titre-video {
+    max-width: 600px;
+    text-align: left;
+}
 
-    .titre-video p {
-        font-size: 1em;
-    }
+.titre-video h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
 
-    .video iframe {
-        height: 250px;
-    }
+
+
 }
