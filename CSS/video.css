@@ -5,6 +5,7 @@
     box-sizing: border-box;
 }
 
+/* Corps du document */
 body {
     font-family: 'Arvo', serif;
     line-height: 1.6;
@@ -12,6 +13,7 @@ body {
     color: #333;
 }
 
+/* Header (inchangé, comme dans ton code initial) */
 header {
     background: #333;
     color: #fff;
@@ -62,13 +64,13 @@ nav ul li a:hover {
     margin: 4px 0;
 }
 
+/* Vidéos - Section */
 .real-video {
     display: flex;
-    margin-top: 100px;
     flex-wrap: wrap;
     gap: 30px;
     justify-content: center;
-    padding: 0 20px;
+    padding: 50px 20px;
 }
 
 .titre-video {
@@ -79,6 +81,7 @@ nav ul li a:hover {
 .titre-video h3 {
     font-size: 2em;
     margin-bottom: 20px;
+    color: #333;
 }
 
 .titre-video p {
@@ -100,6 +103,7 @@ nav ul li a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Bouton "Voir plus" */
 .btn-real {
     display: flex;
     justify-content: center;
