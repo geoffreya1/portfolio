@@ -202,7 +202,7 @@
 
 .ph-left{
   max-width: 600px;
-    text-align: left;
+    
 }
 
 .ph-left p{
@@ -211,7 +211,7 @@
     color: #555;
 }
 
-.ph-left h3 {
+.ph-left h2 {
     font-size: 2em;
     margin-bottom: 20px;
     color: #333;
@@ -219,11 +219,10 @@
 
 
 .grille-photo{
-    max-width: 100%;
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    row-gap: 50px;
+    width: 600px;
+    height: 315px;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     
 
 
