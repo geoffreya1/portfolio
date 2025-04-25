@@ -15,19 +15,19 @@ img {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; /* Aligner les éléments au départ du conteneur */
     padding: 50px 10%;
 }
 
 .left-voy,
 .right-voy {
-    flex: 1 1 45%;  /* Flexibilité pour occuper 45% de l'espace, mais aussi ajuster si nécessaire */
+    flex: 1 1 45%;
     max-width: 45%;
     margin: 10px;
-    height: 500px;
+    min-height: 500px;  /* Garantir que les blocs ont toujours une hauteur minimale */
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between; /* Espacement entre les éléments */
     text-align: center;
 }
 
@@ -42,6 +42,7 @@ img {
     background-image: url(../image/airport-terminal.webp);
     height: 800px;
     background-size: cover;
+    background-position: center;
 }
 
 .bloc-voy {
@@ -99,13 +100,13 @@ img {
     }
 
     .left-voy, .right-voy {
-        width: 100%; /* Sur les petits écrans, chaque partie prend toute la largeur */
-        height: auto; /* La hauteur s’adapte à l’image */
+        width: 100%;
+        min-height: auto;  /* Supprimer la hauteur fixe pour permettre plus de flexibilité */
         margin-bottom: 20px;
     }
 
     .bg-pass {
-        height: 400px; /* Réduire la hauteur pour les petits écrans */
+        height: 400px;
     }
 
     .bloc-voy {
@@ -118,16 +119,16 @@ img {
     .box-voy3,
     .box-voy4 {
         width: 90%;  /* Les boîtes occupent maintenant 90% de la largeur */
-        height: 250px; /* Réduire la hauteur sur les écrans plus petits */
+        height: 250px;
         margin-bottom: 20px;
     }
 
     .apropos p {
-        font-size: 14px; /* Réduire la taille du texte pour les petits écrans */
+        font-size: 14px;
     }
 
     .btn-apropos {
-        width: 80%; /* Bouton plus large sur mobile */
+        width: 80%;
         padding: 12px;
     }
 }
@@ -135,21 +136,23 @@ img {
 /* Pour les petits écrans (mobiles) */
 @media screen and (max-width: 768px) {
     .left-voy, .right-voy {
-        width: 100%; /* Sur mobile, chaque partie prend toute la largeur */
-        height: auto; /* Hauteur s'adapte en fonction du contenu */
+        width: 100%;
+        min-height: auto;
         margin-bottom: 20px;
+        padding: 10px; /* Ajout de padding pour aérer le contenu */
     }
 
     .box-voy,
     .box-voy2,
     .box-voy3,
     .box-voy4 {
-        width: 100%; /* Les boîtes prennent toute la largeur */
-        height: 200px; /* Ajuster la hauteur des boîtes pour que cela soit visuellement correct */
+        width: 100%;
+        height: 200px;
+        margin-bottom: 20px;
     }
 
     .bg-pass {
-        height: 300px; /* Réduire la hauteur de l'image d'arrière-plan */
+        height: 300px;
     }
 
     .apropos {
@@ -157,10 +160,10 @@ img {
     }
 
     .apropos p {
-        font-size: 16px; /* Une taille de texte un peu plus grande sur mobile */
+        font-size: 16px;
     }
 
     .btn-apropos {
-        width: 90%; /* Le bouton occupe maintenant 90% de la largeur */
+        width: 90%;
     }
 }
