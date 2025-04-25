@@ -224,6 +224,12 @@
      padding-top: 50px;
     padding-bottom: 50px; 
 }
+
+.mes-infog{
+      padding-left: 300px;
+    padding-right: 300px;
+}
+
 .grille-photo {
     display: grid;
     max-width: 100%;
