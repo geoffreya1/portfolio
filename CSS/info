@@ -164,11 +164,15 @@
     color: #333;
 }
 
-.titre-infog h2 {
-   text-align: center;
+.titre-infog {
+    text-align: center; 
+    display: flex;   
+    justify-content: center;
+    align-items: center; 
     padding-top: 10px;
     padding-bottom: 10px;
 }
+
 
 .titre-video p {
     font-size: 1.1em;
