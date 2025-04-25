@@ -215,13 +215,14 @@
     color: #555;
 }
 
-.grille-photo{
-    max-width: 350%;
-    width: 350%;
+.grille-photo {
+    max-width: 100%;
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);  /* 3 colonnes */
     row-gap: 50px;
 }
+
 
 
 .grille-ph{
