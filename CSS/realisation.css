@@ -202,8 +202,17 @@
  
 }
 
+
+.ph-left h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
 .ph-left p{
-    text-align: left;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    color: #555;
 }
 
 .grille-photo{
