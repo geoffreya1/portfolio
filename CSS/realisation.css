@@ -187,13 +187,7 @@
 
 /* real ph */
 
-.photos{
-    display: flex;
-    max-width: 100%;
-    align-items: center;
-    margin-top: 200px;
-    margin-bottom: 100px; 
-}
+
 
 
 
@@ -216,14 +210,20 @@
 }
 
 .grille-photo {
+    display: grid;
     max-width: 100%;
     width: 100%;
-    display: grid;
     grid-template-columns: repeat(3, 1fr);  /* 3 colonnes */
     row-gap: 50px;
+    justify-items: center;  /* Centre les images horizontalement */
 }
 
-
+/* Si tu veux centrer la grille elle-même dans son conteneur parent */
+.photos {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
 
 .grille-ph{
     max-width: 100%;
