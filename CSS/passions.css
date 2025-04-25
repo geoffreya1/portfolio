@@ -2,350 +2,165 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}   
+}
 
 img {
-
-
     object-fit: cover;
-    /* Remplir le conteneur sans déformation */
-}
-
-/* PAGE PASS */
-
-/* header{
-    position: fixed;
-    background-color: white;
-    max-width: 100%;
     width: 100%;
-} */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    height: auto; /* Maintenir les proportions de l'image */
 }
 
-
+/* Structure principale */
 .box-apropos-pass {
     display: flex;
-    margin: 0;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    align-items: center;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 10%;
 }
 
-.left-voy {
-
-    width: 50%;
-    max-width: 100%;
+.left-voy,
+.right-voy {
+    flex: 1 1 45%;  /* Flexibilité pour occuper 45% de l'espace, mais aussi ajuster si nécessaire */
+    max-width: 45%;
+    margin: 10px;
     height: 500px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
     text-align: center;
-    object-fit: cover;
-
 }
 
-
-
-.left-voy img {
-
+.left-voy img,
+.right-voy img {
     width: 100%;
-    height: 500px;
-    max-width: 500px;
+    height: 100%;
     border-radius: 25px;
-
-
 }
-
-
-
-
-.left-voy img {
-
-    width: 100%;
-    height: 500px;
-    max-width: 500px;
-    border-radius: 25px;
-
-
-}
-
 
 .bg-pass {
     background-image: url(../image/airport-terminal.webp);
     height: 800px;
-
     background-size: cover;
 }
 
-
-
 .bloc-voy {
-
     display: flex;
-    max-width: 100%;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
-    margin-top: -50px;
     flex-wrap: wrap;
-
+    justify-content: center;
+    gap: 20px;
+    margin-top: -50px;
 }
-
 
 .box-voy,
 .box-voy2,
 .box-voy3,
 .box-voy4 {
-
-    max-width: 100%;
-    width: 300px;
+    flex: 1 1 300px;  /* Flexibilité pour que ces boîtes s'adaptent à différentes largeurs */
     height: 200px;
     background-color: #5ebec4;
-    gap: 100px;
-    margin-bottom: 100px;
     border-radius: 25px;
     text-align: center;
-
-}
-
-.box-voy {
-
-    background-image: url(../image/nyc.webp);
     background-size: cover;
     background-position: center;
+    margin-bottom: 20px;
 }
-
-.box-voy2 {
-
-    background-image: url(../image/bangkok.webp);
-    background-size: cover;
-    background-position: center;
-}
-
-.box-voy3 {
-
-    background-image: url(../image/berlin.webp);
-    background-size: cover;
-    background-position: center;
-}
-
-.box-voy4 {
-
-    background-image: url(../image/maroc.webp);
-    background-size: cover;
-    background-position: center;
-}
-
 
 .box-voy h3 {
-
     color: #000000;
 }
 
-
-
-/* a traiter */
-
-
-.left {
-
-    width: 50%;
-    max-width: 500px;
-    height: 500px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.apropos {
+    padding: 50px 10%;
     text-align: center;
-
 }
 
-
-
-.left img {
-
-    width: 100%;
-    height: 500px;
-    max-width: 500px;
-    border-radius: 25px;
-
-
+.apropos p {
+    max-width: 800px;
+    margin: 0 auto;
 }
-
-.right img {
-
-    width: 100%;
-    height: 500px;
-    max-width: 500px;
-    border-radius: 25px;
-    object-fit: cover;
-
-
-}
-
-.right {
-
-    width: 50%;
-    max-width: 700px;
-    height: 500px;
-    display: flex;
-    flex-direction: column;
-    min-width: 350px;
-    justify-content: center;
-    text-align: left;
-    padding: 50px;
-
-}
-
-
-.right p {
-
-    text-align: left;
-    max-width: 100%;
-
-
-}
-
-.left p {
-
-    text-align: left;
-    max-width: 100%;
-
-}
-
-.right h3 {
-
-    align-self: flex-start;
-}
-
-
 
 .btn-apropos {
-
     width: 35%;
     background: linear-gradient(to right, #ff7e5f, #feb47b);
     border-radius: 10px;
     padding: 15px;
     margin-top: 35px;
     color: white;
-
 }
 
+/* === Media Queries === */
 
-.apropos {
-
-
-    padding-top: 50px;
-    padding-bottom: 50px;
-    text-align: center;
-}
-
-.apropos p {
-
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-
-
-
-@media screen and (max-width : 1060px) {
-
-    .apropos,
-    .box-apropos-pass {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        width: 100%;
-        padding: 10px;
-        
-    }
-}
-
+/* Pour les écrans de taille moyenne (tablettes et petits écrans) */
 @media screen and (max-width: 1060px) {
-    .left-voy {
-        width: 90%; 
-        max-width: 300px; 
-        height: 300px;
-        padding-top: 50%;
-        position: relative;
-        overflow: hidden; 
-        border-radius: 25px; 
+    .box-apropos-pass {
+        padding: 20px;
+        flex-direction: column;
     }
 
-    .left-voy img {
-        position: absolute; /* Absolue pour couvrir l'espace */
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover; /* Remplir le carré sans déformer l'image */
-        border-radius: 25px; /* Si vous voulez que l'image ait les mêmes coins arrondis */
+    .left-voy, .right-voy {
+        width: 100%; /* Sur les petits écrans, chaque partie prend toute la largeur */
+        height: auto; /* La hauteur s’adapte à l’image */
+        margin-bottom: 20px;
+    }
+
+    .bg-pass {
+        height: 400px; /* Réduire la hauteur pour les petits écrans */
+    }
+
+    .bloc-voy {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .box-voy,
+    .box-voy2,
+    .box-voy3,
+    .box-voy4 {
+        width: 90%;  /* Les boîtes occupent maintenant 90% de la largeur */
+        height: 250px; /* Réduire la hauteur sur les écrans plus petits */
+        margin-bottom: 20px;
+    }
+
+    .apropos p {
+        font-size: 14px; /* Réduire la taille du texte pour les petits écrans */
+    }
+
+    .btn-apropos {
+        width: 80%; /* Bouton plus large sur mobile */
+        padding: 12px;
     }
 }
 
-    
-     
+/* Pour les petits écrans (mobiles) */
+@media screen and (max-width: 768px) {
+    .left-voy, .right-voy {
+        width: 100%; /* Sur mobile, chaque partie prend toute la largeur */
+        height: auto; /* Hauteur s'adapte en fonction du contenu */
+        margin-bottom: 20px;
+    }
 
+    .box-voy,
+    .box-voy2,
+    .box-voy3,
+    .box-voy4 {
+        width: 100%; /* Les boîtes prennent toute la largeur */
+        height: 200px; /* Ajuster la hauteur des boîtes pour que cela soit visuellement correct */
+    }
 
+    .bg-pass {
+        height: 300px; /* Réduire la hauteur de l'image d'arrière-plan */
+    }
 
+    .apropos {
+        padding: 20px;
+    }
 
+    .apropos p {
+        font-size: 16px; /* Une taille de texte un peu plus grande sur mobile */
+    }
 
-.box-afr {
-    display: flex;
-    max-width: 100%;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0px;
-}
-
-
-.afr-left,
-.afr-right {
-    flex: 1 1 50%;
-    max-width: 500px;
-    height: 500px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: left;
-
-}
-
-.afr-left h3 {
-    align-self: flex-start;
-}
-
-
-.afr-right p {
-
-    text-align: left;
-}
-
-.afr-right img {
-    width: 100%;
-    height: 500px;
-    max-width: 500px;
-    border-radius: 25px;
-}
-
-.afr-left p {
-
-    text-align: left;
-    max-width: 100%;
-
-}
-
-.right h3 {
-
-    align-self: flex-start;
+    .btn-apropos {
+        width: 90%; /* Le bouton occupe maintenant 90% de la largeur */
+    }
 }
