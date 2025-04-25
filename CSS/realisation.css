@@ -216,11 +216,12 @@
 }
 
 .grille-photo{
-    max-width: 100%;
-    width: 100%;
+    max-width: 350%;
+    width: 350%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     row-gap: 50px;
+    align-items: center;
     
 
 
@@ -294,8 +295,8 @@
 
 .ph-left p{
 
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 300px;
+    padding-right: 300px;
 }
 
 
