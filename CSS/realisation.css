@@ -195,14 +195,11 @@
     margin-bottom: 100px; 
 }
 
-.ph-right, .ph-left{
 
-    width: 50%;
-}
 
 .ph-left{
     text-align: center;
-  width: 50%;
+ 
 }
 
 .ph-left p{
