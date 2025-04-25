@@ -164,6 +164,12 @@
     color: #333;
 }
 
+.titre-infog h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
 .titre-video p {
     font-size: 1.1em;
     margin-bottom: 20px;
