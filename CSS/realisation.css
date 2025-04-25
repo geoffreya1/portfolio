@@ -507,18 +507,17 @@
 
 
 .infographie {
-    justify-content: center;
     display: flex;
-    gap: 50px;
-    flex-wrap: wrap;
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    gap: 20px;
     padding: 20px;
 }
 
 .infographie iframe {
-    height: 500px;
-    width: 100%; 
-    max-width: 500px; 
-    border: none; 
+    width: calc(33.33% - 20px);
+    height: 300px; 
+    border: none;
     overflow: hidden;
 }
 
