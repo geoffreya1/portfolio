@@ -221,10 +221,6 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     row-gap: 50px;
-    align-items: center;
-    
-
-
 }
 
 
