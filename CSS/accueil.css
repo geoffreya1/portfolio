@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}   
+}
 
 /*banniere*/
 
@@ -55,7 +55,6 @@
 
 .header-right {
     width: 50%;
-    /* Chaque div prend 50% de la largeur */
     padding: 10px;
     height: 100%;
     display: flex;
@@ -66,11 +65,10 @@
 
 .header-right img {
     max-width: 100%;
-    /* L'image ne doit pas dépasser la largeur de la div */
     border-radius: 35px;
 }
 
-/* réglage cardlist */
+/* Réglage cardlist */
 
 .cardlist {
     margin-top: 50px;
@@ -120,11 +118,10 @@
     align-items: center;
 }
 
-/* réglage a propos */
+/* Réglage à propos */
 
 .couleur-h2 {
     background: linear-gradient(to right, #ff7e5f, #feb47b);
-    /* Dégradé de gauche à droite */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -199,7 +196,7 @@
     color: white;
 }
 
-/* partie contact */
+/* Partie contact */
 
 .contact-form {
     width: 100%;
@@ -230,12 +227,10 @@
 .form-row textarea {
     height: 100px;
     resize: none;
-    /* Désactive le redimensionnement */
 }
 
 .btn-contact {
     width: 100%;
-    /* Le bouton prend toute la largeur */
     padding: 15px;
     background: linear-gradient(to right, #ff7e5f, #feb47b);
     border: none;
@@ -254,7 +249,7 @@ footer {
     background-color: grey;
 }
 
-/* timeline */
+/* Timeline */
 
 /* Conteneur principal de la timeline */
 .timeline {
@@ -273,7 +268,6 @@ footer {
     top: 0;
     bottom: 0;
     left: 30px;
-    /* Position à gauche */
 }
 
 /* Éléments de la timeline */
@@ -323,7 +317,7 @@ footer {
     color: #555;
 }
 
-/* footer */
+/* Footer */
 
 .footer-avert {
     display: flex;
@@ -332,42 +326,34 @@ footer {
     flex-direction: column;
 }
 
-/* Responsive */
+/* Media Queries */
 @media screen and (max-width: 1000px) {
     .banniere {
         display: flex;
-        flex-direction: column;  /* Aligne les éléments du header en colonne */
-        justify-content: center;
+        flex-direction: column;
         align-items: center;
-        height: auto;  /* Permet à la hauteur de s'adapter au contenu */
-        padding: 10px 0;
+        height: auto;
     }
 
-    .header-left, .header-right {
-        width: 100%; /* Les deux parties prennent toute la largeur */
-        height: auto; /* Ajuste la hauteur pour que les éléments ne soient pas contraints */
-        padding: 10px;
-        text-align: center; /* Centrer le texte */
-    }
-
-    .titre-header {
-        font-size: 50px; /* Réduire la taille du titre pour les écrans plus petits */
-    }
-
-    .soustitre-header {
-        font-size: 16px; /* Ajuste la taille de la police */
-        max-width: 90%; /* Permet au texte de prendre plus de place */
-        text-align: center;  /* Centrer le texte */
+    .header-left,
+    .header-right {
+        width: 100%;
+        text-align: center;
     }
 
     .header-right img {
-        max-width: 80%; /* L'image occupe moins de place */
-        height: auto;  /* L'image garde son ratio */
-        border-radius: 25px;
+        display: none;
+    }
+
+    .soustitre-header {
+        width: 100%;
+        padding: 0 20px; /* Élimine les marges à gauche et à droite */
+        font-size: 18px; /* Ajuste la taille du texte pour qu'il s'adapte mieux */
+        text-align: center;
     }
 }
 
-@media screen and (max-width : 430px) {
+@media screen and (max-width: 430px) {
     .banniere {
         max-width: 100%;
         width: 430px;
@@ -376,7 +362,7 @@ footer {
     }
 }
 
-@media screen and (max-width : 1100px) {
+@media screen and (max-width: 1100px) {
     .box-apropos {
         max-width: 100%;
         display: flex;
@@ -384,19 +370,7 @@ footer {
     }
 }
 
-@media (max-width: 600px) {
-    .timeline-item {
-        flex-direction: column;
-        align-items: flex-start;
-        padding-left: 40px;
-    }
-
-    .timeline-content {
-        width: calc(100% - 40px);
-    }
-}
-
-@media screen and (max-width : 1024) {
+@media screen and (max-width: 1024px) {
     .apropos {
         display: flex;
         flex-direction: column;
@@ -416,34 +390,34 @@ footer {
 
     .categ {
         width: 90%;
-        height: 300px; /* Définir une hauteur fixe pour obtenir un carré */
+        height: 300px;
         min-height: 300px;
-        max-width: 300px; /* Assurer un carré parfait */
+        max-width: 300px;
         display: flex;
         justify-content: center;
         align-items: center;
         background-size: cover;
         background-position: center;
-        border-radius: 20px; /* Arrondi des bords */
+        border-radius: 20px;
     }
 }
 
 @media screen and (max-width: 1400px) {
     .left {
         width: 90%;
-        height: 300px; /* Définir une hauteur fixe pour obtenir un carré */
+        height: 300px;
         min-height: 300px;
-        max-width: 300px; /* Assurer un carré parfait */
+        max-width: 300px;
         display: flex;
         justify-content: center;
         align-items: center;
         background-size: cover;
         background-position: center;
-        border-radius: 20px; /* Arrondi des bords */
+        border-radius: 20px;
     }
 }
 
-@media screen and (max-width : 780px) {
+@media screen and (max-width: 780px) {
     .me-contacter {
         margin-left: 30px;
         margin-right: 30px;
