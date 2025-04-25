@@ -196,6 +196,11 @@
  
 }
 
+.titre-infog{
+    text-align: center;
+ 
+}
+
 
 .ph-left h2 {
     font-size: 2em;
@@ -203,7 +208,13 @@
     color: #333;
 }
 
-.ph-left p{
+.titre-infog h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.titre-infog p{
     font-size: 1.1em;
     margin-bottom: 20px;
     color: #555;
