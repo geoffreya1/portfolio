@@ -223,12 +223,10 @@
 .mes-infog{
      padding-top: 50px;
     padding-bottom: 50px; 
-}
-
-.mes-infog{
       padding-left: 300px;
     padding-right: 300px;
 }
+
 
 .grille-photo {
     display: grid;
@@ -495,7 +493,11 @@
     
 }
 
-
+@media screen and (max-width : 1400px) {
+    .mes-infog p{
+       padding: 0;
+       
+    }
 
 
 
