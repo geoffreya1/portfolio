@@ -6,7 +6,6 @@
 }
 
 /* Réalisations */
-
 .mes-realisations {
     justify-content: center;
     text-align: center;
@@ -63,7 +62,6 @@
 }
 
 /* Vidéos & Photos */
-
 .titre-real-video, .titre-real-photo {
     background: linear-gradient(to right, #ff7e5f, #feb47b);
     -webkit-background-clip: text;
@@ -112,7 +110,6 @@
 }
 
 /* Infographie */
-
 .ph-left, .titre-infog {
     text-align: center;
 }
@@ -144,7 +141,6 @@
 }
 
 /* Galerie photo */
-
 .photos {
     display: flex;
     justify-content: center;
@@ -155,6 +151,7 @@
     display: flex;
     justify-content: center;
     width: 100%;
+    gap: 30px; /* Adjust the gap between elements */
 }
 
 .grille-photo {
@@ -175,7 +172,6 @@
 }
 
 /* Boutons */
-
 .boutons {
     cursor: pointer;
     background: linear-gradient(to right, #ff7e5f, #feb47b);
@@ -193,7 +189,6 @@
 }
 
 /* Carousel */
-
 .carousel-box {
     display: flex;
     justify-content: center;
@@ -231,7 +226,6 @@
 }
 
 /* Pop-up */
-
 .popup {
     display: none;
     position: fixed;
@@ -262,7 +256,6 @@
 }
 
 /* Responsive */
-
 @media screen and (max-width: 1400px) {
     .real-items,
     .photos,
@@ -334,4 +327,25 @@
         height: 250px;
         width: 100%;
     }
+}
+
+/* New infographics flex display */
+.infogs {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.infographie {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%; /* Set the width of each iframe section */
+}
+
+.infographie iframe {
+    width: 100%;
+    height: 300px; /* Adjust the height if needed */
+    margin: 10px 0;
 }
