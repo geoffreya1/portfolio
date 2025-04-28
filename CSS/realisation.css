@@ -151,6 +151,12 @@
     width: 100%;
 }
 
+.infogs {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
 .grille-photo {
     display: grid;
     width: 100%;
@@ -260,6 +266,7 @@
 @media screen and (max-width: 1400px) {
     .real-items,
     .photos,
+    .infogs
     section {
         flex-direction: column;
         height: auto;
