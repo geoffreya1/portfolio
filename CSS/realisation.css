@@ -155,23 +155,19 @@
     display: flex;
     justify-content: center;
     width: 100%;
+    gap: 30px;
+    flex-wrap: wrap;
 }
 
-.grille-photo {
-    display: grid;
+.infographie {
+    width: 33%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.infographie iframe {
     width: 100%;
-    max-width: 100%;
-    grid-template-columns: repeat(3, 1fr);
-    row-gap: 50px;
-    justify-items: center;
-}
-
-.grille-ph {
-    width: 350px;
-    height: 350px;
-    object-fit: cover;
-    padding: 0 30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    height: 300px;
 }
 
 /* Boutons */
