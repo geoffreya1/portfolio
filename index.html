@@ -242,9 +242,9 @@ function sendEmail(){
 
   window.addEventListener("scroll", () => {
     if (window.scrollY > 300) {
-      backToTopButton.style.display = "block";
+      backToTopButton.classList.add("show");
     } else {
-      backToTopButton.style.display = "none";
+      backToTopButton.classList.remove("show");
     }
   });
 
@@ -252,6 +252,7 @@ function sendEmail(){
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 </script>
+
 
 
 </body>
