@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <title> Réalisation Geoffrey Audouin</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+    <title>Titre de la page</title>
+    <link rel="stylesheet" href="CSS/accueil.css">
+    <link rel="stylesheet" href="CSS/realisation.css">
+    <link rel="stylesheet" href="CSS/main.css">
+    <script src="script.js"></script>
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3CH32N4V7L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3CH32N4V7L');
+</script>
+</head>
+
+<body>
+
+    <header>
+<a href="index.html"><p class="logo">GEOFFREY AUDOUIN</p></a>        
+        
+        <nav class="nav">
+            <ul>
+               <li><a href="qui-suis-je.html">Qui suis-je</a></li>
+            <li><a href="realisations.html">Mes réalisations</a></li>
+            <li><a href="voyages.html">Mes voyages</a></li>
+        <!--  <li><a href="Voypass.html">Mes passions</a></li> -->
+            <li><a href="https://lafocalelibre.fr/galerie/">Galerie photo</a></li>
+            </ul>
+        </nav>
+        <button class="burger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <script>
+        const burger = document.querySelector('.burger');
+        const nav = document.querySelector('.nav');
+    
+        burger.addEventListener('click', () => {
+            nav.classList.toggle('open');
+        });
+    </script>
