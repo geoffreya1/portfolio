@@ -1,72 +1,53 @@
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}   
+}
 
-/* voypass */
+/* Voypass section */
 
-
-.dooblepass{
-
+.dooblepass {
     display: flex;
     height: 100%;
 }
 
-.dooblepass:hover{}
-
-.voypass-left, .voypass-right  {
+.voypass-left,
+.voypass-right {
     width: 50%;
-    background-color: #b36a6a;
     height: 91.3vh;
-    background-image: url('../image/video.webp'); 
-    background-size: cover;
-    filter: blur(5px); 
-    transition: filter 0.3s ease; 
-}
-
-.voypass-left:hover {
-    filter: blur(0px);
-}
-
-
-@media screen and (max-width: 1024px) {
-    .voypass-left, .voypass-right {
-        filter: none !important; 
-
-    }
-}
-
-/* .voypass-right{
-
-    width: 50%;
     background-color: #b36a6a;
-    height: 91.3vh;
-    background-image: url(image/video.webp);
+    background-image: url('../image/video.webp');
     background-size: cover;
-} */
+    filter: blur(5px);
+    transition: filter 0.3s ease;
+}
 
-
-
+.voypass-left:hover,
 .voypass-right:hover {
-    filter: blur(0px);
+    filter: blur(0);
 }
 
 .P, .V {
-    display: flex;             
-    justify-content: center;   
-    align-items: center;        
-    text-align: center; 
-    height: 91.3vh;    
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 91.3vh;
 }
 
-.bouton-pv{
-    
+.bouton-pv {
     width: 100px;
     height: 50px;
     background-color: white;
     border: none;
     border-radius: 10px;
- 
+}
+
+/* Responsive */
+@media screen and (max-width: 1024px) {
+    .voypass-left,
+    .voypass-right {
+        filter: none !important;
+    }
 }
