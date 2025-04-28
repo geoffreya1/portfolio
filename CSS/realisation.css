@@ -1,28 +1,88 @@
-<div class="infogs">
-    <div class="infographie">            
-        <div style="text-align:center;">
-            <div style="margin:8px 0px 4px;">
-                <a href="https://www.calameo.com/books/0079298407e0e08e28c8b" target="_blank">Curcus</a>
-            </div>
-            <iframe src="//v.calameo.com/?bkcode=0079298407e0e08e28c8b&mode=mini" frameborder="0" scrolling="no" allowtransparency allowfullscreen></iframe>
-        </div>
-    </div>
+/* CSS spécifique pour les sections */
+.pass-ph {
+    width: 50%; /* Modifie cette valeur si tu souhaites un autre format */
+    padding: 20px;
+    text-align: left;
+    font-family: 'Arvo', serif;
+}
 
-    <div class="infographie">            
-        <div style="text-align:center;">
-            <div style="margin:8px 0px 4px;">
-                <a href="https://www.calameo.com/books/00792984071b9501225d8" target="_blank">Plaquette Prevention Suicide</a>
-            </div>
-            <iframe src="//v.calameo.com/?bkcode=00792984071b9501225d8&mode=mini" frameborder="0" scrolling="no" allowtransparency allowfullscreen></iframe>
-        </div>
-    </div>
+.pass-ph h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
 
-    <div class="infographie">            
-        <div style="text-align:center;">
-            <div style="margin:8px 0px 4px;">
-                <a href="https://www.calameo.com/books/007929840794181cde3ab" target="_blank">Alerte Du Smur</a>
-            </div>
-            <iframe src="//v.calameo.com/?bkcode=007929840794181cde3ab&mode=mini" frameborder="0" scrolling="no" allowtransparency allowfullscreen></iframe>
-        </div>
-    </div>
-</div>
+.pass-ph p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Ajoutez ici les autres classes si nécessaire */
+.photos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.ph-right {
+    width: 50%; /* Ajuster selon les besoins */
+    padding: 20px;
+}
+
+.grille-photo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+/* Autres styles généraux pour la mise en page */
+.grille-ph {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.grille-ph:hover {
+    transform: scale(1.05);
+}
+
+/* Styles pour les boutons et autres éléments de navigation */
+.boutons {
+    background-color: #008CBA;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.boutons:hover {
+    background-color: #005f73;
+}
+
+.footer-avert {
+    text-align: center;
+    font-size: 0.9em;
+    color: #777;
+    margin-top: 20px;
+}
+
+.back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.back-to-top.show {
+    display: block;
+}
+
