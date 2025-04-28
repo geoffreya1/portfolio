@@ -132,7 +132,7 @@ footer {
 
 
 .back-to-top {
-    position: fixed; /* Utilise fixed pour un vrai effet "collé à l'écran" */
+    position: fixed;
     bottom: 30px;
     right: 30px;
     width: 50px;
@@ -145,9 +145,15 @@ footer {
     cursor: pointer;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     z-index: 1000;
-    transition: opacity 0.3s ease;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .back-to-top:hover {
     background: linear-gradient(to right, #feb47b, #ff7e5f);
+}
+
+.back-to-top.show {
+    opacity: 1;
+    transform: translateY(0);
 }
