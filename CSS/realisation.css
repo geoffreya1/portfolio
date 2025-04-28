@@ -115,9 +115,9 @@
 }
 
 .ph-left h2, .titre-infog h2 {
-    font-size: 2em;
+   font-size: 1.1em;
     margin-bottom: 20px;
-    color: #333;
+    color: #555;
 }
 
 .titre-infog p {
