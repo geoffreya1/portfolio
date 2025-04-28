@@ -73,16 +73,18 @@ section {
 /* Real items layout */
 .real-items {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: space-around;
     gap: 20px;
     margin: 0 auto;
-    max-width: 1200px;
     padding: 20px;
+    max-width: 1200px;
 }
 
 .cards, .cards1 {
-    width: 30%;
+    flex: 1 1 30%;  /* This ensures the cards are flexible and will take up 30% of the space */
     position: relative;
+    min-width: 250px; /* Prevents cards from getting too small on narrow screens */
 }
 
 .cards img, .cards1 img {
@@ -124,7 +126,8 @@ button.btn-real1:hover, button.btn-real2:hover {
 /* Video section */
 .real-video {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
     gap: 40px;
     margin-bottom: 40px;
 }
@@ -141,21 +144,21 @@ button.btn-real1:hover, button.btn-real2:hover {
 
 .video iframe {
     border-radius: 8px;
+    width: 100%;
+    height: 315px;
 }
 
 /* Photos section */
 .photos {
     display: flex;
+    flex-wrap: wrap;
     gap: 40px;
     margin-top: 40px;
 }
 
-.ph-left {
-    width: 45%;
-}
-
-.ph-right {
-    width: 55%;
+.ph-left, .ph-right {
+    width: 48%;
+    min-width: 300px;
 }
 
 .grille-photo {
