@@ -1,29 +1,27 @@
-/* Mise en forme globale */
+/* Réinitialisation des styles par défaut */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Corps du site */
 body {
-    font-family: 'Arvo', serif;
+    font-family: 'Arvo', serif; /* Police Arvo pour tout le texte */
     background-color: #f9f9f9;
     color: #333;
     line-height: 1.6;
 }
 
-/* ---- HEADER ---- */
+/* --- HEADER --- */
 header {
     background-color: #333;
     color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
+    padding: 15px 20px;
 }
 
 .logo {
-    font-size: 1.5em;
+    font-size: 2em;
     font-weight: bold;
 }
 
@@ -43,7 +41,7 @@ nav a:hover {
     color: #ff6f61;
 }
 
-/* ---- MES RÉALISATIONS ---- */
+/* --- MES RÉALISATIONS --- */
 .mes-realisations {
     text-align: center;
     margin: 50px 0;
@@ -52,14 +50,19 @@ nav a:hover {
 .mes-realisations h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
+    font-weight: bold;
+    color: #333;
 }
 
 .mes-realisations p {
     font-size: 1.1em;
     color: #555;
+    line-height: 1.7;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-/* ---- CARDS ---- */
+/* --- CARDS --- */
 .real-items {
     display: flex;
     justify-content: space-around;
@@ -120,7 +123,7 @@ button:hover {
     background-color: #e4573e;
 }
 
-/* Vidéo section */
+/* --- VIDÉO --- */
 .real-video {
     margin: 50px 0;
     text-align: center;
@@ -132,6 +135,7 @@ button:hover {
 
 .real-video .titre-video h2 {
     font-size: 2.5em;
+    font-weight: bold;
 }
 
 .real-video .titre-video p {
@@ -146,56 +150,7 @@ button:hover {
     border: none;
 }
 
-.btn-real {
-    text-align: center;
-    margin-top: 20px;
-}
-
-/* Photos section */
-.photos {
-    display: flex;
-    justify-content: space-between;
-    margin: 50px 0;
-}
-
-.ph-left {
-    width: 48%;
-}
-
-.ph-left h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-}
-
-.ph-left p {
-    font-size: 1.1em;
-    line-height: 1.6;
-    color: #555;
-}
-
-.ph-right {
-    width: 48%;
-}
-
-.grille-photo {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-}
-
-.grille-ph {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.grille-ph:hover {
-    transform: scale(1.05);
-}
-
-/* Footer */
+/* --- FOOTER --- */
 footer {
     background-color: #333;
     color: white;
@@ -208,28 +163,6 @@ footer {
 footer .footer-avert {
     font-size: 0.9em;
     color: #ddd;
-}
-
-/* Back to top button */
-.back-to-top {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background-color: #ff6f61;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5em;
-    cursor: pointer;
-}
-
-.back-to-top.show {
-    display: flex;
 }
 
 /* Responsivité */
