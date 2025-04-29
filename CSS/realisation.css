@@ -51,6 +51,15 @@
     color: #adadad;
 }
 
+.content-card p {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify; /* Aligne le texte pour qu'il soit justifié */
+}
+
+/* Boutons */
 .btn-real1, .btn-real2, .btn-real3 {
     color: white;
     width: 100%;
@@ -68,6 +77,19 @@
     -webkit-text-fill-color: transparent;
     text-align: center;
     margin-top: 100px;
+}
+
+.titre-real-video h3, .titre-real-photo h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.titre-real-video p, .titre-real-photo p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    color: #555;
+    line-height: 1.6;
 }
 
 .real-video {
@@ -124,6 +146,7 @@
     font-size: 1.1em;
     margin-bottom: 20px;
     color: #555;
+    line-height: 1.6;
 }
 
 .mes-infog {
