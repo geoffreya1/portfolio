@@ -6,7 +6,6 @@
 }
 
 /* Réalisations */
-
 .mes-realisations {
     justify-content: center;
     text-align: center;
@@ -63,7 +62,6 @@
 }
 
 /* Vidéos & Photos */
-
 .titre-real-video, .titre-real-photo {
     background: linear-gradient(to right, #ff7e5f, #feb47b);
     -webkit-background-clip: text;
@@ -112,7 +110,6 @@
 }
 
 /* Infographie */
-
 .ph-left, .titre-infog {
     text-align: center;
 }
@@ -144,7 +141,6 @@
 }
 
 /* Galerie photo */
-
 .photos {
     display: flex;
     justify-content: center;
@@ -174,8 +170,25 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Boutons */
+/* Infographie – MODIFIÉ */
+.infographie {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 100%;
+    margin-top: 30px;
+}
 
+.infographie > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 480px;
+    margin-bottom: 30px;
+}
+
+/* Boutons */
 .boutons {
     cursor: pointer;
     background: linear-gradient(to right, #ff7e5f, #feb47b);
@@ -193,7 +206,6 @@
 }
 
 /* Carousel */
-
 .carousel-box {
     display: flex;
     justify-content: center;
@@ -231,7 +243,6 @@
 }
 
 /* Pop-up */
-
 .popup {
     display: none;
     position: fixed;
@@ -262,11 +273,10 @@
 }
 
 /* Responsive */
-
 @media screen and (max-width: 1400px) {
     .real-items,
     .photos,
-    .infogs
+    .infogs,
     section {
         flex-direction: column;
         height: auto;
