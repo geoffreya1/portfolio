@@ -1,127 +1,69 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
+
 <head>
-    <title>Réalisation Geoffrey Audouin</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="index, follow">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Arvo:wght@400;700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="CSS/main.css">
-    <link rel="stylesheet" href="CSS/realisation.css">
-    <script src="script.js"></script>
-
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3CH32N4V7L"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-3CH32N4V7L');
-    </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exemple Réalisations</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-    <header>
-        <a href="index.html"><p class="logo">GEOFFREY AUDOUIN</p></a>        
-        <nav class="nav">
-            <ul>
-               <li><a href="qui-suis-je.html">Qui suis-je</a></li>
-               <li><a href="realisations.html">Mes réalisations</a></li>
-               <li><a href="voyages.html">Mes voyages</a></li>
-               <li><a href="https://lafocalelibre.fr/galerie/">Galerie photo</a></li>
-            </ul>
-        </nav>
-        <button class="burger" aria-label="Menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-    </header>
 
-    <script>
-        const burger = document.querySelector('.burger');
-        const nav = document.querySelector('.nav');
-        burger.addEventListener('click', () => {
-            nav.classList.toggle('open');
-        });
-    </script>
+  <header>
+    <h1>Geoffrey Audouin</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Qui suis-je</a></li>
+        <li><a href="#">Mes réalisations</a></li>
+        <li><a href="#">Mes voyages</a></li>
+        <li><a href="#">Galerie</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <section>
-        <div class="titre-video">
-            <h2>Mes réalisations</h2>
-            <p>Cette page est dédiée à mes réalisations en photographie, vidéo, print et autres projets digitaux menés. Vous y trouverez une sélection de mes projets créatifs, réalisés à la fois dans un cadre académique et professionnel.</p>
-            <div class="btn-real">
-                <a href="#real-items"><button class="boutons">Voir plus</button></a>
-            </div>
-        </div>
+  <main>
+
+    <!-- Bloc texte type "titre-video" -->
+    <section class="titre-video">
+      <h2>Publicité pour la marque Dumatos Bio</h2>
+      <p>
+        Lors de ma dernière année de Mastère, nous avons travaillé sur la conception et la réalisation d’une publicité vidéo pour Dumatos Bio, une marque engagée dans le bio et le naturel. <br><br>
+        L’objectif principal était de mettre en avant la boisson phare de la marque, en valorisant ses atouts uniques à travers une approche créative et impactante. Ce projet nous a permis d’explorer plusieurs aspects de la communication et du marketing, de la conception du scénario au tournage, en passant par le montage et l’optimisation du message publicitaire.
+      </p>
+      <div class="btn-real">
+        <button class="boutons">Voir plus</button>
+      </div>
     </section>
 
-    <div id="real-items" class="real-items">
-        <!-- Répète tes cartes ici comme avant -->
-        <!-- ... -->
-    </div>
-
-    <section>
-        <div class="titre-video">
-            <h2>Publicité pour la marque Dumatos Bio</h2>
-            <p>Lors de ma dernière année de Mastère, nous avons travaillé sur la conception et la réalisation d’une publicité vidéo pour Dumatos Bio, une marque engagée dans le bio et le naturel. L’objectif principal était de mettre en avant la boisson phare de la marque à travers une approche créative et impactante. Ce projet nous a permis d’explorer plusieurs aspects de la communication : scénario, tournage, montage et optimisation du message publicitaire.</p>
-            <div class="btn-real">
-                <button class="boutons">Voir plus</button>
-            </div>
-        </div>
-        <div class="video">
-            <iframe width="620" height="315" src="https://www.youtube.com/embed/zl3Wh5CWz2s?si=bbuKpp0vWxjo7H5Y"></iframe>
-        </div>
+    <!-- Vidéo -->
+    <section class="video">
+      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Vidéo YouTube" allowfullscreen></iframe>
     </section>
 
-    <section>
-        <div class="titre-video">
-            <h2>Ma passion pour la photographie</h2>
-            <p>Depuis 2019, la photographie est bien plus qu’un simple passe-temps pour moi : c’est une véritable passion. Autodidacte, j’ai appris à maîtriser la composition, la lumière et les réglages au fil des expériences, en explorant différents styles et techniques.</p>
-            <div class="btn-real">
-                <a href="galery.html"><button class="boutons">Voir plus</button></a>
-            </div>
-        </div>
-        <div class="ph-right">
-            <div class="grille-photo">
-                <!-- Images de la grille -->
-            </div>
-        </div>
+    <!-- Bloc photo -->
+    <section class="titre-video">
+      <h2>Ma passion pour la photographie</h2>
+      <p>
+        Depuis 2019, la photographie est bien plus qu’un simple passe-temps pour moi : c’est une véritable passion. Autodidacte, j’ai appris à maîtriser la composition, la lumière et les réglages au fil des expériences, en explorant différents styles et techniques.
+      </p>
+      <div class="btn-real">
+        <button class="boutons">Voir plus</button>
+      </div>
     </section>
 
-    <section id="infographie">
-        <div class="titre-video">
-            <h2>Mes illustrations et infographies</h2>
-            <p>Voici une sélection d'infographies réalisées dans le cadre de projets de cours ainsi qu'en entreprise. Ces créations reflètent mon approche visuelle pour communiquer des informations de manière simple et attrayante, tout en répondant aux besoins spécifiques de chaque projet.</p>
-            <div class="btn-real">
-                <a href="#infographie"><button class="boutons">Voir plus</button></a>
-            </div>
-        </div>
-        <div class="infographie">
-            <!-- Calaméo blocs -->
-        </div>
+    <section class="grille-photo">
+      <img class="grille-ph" src="https://via.placeholder.com/300x300?text=Photo+1" alt="photo 1" />
+      <img class="grille-ph" src="https://via.placeholder.com/300x300?text=Photo+2" alt="photo 2" />
+      <img class="grille-ph" src="https://via.placeholder.com/300x300?text=Photo+3" alt="photo 3" />
     </section>
 
-    <footer>
-        <p class="footer-avert">Ce site a été développé par mes soins en HTML, CSS et JS.</p>
-    </footer>
+  </main>
 
-    <button id="backToTop" class="back-to-top">↑</button>
-    <script>
-      const backToTopButton = document.getElementById("backToTop");
-      window.addEventListener("scroll", () => {
-        if (window.scrollY > 300) {
-          backToTopButton.classList.add("show");
-        } else {
-          backToTopButton.classList.remove("show");
-        }
-      });
-      backToTopButton.addEventListener("click", () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
-    </script>
+  <footer>
+    <p>Site réalisé par Geoffrey Audouin – HTML / CSS / JS</p>
+  </footer>
+
 </body>
+
 </html>
