@@ -1,285 +1,190 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
-
 <head>
-    <title> Réalisation Geoffrey Audouin</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="index, follow">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Réalisations</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Anton&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-        rel="stylesheet">
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f5f5f5;
+      color: #333;
+    }
 
-    <title>Titre de la page</title>
-    <link rel="stylesheet" href="CSS/accueil.css">
-    <link rel="stylesheet" href="CSS/realisation.css">
-    <link rel="stylesheet" href="CSS/main.css">
-    <script src="script.js"></script>
+    h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
 
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3CH32N4V7L"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    p {
+      margin-bottom: 15px;
+    }
 
-  gtag('config', 'G-3CH32N4V7L');
-</script>
+    a {
+      color: #0073e6;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .boutons {
+      padding: 10px 20px;
+      background-color: #0073e6;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1em;
+    }
+
+    .boutons:hover {
+      background-color: #005bb5;
+    }
+
+    /* Réalisations - Section principale */
+    .real-section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .real-video {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    .titre-video {
+      max-width: 600px;
+      text-align: left;
+    }
+
+    .titre-video h2 {
+      color: #333;
+    }
+
+    .titre-video p {
+      font-size: 1.1em;
+      color: #555;
+    }
+
+    .btn-real {
+      margin-top: 20px;
+    }
+
+    /* Galerie photo */
+    .grille-photo {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      justify-items: center;
+    }
+
+    .grille-ph {
+      width: 100%;
+      max-width: 350px;
+      height: 350px;
+      object-fit: cover;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Infographie */
+    .infographie {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      width: 100%;
+      margin-top: 30px;
+    }
+
+    .calameo-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 480px;
+    }
+
+    .calameo-block iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      margin-top: 8px;
+    }
+
+    .calameo-block a {
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+  </style>
 </head>
-
 <body>
 
-    <header>
-<a href="index.html"><p class="logo">GEOFFREY AUDOUIN</p></a>        
-        
-        <nav class="nav">
-            <ul>
-               <li><a href="qui-suis-je.html">Qui suis-je</a></li>
-            <li><a href="realisations.html">Mes réalisations</a></li>
-            <li><a href="voyages.html">Mes voyages</a></li>
-        <!--  <li><a href="Voypass.html">Mes passions</a></li> -->
-            <li><a href="https://lafocalelibre.fr/galerie/">Galerie photo</a></li>
-            </ul>
-        </nav>
-        <button class="burger" aria-label="Menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-    </header>
-
-    <script>
-        const burger = document.querySelector('.burger');
-        const nav = document.querySelector('.nav');
-    
-        burger.addEventListener('click', () => {
-            nav.classList.toggle('open');
-        });
-    </script>
-
-    <section>
-
-        <div class="mes-realisations">
-
-            <h2>Mes réalisations</h2>
-            <p>Cette page est dédiée à mes réalisations en photographie, vidéo, print et autres projets digitaux menés</p>
-
+  <!-- SECTION PHOTO -->
+  <section class="real-section">
+    <div class="real-video">
+      <div class="titre-video">
+        <h2>Ma passion pour la photographie</h2>
+        <p>Depuis 2019, la photographie est bien plus qu’un simple passe-temps pour moi : c’est une véritable passion.
+          Autodidacte, j’ai appris à maîtriser la composition, la lumière et les réglages au fil des expériences, en
+          explorant différents styles et techniques. Chaque cliché est pour moi une occasion de raconter une histoire, de
+          capturer une émotion ou un instant unique. Que ce soit en portrait, en paysage ou en photographie urbaine, je
+          cherche toujours à perfectionner mon regard et à retranscrire ma vision du monde à travers l’image.</p>
+        <div class="btn-real">
+          <a href="galery.html"><button class="boutons">Voir plus</button></a>
         </div>
-
-    </section>
-
-    <div class="real-items">
-
-        <div >
-            <div class="cards">
-                <img src="image/photo.webp">
-                <div class="content-card">
-                    <h3> Réalisation</h3>
-                    <h2>Photos</h2>
-                  
-                </div>
-                <a href="https://lafocalelibre.fr/galerie/">
-                <button class="btn-real1">voir plus</button>
-                    </a>
-            </div>
+      </div>
+      <div class="video">
+        <div class="grille-photo">
+          <img class="grille-ph" src="image/4Z8A5255-scaled.jpg.webp" alt="photo 1">
+          <img class="grille-ph" src="image/Photo_print_5.webp" alt="photo 2">
+          <img class="grille-ph" src="image/Photo_print_7.webp" alt="photo 3">
+          <img class="grille-ph" src="image/lune6.webp" alt="photo 4">
+          <img class="grille-ph" src="image/IMG_2450.webp" alt="photo 5">
+          <img class="grille-ph" src="image/fleur.webp" alt="photo 6">
         </div>
-
-        <div class=>
-            <div class="cards1">
-                <img src="image/video.webp">
-                <div class="content-card">
-                    <h3> Réalisation</h3>
-                    <h2>Vidéos</h2>
-                   
-                </div>
-                <a href="videos.html">
-                      <button class="btn-real2">voir plus</button>
-                </a>
-            </div>
-        </div>
-
-        <div class=>
-            <div class="cards">
-                <img src="image/infog.webp">
-                <div class="content-card">
-                    <h3> Réalisation</h3>
-                    <h2>Print</h2>
-                  
-                </div>
-                <a href="print.html">
-                      <button class="btn-real2">voir plus</button>
-                </a>
-            </div>
-        </div>
+      </div>
     </div>
+  </section>
 
-
-    <!-- realisatoin vidéo -->
-
-    <section>
-
-
-        <div class="real-video">
-
-
-            <div class="titre-video">
-
-                <h2>Publicité pour la marque Dumatos Bio</h2>
-
-                    <p> Lors de ma dernière année de Mastère, nous avons travaillé sur la conception et la réalisation
-                        d’une publicité vidéo pour Dumatos Bio, une marque engagée dans le bio et le naturel. L’objectif
-                        principal était de mettre en avant la boisson phare de la marque, en valorisant ses atouts
-                        uniques à travers une approche créative et impactante. <br>
-
-                        Ce projet nous a permis d’explorer plusieurs aspects de la communication et du marketing, de la
-                        conception du scénario au tournage, en passant par le montage et l’optimisation du message
-                        publicitaire. Une expérience enrichissante qui nous a permis de mettre en pratique nos
-                        compétences et d’appréhender concrètement les enjeux du branding vidéo.</p>
-                    <div class="btn-real">
-                        <button class="boutons">Voir plus</button>
-                    </div>
-            </div>
-            <div class="video">
-
-                <iframe width="620" height="315" src="https://www.youtube.com/embed/zl3Wh5CWz2s?si=bbuKpp0vWxjo7H5Y/">
-                </iframe>
-            </div>
+  <!-- SECTION INFOGRAPHIE -->
+  <section class="real-section">
+    <div class="real-video">
+      <div class="titre-video">
+        <h2>Mes illustrations et infographies</h2>
+        <p>Voici une sélection d'infographies réalisées dans le cadre de projets de cours ainsi qu'en entreprise. Ces
+          créations reflètent mon approche visuelle pour communiquer des informations de manière simple et attrayante,
+          tout en répondant aux besoins spécifiques de chaque projet.</p>
+      </div>
+      <div class="video infographie">
+        <div class="calameo-block">
+          <a href="https://www.calameo.com/books/0079298407e0e08e28c8b" target="_blank"><u>Curcus</u></a>
+          <iframe src="//v.calameo.com/?bkcode=0079298407e0e08e28c8b&mode=mini"
+            allowtransparency allowfullscreen></iframe>
         </div>
-
-
-
-    </section>
-
-
-    <section>
-
-
-
-
-        <div class="photos">
-            <div class="ph-left">
-
-                <h2>Ma passion pour la photographie</h2>
-                <p> Depuis 2019, la photographie est bien plus qu’un simple passe-temps pour moi : c’est une véritable
-                    passion. Autodidacte, j’ai appris à maîtriser la composition, la lumière et les réglages au fil des
-                    expériences, en explorant différents styles et techniques. Chaque cliché est pour moi une occasion
-                    de raconter une histoire, de capturer une émotion ou un instant unique. Que ce soit en portrait, en
-                    paysage ou en photographie urbaine, je cherche toujours à perfectionner mon regard et à repousser
-                    mes limites pour retranscrire ma vision du monde à travers l’image.
-
-                </p>
-               
-            </div>
-
+        <div class="calameo-block">
+          <a href="https://www.calameo.com/books/00792984071b9501225d8" target="_blank"><u>Plaquette Prévention Suicide</u></a>
+          <iframe src="//v.calameo.com/?bkcode=00792984071b9501225d8&mode=mini"
+            allowtransparency allowfullscreen></iframe>
         </div>
- <div class="ph-right">
-                <div class="grille-photo">
-                    <div>
-                        <img class="grille-ph" src="image/4Z8A5255-scaled.jpg.webp">
-                    </div>
-                    <div>
-                        <img class="grille-ph" src="image/Photo_print_5.webp">
-                    </div>
-                    <div>
-                        <img class="grille-ph" src="image/Photo_print_7.webp">
-                    </div>
-                    <div>
-                        <img class="grille-ph" src="image/lune6.webp">
-                    </div>
-                    <div>
-                        <img class="grille-ph" src="image/IMG_2450.webp">
-                    </div>
-                    <div>
-                        <img class="grille-ph" src="image/fleur.webp">
-                    </div>
-                </div>
-
-            </div>
-
-         <div class="btn-real">
-                    <a href="galery.html"><button class="boutons"> Voir plus</button></a>
-                </div>
-    </section>
-
-
-
-    <!-- nouvelle section avec caraousel defilant fleches renvoyant vers pdf -->
-
-
-
-
-
- <section class="mes-infog">
-           <div class="titre-infog">
-
-                <h2>Mes illustrations et infographies</h2>
-                <p> Voici une sélection d'infographies réalisées dans le cadre de projets de cours ainsi qu'en entreprise. Ces créations reflètent mon approche visuelle pour communiquer des informations de manière simple et attrayante, tout en répondant aux besoins spécifiques de chaque projet
-
-                </p>
-               
-            </div>
-
-<div class="infogs">
-      
-     
-<div class="infographie">
-  <div class="calameo-block">
-    <a href="https://www.calameo.com/books/0079298407e0e08e28c8b" target="_blank"><u>Curcus</u></a>
-    <iframe src="//v.calameo.com/?bkcode=0079298407e0e08e28c8b&mode=mini"
-            width="480" height="300"
-            frameborder="0" scrolling="no"
+        <div class="calameo-block">
+          <a href="https://www.calameo.com/books/007929840794181cde3ab" target="_blank"><u>Alerte du Smur</u></a>
+          <iframe src="//v.calameo.com/?bkcode=007929840794181cde3ab&mode=mini"
             allowtransparency allowfullscreen></iframe>
-  </div>
-
-  <div class="calameo-block">
-    <a href="https://www.calameo.com/books/00792984071b9501225d8" target="_blank"><u>Plaquette Prévention Suicide</u></a>
-    <iframe src="//v.calameo.com/?bkcode=00792984071b9501225d8&mode=mini"
-            width="480" height="300"
-            frameborder="0" scrolling="no"
-            allowtransparency allowfullscreen></iframe>
-  </div>
-
-  <div class="calameo-block">
-    <a href="https://www.calameo.com/books/007929840794181cde3ab" target="_blank"><u>Alerte du Smur</u></a>
-    <iframe src="//v.calameo.com/?bkcode=007929840794181cde3ab&mode=mini"
-            width="480" height="300"
-            frameborder="0" scrolling="no"
-            allowtransparency allowfullscreen></iframe>
-  </div>
-</div>
-
-    </section>
-
-
-    <footer>
-
-        <p class="footer-avert">ce site à été développé par mes soins en HTML, CSS et JS</p>
-
-    </footer>
-
-      <button id="backToTop" class="back-to-top">↑</button>
-<script>
-  const backToTopButton = document.getElementById("backToTop");
-
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
-      backToTopButton.classList.add("show");
-    } else {
-      backToTopButton.classList.remove("show");
-    }
-  });
-
-  backToTopButton.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-</script>
-
+        </div>
+      </div>
+    </div>
+  </section>
 
 </body>
+</html>
