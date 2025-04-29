@@ -7,9 +7,9 @@
 
 body {
     font-family: 'Arvo', serif;
-    line-height: 1.6;
-    color: #333;
     background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
 }
 
 /* ---- HEADER ---- */
@@ -18,8 +18,8 @@ header {
     color: white;
     display: flex;
     justify-content: space-between;
-    padding: 10px 20px;
     align-items: center;
+    padding: 10px 20px;
 }
 
 .logo {
@@ -37,39 +37,10 @@ nav a {
     color: white;
     text-decoration: none;
     font-weight: 600;
-    transition: color 0.3s ease;
 }
 
 nav a:hover {
     color: #ff6f61;
-}
-
-.burger {
-    display: none;
-}
-
-@media (max-width: 768px) {
-    .burger {
-        display: block;
-        cursor: pointer;
-    }
-    
-    .burger span {
-        display: block;
-        width: 25px;
-        height: 3px;
-        margin: 5px auto;
-        background-color: #fff;
-    }
-    
-    .nav.open {
-        display: block;
-    }
-
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
 }
 
 /* ---- MES RÉALISATIONS ---- */
@@ -99,7 +70,6 @@ nav a:hover {
 .cards, .cards1 {
     position: relative;
     width: 30%;
-    overflow: hidden;
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
@@ -167,8 +137,6 @@ button:hover {
 .real-video .titre-video p {
     font-size: 1.2em;
     color: #555;
-    line-height: 1.6;
-    margin-bottom: 20px;
 }
 
 .real-video .video iframe {
@@ -227,11 +195,7 @@ button:hover {
     transform: scale(1.05);
 }
 
-.btn-real {
-    text-align: center;
-    margin-top: 20px;
-}
-
+/* Footer */
 footer {
     background-color: #333;
     color: white;
