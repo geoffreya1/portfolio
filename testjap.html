@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz Japonais Débutant</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+    .question {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    .options button {
+      display: block;
+      margin: 10px auto;
+      padding: 10px 20px;
+      font-size: 18px;
+      cursor: pointer;
+      width: 200px;
+    }
+    .correct {
+      background-color: #a4f9a4;
+    }
+    .wrong {
+      background-color: #f9a4a4;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="quiz-container">
+    <div class="question" id="question"></div>
+    <div class="options" id="options"></div>
+  </div>
+
+  <script>
+    const quiz = [
+      {
+        word: "水",
+        correct: "Eau",
+        options: ["Feu", "Terre", "Eau", "Vent"]
+      },
+      {
+        word: "猫",
+        correct: "Chat",
+        options: ["Chien", "Souris", "Chat", "Oiseau"]
+      },
+      {
+        word: "青",
+        correct: "Bleu",
+        options: ["Rouge", "Bleu", "Vert", "Jaune"]
+      },
+      {
+        word: "山",
+        correct: "Montagne",
+        options: ["Mer", "Plage", "Montagne", "Forêt"]
+      },
+      {
+        word: "先生",
+        correct: "Professeur",
+        options: ["Étudiant", "Professeur", "Médecin", "Policier"]
+      }
+    ];
+
+    let current = 0;
+
+    function loadQuestion() {
+      const q = quiz[current];
+      const questionDiv = document.getElementById("question");
+      const optionsDiv = document.getElementById("options");
+
+      questionDiv.textContent = `Que signifie : ${q.word} ?`;
+      optionsDiv.innerHTML = "";
+
+      q.options.forEach(option => {
+        const btn = document.createElement("button");
+        btn.textContent = option;
+        btn.onclick = () => checkAnswer(btn, option === q.correct);
+        optionsDiv.appendChild(btn);
+      });
+    }
+
+    function checkAnswer(button, isCorrect) {
+      const buttons = document.querySelectorAll("#options button");
+      buttons.forEach(btn => btn.disabled = true);
+
+      if (isCorrect) {
+        button.classList.add("correct");
+        setTimeout(() => {
+          current++;
+          if (current < quiz.length) {
+            loadQuestion();
+          } else {
+            document.getElementById("quiz-container").innerHTML = "<h2>Quiz terminé ! Bravo 👏</h2>";
+          }
+        }, 1000);
+      } else {
+        button.classList.add("wrong");
+        setTimeout(() => {
+          button.classList.remove("wrong");
+          buttons.forEach(btn => btn.disabled = false);
+        }, 1000);
+      }
+    }
+
+    loadQuestion();
+  </script>
+
+</body>
+</html>
