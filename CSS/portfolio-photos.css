@@ -1,10 +1,18 @@
-/* Accessibilité */
-.sr-only {
-  position: absolute;
-  width: 1px; height: 1px;
-  padding: 0; margin: -1px;
-  overflow: hidden; clip: rect(0,0,0,0);
-  white-space: nowrap; border: 0; 
+/* ===== Reset / Base ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
 }
 
 :root{
@@ -16,18 +24,40 @@
   --accent: #ffffff;
 }
 
+body{
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Arvo", serif;
+}
+
 body.no-scroll { overflow: hidden; }
 
-/* HERO */
+/* Accessibilité */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ===== HERO ===== */
 .portfolio-hero{
   padding: 56px 16px 22px;
-  background: radial-gradient(1200px 400px at 30% 0%, rgba(255,255,255,0.08), transparent 60%),
-              radial-gradient(900px 400px at 70% 0%, rgba(255,255,255,0.06), transparent 60%);
+  background:
+    radial-gradient(1200px 400px at 30% 0%, rgba(255,255,255,0.08), transparent 60%),
+    radial-gradient(900px 400px at 70% 0%, rgba(255,255,255,0.06), transparent 60%);
 }
+
 .portfolio-hero__inner{
   max-width: 1100px;
   margin: 0 auto;
 }
+
 .portfolio-hero h1{
   font-family: "Anton", sans-serif;
   letter-spacing: 1px;
@@ -35,18 +65,19 @@ body.no-scroll { overflow: hidden; }
   margin: 0 0 10px;
   color: var(--text);
 }
+
 .portfolio-hero p{
   margin: 0;
   max-width: 70ch;
   color: var(--muted);
-  font-family: "Arvo", serif;
   line-height: 1.6;
 }
 
-/* CONTROLS */
+/* ===== CONTROLS ===== */
 .portfolio-controls{
   padding: 18px 16px 10px;
 }
+
 .controls-inner{
   max-width: 1100px;
   margin: 0 auto;
@@ -56,11 +87,13 @@ body.no-scroll { overflow: hidden; }
   justify-content: space-between;
   flex-wrap: wrap;
 }
+
 .filters{
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
 }
+
 .filter-btn{
   border: 1px solid var(--line);
   background: transparent;
@@ -72,7 +105,12 @@ body.no-scroll { overflow: hidden; }
   font-size: 14px;
   transition: transform .15s ease, background .15s ease, border-color .15s ease;
 }
-.filter-btn:hover{ transform: translateY(-1px); border-color: rgba(255,255,255,0.25); }
+
+.filter-btn:hover{
+  transform: translateY(-1px);
+  border-color: rgba(255,255,255,0.25);
+}
+
 .filter-btn.is-active{
   background: rgba(255,255,255,0.14);
   border-color: rgba(255,255,255,0.32);
@@ -82,6 +120,7 @@ body.no-scroll { overflow: hidden; }
   display: flex;
   align-items: center;
 }
+
 #portfolioSearch{
   width: min(360px, 78vw);
   border: 1px solid var(--line);
@@ -92,13 +131,15 @@ body.no-scroll { overflow: hidden; }
   outline: none;
   font-family: "Arvo", serif;
 }
+
 #portfolioSearch::placeholder{ color: rgba(242,242,242,0.55); }
 #portfolioSearch:focus{ border-color: rgba(255,255,255,0.30); }
 
-/* GRID */
+/* ===== GRID ===== */
 .portfolio{
   padding: 14px 16px 60px;
 }
+
 .portfolio-grid{
   max-width: 1100px;
   margin: 0 auto;
@@ -107,10 +148,11 @@ body.no-scroll { overflow: hidden; }
   gap: 14px;
 }
 
-/* CARD */
+/* ===== CARD ===== */
 .photo-card{
   margin: 0;
 }
+
 .photo-btn{
   width: 100%;
   border: 0;
@@ -121,17 +163,24 @@ body.no-scroll { overflow: hidden; }
   position: relative;
   border-radius: 18px;
   overflow: hidden;
-  outline: none;
 }
+
+.photo-btn:focus-visible{
+  outline: 2px solid rgba(255,255,255,0.35);
+  outline-offset: 3px;
+}
+
 .photo-btn img{
   width: 100%;
   height: 280px;
   object-fit: cover;
-  display: block;
   transform: scale(1);
   transition: transform .35s ease;
 }
-.photo-btn:hover img{ transform: scale(1.04); }
+
+.photo-btn:hover img{
+  transform: scale(1.04);
+}
 
 .photo-overlay{
   position: absolute;
@@ -144,6 +193,7 @@ body.no-scroll { overflow: hidden; }
   opacity: 0;
   transition: opacity .25s ease;
 }
+
 .photo-btn:hover .photo-overlay,
 .photo-btn:focus-visible .photo-overlay{
   opacity: 1;
@@ -151,14 +201,13 @@ body.no-scroll { overflow: hidden; }
 
 .photo-title{
   color: var(--text);
-  font-family: "Arvo", serif;
   font-weight: 700;
   font-size: 16px;
 }
+
 .photo-tags{
   margin-top: 4px;
   color: rgba(255,255,255,0.75);
-  font-family: "Arvo", serif;
   font-size: 13px;
 }
 
@@ -168,16 +217,16 @@ body.no-scroll { overflow: hidden; }
   max-width: 1100px;
   margin: 14px auto 0;
   color: var(--muted);
-  font-family: "Arvo", serif;
 }
 
-/* LIGHTBOX */
+/* ===== LIGHTBOX ===== */
 .lightbox{
   position: fixed;
   inset: 0;
   display: none;
   z-index: 9999;
 }
+
 .lightbox.is-open{ display: block; }
 
 .lightbox__backdrop{
@@ -206,6 +255,7 @@ body.no-scroll { overflow: hidden; }
   margin: 0;
   text-align: center;
 }
+
 .lightbox__figure img{
   width: 100%;
   max-height: 72vh;
@@ -214,10 +264,10 @@ body.no-scroll { overflow: hidden; }
   border: 1px solid rgba(255,255,255,0.10);
   background: rgba(0,0,0,0.30);
 }
+
 #lightboxCaption{
   margin-top: 10px;
   color: var(--muted);
-  font-family: "Arvo", serif;
   font-size: 14px;
 }
 
@@ -245,7 +295,6 @@ body.no-scroll { overflow: hidden; }
   line-height: 1;
 }
 
-/* Responsive lightbox */
 @media (max-width: 640px){
   .lightbox__content{
     grid-template-columns: 1fr;
