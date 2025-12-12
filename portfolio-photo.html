@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <title>Portfolio photo - Geoffrey Audouin</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Arvo:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- Tes CSS existants si tu veux garder ton style global -->
+  <link rel="stylesheet" href="CSS/main.css" />
+  <link rel="stylesheet" href="CSS/accueil.css" />
+
+  <!-- Nouveau CSS pour le portfolio -->
+  <link rel="stylesheet" href="CSS/portfolio.css" />
+
+  <!-- Google tag (optionnel si déjà présent ailleurs) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3CH32N4V7L"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-3CH32N4V7L');
+  </script>
+</head>
+
+<body>
+  <header>
+    <a href="index.html"><p class="logo">GEOFFREY AUDOUIN</p></a>
+
+    <nav class="nav" aria-label="Navigation principale">
+      <ul>
+        <li><a href="qui-suis-je.html">Qui suis-je</a></li>
+        <li><a href="realisations.html">Mes réalisations</a></li>
+        <li><a href="voyages.html">Mes voyages</a></li>
+        <li><a href="https://lafocalelibre.fr/galerie/">Galerie photo</a></li>
+      </ul>
+    </nav>
+
+    <button class="burger" aria-label="Menu" aria-expanded="false" aria-controls="mainNav">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+    <!-- HERO / INTRO -->
+    <section class="portfolio-hero">
+      <div class="portfolio-hero__inner">
+        <h1>Portfolio photo</h1>
+        <p>
+          Explore mes séries par catégories. Clique sur une photo pour l’ouvrir en grand.
+        </p>
+      </div>
+    </section>
+
+    <!-- FILTRES -->
+    <section class="portfolio-controls" aria-label="Filtres du portfolio">
+      <div class="controls-inner">
+        <div class="filters" role="tablist" aria-label="Catégories">
+          <button class="filter-btn is-active" data-filter="all" role="tab" aria-selected="true">Tout</button>
+          <button class="filter-btn" data-filter="portrait" role="tab" aria-selected="false">Portrait</button>
+          <button class="filter-btn" data-filter="paysage" role="tab" aria-selected="false">Paysage</button>
+          <button class="filter-btn" data-filter="urbain" role="tab" aria-selected="false">Urbain</button>
+          <button class="filter-btn" data-filter="macro" role="tab" aria-selected="false">Macro</button>
+          <button class="filter-btn" data-filter="noirblanc" role="tab" aria-selected="false">Noir &amp; Blanc</button>
+        </div>
+
+        <div class="search-wrap">
+          <label class="sr-only" for="portfolioSearch">Rechercher</label>
+          <input id="portfolioSearch" type="search" placeholder="Rechercher (ex: lune, montagne, rue...)" />
+        </div>
+      </div>
+    </section>
+
+    <!-- GRILLE -->
+    <section class="portfolio" aria-label="Galerie de photos">
+      <div class="portfolio-grid" id="portfolioGrid">
+
+        <!--
+          Remplace les src par tes images.
+          data-category peut contenir plusieurs catégories séparées par des espaces.
+          data-title sert à la recherche + légende.
+        -->
+
+        <figure class="photo-card" data-category="paysage" data-title="Lune - ciel">
+          <button class="photo-btn" type="button" aria-label="Ouvrir : Lune - ciel">
+            <img src="image/lune6.webp" alt="Photo : Lune dans le ciel" loading="lazy" />
+            <span class="photo-overlay">
+              <span class="photo-title">Lune - ciel</span>
+              <span class="photo-tags">Paysage</span>
+            </span>
+          </button>
+        </figure>
+
+        <figure class="photo-card" data-category="paysage urbain" data-title="Rue - lumière">
+          <button class="photo-btn" type="button" aria-label="Ouvrir : Rue - lumière">
+            <img src="image/IMG_2450.webp" alt="Photo urbaine avec lumière" loading="lazy" />
+            <span class="photo-overlay">
+              <span class="photo-title">Rue - lumière</span>
+              <span class="photo-tags">Urbain · Paysage</span>
+            </span>
+          </button>
+        </figure>
+
+        <figure class="photo-card" data-category="macro" data-title="Fleur - détail">
+          <button class="photo-btn" type="button" aria-label="Ouvrir : Fleur - détail">
+            <img src="image/fleur.webp" alt="Macro fleur" loading="lazy" />
+            <span class="photo-overlay">
+              <span class="photo-title">Fleur - détail</span>
+              <span class="photo-tags">Macro</span>
+            </span>
+          </button>
+        </figure>
+
+        <figure class="photo-card" data-category="portrait" data-title="Portrait - studio">
+          <button class="photo-btn" type="button" aria-label="Ouvrir : Portrait - studio">
+            <img src="image/Photo_print_5.webp" alt="Portrait" loading="lazy" />
+            <span class="photo-overlay">
+              <span class="photo-title">Portrait - studio</span>
+              <span class="photo-tags">Portrait</span>
+            </span>
+          </button>
+        </figure>
+
+        <figure class="photo-card" data-category="noirblanc urbain" data-title="Noir et blanc - rue">
+          <button class="photo-btn" type="button" aria-label="Ouvrir : Noir et blanc - rue">
+            <img src="image/Photo_print_7.webp" alt="Photo noir et blanc urbaine" loading="lazy" />
+            <span class="photo-overlay">
+              <span class="photo-title">Noir et blanc - rue</span>
+              <span class="photo-tags">Noir &amp; Blanc · Urbain</span>
+            </span>
+          </button>
+        </figure>
+
+        <figure class="photo-card" data-category="paysage" data-title="Paysage - nature">
+          <button class="photo-btn" type="button" aria-label="Ouvrir : Paysage - nature">
+            <img src="image/4Z8A5255-scaled.jpg.webp" alt="Paysage nature" loading="lazy" />
+            <span class="photo-overlay">
+              <span class="photo-title">Paysage - nature</span>
+              <span class="photo-tags">Paysage</span>
+            </span>
+          </button>
+        </figure>
+
+      </div>
+
+      <p class="no-results" id="noResults" hidden>Aucun résultat pour ce filtre / cette recherche.</p>
+    </section>
+  </main>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lightbox__backdrop" data-close="true"></div>
+
+    <div class="lightbox__content" role="dialog" aria-modal="true" aria-label="Aperçu photo">
+      <button class="lightbox__close" type="button" aria-label="Fermer" data-close="true">✕</button>
+
+      <button class="lightbox__nav lightbox__prev" type="button" aria-label="Photo précédente">‹</button>
+
+      <figure class="lightbox__figure">
+        <img id="lightboxImg" src="" alt="" />
+        <figcaption id="lightboxCaption"></figcaption>
+      </figure>
+
+      <button class="lightbox__nav lightbox__next" type="button" aria-label="Photo suivante">›</button>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-links">
+        <a href="qui-suis-je.html">Qui je suis</a>
+        <a href="realisations.html">Mes réalisations</a>
+        <a href="voyages.html">Mes voyages</a>
+        <a href="https://lafocalelibre.fr/galerie/">Galerie photo</a>
+      </div>
+      <p class="footer-text">© Geoffrey Audouin - Tous droits réservés</p>
+    </div>
+  </footer>
+
+  <button id="backToTop" class="back-to-top" aria-label="Retour en haut">↑</button>
+
+  <!-- JS intégré -->
+  <script>
+    // Burger menu
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.nav');
+
+    burger.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('open');
+      burger.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    // Back to top
+    const backToTopButton = document.getElementById("backToTop");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) backToTopButton.classList.add("show");
+      else backToTopButton.classList.remove("show");
+    });
+    backToTopButton.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Portfolio filtering + search
+    const grid = document.getElementById('portfolioGrid');
+    const cards = Array.from(grid.querySelectorAll('.photo-card'));
+    const filterBtns = Array.from(document.querySelectorAll('.filter-btn'));
+    const searchInput = document.getElementById('portfolioSearch');
+    const noResults = document.getElementById('noResults');
+
+    let activeFilter = 'all';
+
+    function normalize(s) {
+      return (s || '').toString().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    }
+
+    function applyFilters() {
+      const q = normalize(searchInput.value);
+      let visibleCount = 0;
+
+      cards.forEach((card) => {
+        const cats = normalize(card.dataset.category).split(/\s+/).filter(Boolean);
+        const title = normalize(card.dataset.title);
+        const matchesFilter = (activeFilter === 'all') || cats.includes(activeFilter);
+        const matchesSearch = !q || title.includes(q) || cats.join(' ').includes(q);
+
+        const show = matchesFilter && matchesSearch;
+        card.classList.toggle('is-hidden', !show);
+        if (show) visibleCount++;
+      });
+
+      noResults.hidden = visibleCount !== 0;
+    }
+
+    filterBtns.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => {
+          b.classList.remove('is-active');
+          b.setAttribute('aria-selected', 'false');
+        });
+        btn.classList.add('is-active');
+        btn.setAttribute('aria-selected', 'true');
+
+        activeFilter = btn.dataset.filter;
+        applyFilters();
+      });
+    });
+
+    searchInput.addEventListener('input', applyFilters);
+
+    // Lightbox
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxCaption = document.getElementById('lightboxCaption');
+    const closeTargets = lightbox.querySelectorAll('[data-close="true"]');
+    const prevBtn = lightbox.querySelector('.lightbox__prev');
+    const nextBtn = lightbox.querySelector('.lightbox__next');
+
+    function getVisibleCards() {
+      return cards.filter(c => !c.classList.contains('is-hidden'));
+    }
+
+    let currentIndex = -1;
+
+    function openLightbox(index) {
+      const visible = getVisibleCards();
+      if (!visible[index]) return;
+
+      currentIndex = index;
+
+      const img = visible[index].querySelector('img');
+      const title = visible[index].dataset.title || img.alt || '';
+
+      lightboxImg.src = img.currentSrc || img.src;
+      lightboxImg.alt = img.alt || title;
+      lightboxCaption.textContent = title;
+
+      lightbox.classList.add('is-open');
+      lightbox.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('no-scroll');
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('is-open');
+      lightbox.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('no-scroll');
+
+      // reset (optionnel)
+      lightboxImg.src = '';
+      lightboxImg.alt = '';
+      lightboxCaption.textContent = '';
+      currentIndex = -1;
+    }
+
+    function navLightbox(dir) {
+      const visible = getVisibleCards();
+      if (visible.length === 0) return;
+
+      const next = (currentIndex + dir + visible.length) % visible.length;
+      openLightbox(next);
+    }
+
+    // Click sur carte => lightbox (dans l’ordre des visibles)
+    function bindCardClicks() {
+      cards.forEach(card => {
+        const btn = card.querySelector('.photo-btn');
+        btn.addEventListener('click', () => {
+          const visible = getVisibleCards();
+          const index = visible.indexOf(card);
+          openLightbox(index);
+        });
+      });
+    }
+    bindCardClicks();
+
+    closeTargets.forEach(el => el.addEventListener('click', closeLightbox));
+    prevBtn.addEventListener('click', () => navLightbox(-1));
+    nextBtn.addEventListener('click', () => navLightbox(1));
+
+    window.addEventListener('keydown', (e) => {
+      if (!lightbox.classList.contains('is-open')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') navLightbox(-1);
+      if (e.key === 'ArrowRight') navLightbox(1);
+    });
+
+    // Initial
+    applyFilters();
+  </script>
+</body>
+</html>
