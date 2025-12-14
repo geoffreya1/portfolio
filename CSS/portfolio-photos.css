@@ -63,7 +63,7 @@ body.no-scroll { overflow: hidden; }
   letter-spacing: 1px;
   font-size: clamp(32px, 4vw, 56px);
   margin: 0 0 10px;
-  color: var(--text);
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
 }
 
 .portfolio-hero p{
