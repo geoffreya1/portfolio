@@ -1,22 +1,24 @@
-<html lang="fr"><head>
+<!doctype html>
+<html lang="fr">
+<head>
   <title>Portfolio photo - Geoffrey Audouin</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="index, follow">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-  <link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Arvo:wght@400;700&amp;display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Arvo:wght@400;700&display=swap" rel="stylesheet" />
 
-  <!-- Tes CSS existants si tu veux garder ton style global -->
-  <link rel="stylesheet" href="CSS/main.css">
-  <link rel="stylesheet" href="CSS/accueil.css">
+  <!-- Tes CSS existants -->
+  <link rel="stylesheet" href="CSS/main.css" />
+  <link rel="stylesheet" href="CSS/accueil.css" />
 
   <!-- Nouveau CSS pour le portfolio -->
-  <link rel="stylesheet" href="CSS/portfolio-photos.css">
+  <link rel="stylesheet" href="CSS/portfolio-photos.css" />
 
   <!-- Google tag (optionnel si déjà présent ailleurs) -->
-  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-3CH32N4V7L"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3CH32N4V7L"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -29,7 +31,7 @@
   <header>
     <a href="index.html"><p class="logo">GEOFFREY AUDOUIN</p></a>
 
-    <nav class="nav" aria-label="Navigation principale">
+    <nav class="nav" id="mainNav" aria-label="Navigation principale">
       <ul>
         <li><a href="qui-suis-je.html">Qui suis-je</a></li>
         <li><a href="realisations.html">Mes réalisations</a></li>
@@ -48,9 +50,7 @@
     <section class="portfolio-hero">
       <div class="portfolio-hero__inner">
         <h1>Portfolio photo</h1>
-        <p>
-          Explore mes séries par catégories. Clique sur une photo pour l’ouvrir en grand.
-        </p>
+        <p>Explore mes séries par catégories. Clique sur une photo pour l’ouvrir en grand.</p>
       </div>
     </section>
 
@@ -68,7 +68,7 @@
 
         <div class="search-wrap">
           <label class="sr-only" for="portfolioSearch">Rechercher</label>
-          <input id="portfolioSearch" type="search" placeholder="Rechercher (ex: lune, montagne, rue...)">
+          <input id="portfolioSearch" type="search" placeholder="Rechercher (ex: lune, montagne, rue...)" />
         </div>
       </div>
     </section>
@@ -77,75 +77,524 @@
     <section class="portfolio" aria-label="Galerie de photos">
       <div class="portfolio-grid" id="portfolioGrid">
 
-        <!--
-          Remplace les src par tes images.
-          data-category peut contenir plusieurs catégories séparées par des espaces.
-          data-title sert à la recherche + légende.
-        -->
-
-        <figure class="photo-card" data-category="paysage" data-title="Lune - ciel">
-          <button class="photo-btn" type="button" aria-label="Ouvrir : Lune - ciel">
-            <img src="image/lune6.webp" alt="Photo : Lune dans le ciel" loading="lazy">
+        <!-- ===================== -->
+        <!-- PAYSAGE (10) -->
+        <!-- ===================== -->
+        <figure class="photo-card" data-category="paysage" data-title="Paysage - Montagne">
+          <button class="photo-btn" type="button" aria-label="Ouvrir : Paysage - Montagne">
+            <img src="image/paysage-01.webp" alt="Photo paysage : montagne" loading="lazy" />
             <span class="photo-overlay">
-              <span class="photo-title">Lune - ciel</span>
+              <span class="photo-title">Paysage - Montagne</span>
               <span class="photo-tags">Paysage</span>
             </span>
           </button>
         </figure>
 
-        <figure class="photo-card" data-category="paysage urbain" data-title="Rue - lumière">
-          <button class="photo-btn" type="button" aria-label="Ouvrir : Rue - lumière">
-            <img src="image/IMG_2450.webp" alt="Photo urbaine avec lumière" loading="lazy">
+        <figure class="photo-card" data-category="paysage" data-title="Paysage - Lac">
+          <button class="photo-btn" type="button" aria-label="Ouvrir : Paysage - Lac">
+            <img src="image/paysage-02.webp" alt="Photo paysage : lac" loading="lazy" />
             <span class="photo-overlay">
-              <span class="photo-title">Rue - lumière</span>
-              <span class="photo-tags">Urbain · Paysage</span>
+              <span class="photo-title">Paysage - Lac</span>
+              <span class="photo-tags">Paysage</span>
             </span>
           </button>
         </figure>
 
-        <figure class="photo-card" data-category="macro" data-title="Fleur - détail">
-          <button class="photo-btn" type="button" aria-label="Ouvrir : Fleur - détail">
-            <img src="image/fleur.webp" alt="Macro fleur" loading="lazy">
+        <figure class="photo-card" data-category="paysage" data-title="Paysage - Forêt">
+          <button class="photo-btn" type="button" aria-label="Ouvrir : Paysage - Forêt">
+            <img src="image/paysage-03.webp" alt="Photo paysage : forêt" loading="lazy" />
             <span class="photo-overlay">
-              <span class="photo-title">Fleur - détail</span>
+              <span class="photo-title">Paysage - Forêt</span>
+              <span class="photo-tags">Paysage</span>
+            </span>
+          </button>
+        </figure>
+
+        <figure class="photo-card" data-category="paysage" data-title="Paysage - Coucher de soleil">
+          <button class="photo-btn" type="button" aria-label="Ouvrir : Paysage - Coucher de soleil">
+            <img src="image/paysage-04.webp" alt="Photo paysage : coucher de soleil" loading="lazy" />
+            <span class="photo-overlay">
+              <span class="photo-title">Paysage - Coucher de soleil</span>
+              <span class="photo-tags">Paysage</span>
+            </span>
+          </button>
+        </figure>
+
+        <figure class="photo-card" data-category="paysage" data-title="Paysage - Mer">
+          <button class="photo-btn" type="button" aria-label="Ouvrir : Paysage - Mer">
+            <img src="image/paysage-05.webp" alt="Photo paysage : mer" loading="lazy" />
+            <span class="photo-overlay">
+              <span class="photo-title">Paysage - Mer</span>
+              <span class="photo-tags">Paysage</span>
+            </span>
+          </button>
+        </figure>
+
+        <figure class="photo-card" data-category="paysage" data-title="Paysage - Nuages">
+          <button class="photo-btn" type="button" aria-label="Ouvrir : Paysage - Nuages">
+            <img src="image/paysage-06.webp" alt="Photo paysage : nuages" loading="lazy" />
+            <span class="photo-overlay">
+              <span class="photo-title">Paysage - Nuages</span>
+              <span class="photo-tags">Paysage</span>
+            </span>
+          </button>
+        </figure>
+
+        <figure class="photo-card" data-category="paysage" data-title="Paysage - Rivière">
+          <button class="photo-btn" type="button" aria-label="Ouvrir : Paysage - Rivière">
+            <img src="image/paysage-07.webp" alt="Photo paysage : rivière" loading="lazy" />
+            <span class="photo-overlay">
+              <span class="photo-title">Paysage - Rivière</span>
+              <span class="photo-tags">Paysage</span>
+            </span>
+          </button>
+        </figure>
+
+        <figure class="photo-card" data-category="paysage" data-title="Paysage - Plage">
+          <button class="photo-btn" type="button" aria-label="Ouvrir : Paysage - Plage">
+            <img src="image/paysage-08.webp" alt="Photo paysage : plage" loading="lazy" />
+            <span class="photo-overlay">
+              <span class="photo-title">Paysage - Plage</span>
+              <span class="photo-tags">Paysage</span>
+            </span>
+          </button>
+        </figure>
+
+        <figure class="photo-card" data-category="paysage" data-title="Paysage - Neige">
+          <button class="photo-btn" type="button" aria-label="Ouvrir : Paysage - Neige">
+            <img src="image/paysage-09.webp" alt="Photo paysage : neige" loading="lazy" />
+            <span class="photo-overlay">
+              <span class="photo-title">Paysage - Neige</span>
+              <span class="photo-tags">Paysage</span>
+            </span>
+          </button>
+        </figure>
+
+        <figure class="photo-card" data-category="paysage" data-title="Paysage - Lune">
+          <button class="photo-btn" type="button" aria-label="Ouvrir : Paysage - Lune">
+            <img src="image/paysage-10.webp" alt="Photo paysage : lune" loading="lazy" />
+            <span class="photo-overlay">
+              <span class="photo-title">Paysage - Lune</span>
+              <span class="photo-tags">Paysage</span>
+            </span>
+          </button>
+        </figure>
+
+        <!-- ===================== -->
+        <!-- URBAIN (10) -->
+        <!-- ===================== -->
+        <figure class="photo-card" data-category="urbain" data-title="Urbain - Rue de nuit">
+          <button class="photo-btn" type="button" aria-label="Ouvrir : Urbain - Rue de nuit">
+            <img src="image/urbain-01.webp" alt="Photo urbaine : rue de nuit" loading="lazy" />
+            <span class="photo-overlay">
+              <span class="photo-title">Urbain - Rue de nuit</span>
+              <span class="photo-tags">Urbain</span>
+            </span>
+          </button>
+        </figure>
+
+        <figure class="photo-card" data-category="urbain" data-title="Urbain - Néons">
+          <button class="photo-btn" type="button" aria-label="Ouvrir : Urbain - Néons">
+            <img src="image/urbain-02.webp" alt="Photo urbaine : néons" loading="lazy" />
+            <span class="photo-overlay">
+              <span class="photo-title">Urbain - Néons</span>
+              <span class="photo-tags">Urbain</span>
+            </span>
+          </button>
+        </figure>
+
+        <figure class="photo-card" data-category="urbain" data-title="Urbain - Architecture">
+          <button class="photo-btn" type="button" aria-label="Ouvrir : Urbain - Architecture">
+            <img src="image/urbain-03.webp" alt="Photo urbaine : architecture" loading="lazy" />
+            <span class="photo-overlay">
+              <span class="photo-title">Urbain - Architecture</span>
+              <span class="photo-tags">Urbain</span>
+            </span>
+          </button>
+        </figure>
+
+        <figure class="photo-card" data-category="urbain" data-title="Urbain - Passage piéton">
+          <button class="photo-btn" type="button" aria-label="Ouvrir : Urbain - Passage piéton">
+            <img src="image/urbain-04.webp" alt="Photo urbaine : passage piéton" loading="lazy" />
+            <span class="photo-overlay">
+              <span class="photo-title">Urbain - Passage piéton</span>
+              <span class="photo-tags">Urbain</span>
+            </span>
+          </button>
+        </figure>
+
+        <figure class="photo-card" data-category="urbain" data-title="Urbain - Métro">
+          <button class="photo-btn" type="button" aria-label="Ouvrir : Urbain - Métro">
+            <img src="image/urbain-05.webp" alt="Photo urbaine : métro" loading="lazy" />
+            <span class="photo-overlay">
+              <span class="photo-title">Urbain - Métro</span>
+              <span class="photo-tags">Urbain</span>
+            </span>
+          </button>
+        </figure>
+
+        <figure class="photo-card" data-category="urbain" data-title="Urbain - Pluie">
+          <button class="photo-btn" type="button" aria-label="Ouvrir : Urbain - Pluie">
+            <img src="image/urbain-06.webp" alt="Photo urbaine : pluie" loading="lazy" />
+            <span class="photo-overlay">
+              <span class="photo-title">Urbain - Pluie</span>
+              <span class="photo-tags">Urbain</span>
+            </span>
+          </button>
+        </figure>
+
+        <figure class="photo-card" data-category="urbain" data-title="Urbain - Reflets">
+          <button class="photo-btn" type="button" aria-label="Ouvrir : Urbain - Reflets">
+            <img src="image/urbain-07.webp" alt="Photo urbaine : reflets" loading="lazy" />
+            <span class="photo-overlay">
+              <span class="photo-title">Urbain - Reflets</span>
+              <span class="photo-tags">Urbain</span>
+            </span>
+          </button>
+        </figure>
+
+        <figure class="photo-card" data-category="urbain" data-title="Urbain - Escalier">
+          <button class="photo-btn" type="button" aria-label="Ouvrir : Urbain - Escalier">
+            <img src="image/urbain-08.webp" alt="Photo urbaine : escalier" loading="lazy" />
+            <span class="photo-overlay">
+              <span class="photo-title">Urbain - Escalier</span>
+              <span class="photo-tags">Urbain</span>
+            </span>
+          </button>
+        </figure>
+
+        <figure class="photo-card" data-category="urbain" data-title="Urbain - Façades">
+          <button class="photo-btn" type="button" aria-label="Ouvrir : Urbain - Façades">
+            <img src="image/urbain-09.webp" alt="Photo urbaine : façades" loading="lazy" />
+            <span class="photo-overlay">
+              <span class="photo-title">Urbain - Façades</span>
+              <span class="photo-tags">Urbain</span>
+            </span>
+          </button>
+        </figure>
+
+        <figure class="photo-card" data-category="urbain" data-title="Urbain - Rue lumière">
+          <button class="photo-btn" type="button" aria-label="Ouvrir : Urbain - Rue lumière">
+            <img src="image/urbain-10.webp" alt="Photo urbaine : lumière" loading="lazy" />
+            <span class="photo-overlay">
+              <span class="photo-title">Urbain - Rue lumière</span>
+              <span class="photo-tags">Urbain</span>
+            </span>
+          </button>
+        </figure>
+
+        <!-- ===================== -->
+        <!-- MACRO (10) -->
+        <!-- ===================== -->
+        <figure class="photo-card" data-category="macro" data-title="Macro - Fleur">
+          <button class="photo-btn" type="button" aria-label="Ouvrir : Macro - Fleur">
+            <img src="image/macro-01.webp" alt="Photo macro : fleur" loading="lazy" />
+            <span class="photo-overlay">
+              <span class="photo-title">Macro - Fleur</span>
               <span class="photo-tags">Macro</span>
             </span>
           </button>
         </figure>
 
-        <figure class="photo-card" data-category="portrait" data-title="Portrait - studio">
-          <button class="photo-btn" type="button" aria-label="Ouvrir : Portrait - studio">
-            <img src="image/Photo_print_5.webp" alt="Portrait" loading="lazy">
+        <figure class="photo-card" data-category="macro" data-title="Macro - Goutte d'eau">
+          <button class="photo-btn" type="button" aria-label="Ouvrir : Macro - Goutte d'eau">
+            <img src="image/macro-02.webp" alt="Photo macro : goutte d'eau" loading="lazy" />
             <span class="photo-overlay">
-              <span class="photo-title">Portrait - studio</span>
+              <span class="photo-title">Macro - Goutte d'eau</span>
+              <span class="photo-tags">Macro</span>
+            </span>
+          </button>
+        </figure>
+
+        <figure class="photo-card" data-category="macro" data-title="Macro - Texture">
+          <button class="photo-btn" type="button" aria-label="Ouvrir : Macro - Texture">
+            <img src="image/macro-03.webp" alt="Photo macro : texture" loading="lazy" />
+            <span class="photo-overlay">
+              <span class="photo-title">Macro - Texture</span>
+              <span class="photo-tags">Macro</span>
+            </span>
+          </button>
+        </figure>
+
+        <figure class="photo-card" data-category="macro" data-title="Macro - Insecte">
+          <button class="photo-btn" type="button" aria-label="Ouvrir : Macro - Insecte">
+            <img src="image/macro-04.webp" alt="Photo macro : insecte" loading="lazy" />
+            <span class="photo-overlay">
+              <span class="photo-title">Macro - Insecte</span>
+              <span class="photo-tags">Macro</span>
+            </span>
+          </button>
+        </figure>
+
+        <figure class="photo-card" data-category="macro" data-title="Macro - Pétales">
+          <button class="photo-btn" type="button" aria-label="Ouvrir : Macro - Pétales">
+            <img src="image/macro-05.webp" alt="Photo macro : pétales" loading="lazy" />
+            <span class="photo-overlay">
+              <span class="photo-title">Macro - Pétales</span>
+              <span class="photo-tags">Macro</span>
+            </span>
+          </button>
+        </figure>
+
+        <figure class="photo-card" data-category="macro" data-title="Macro - Feuille">
+          <button class="photo-btn" type="button" aria-label="Ouvrir : Macro - Feuille">
+            <img src="image/macro-06.webp" alt="Photo macro : feuille" loading="lazy" />
+            <span class="photo-overlay">
+              <span class="photo-title">Macro - Feuille</span>
+              <span class="photo-tags">Macro</span>
+            </span>
+          </button>
+        </figure>
+
+        <figure class="photo-card" data-category="macro" data-title="Macro - Grains">
+          <button class="photo-btn" type="button" aria-label="Ouvrir : Macro - Grains">
+            <img src="image/macro-07.webp" alt="Photo macro : grains" loading="lazy" />
+            <span class="photo-overlay">
+              <span class="photo-title">Macro - Grains</span>
+              <span class="photo-tags">Macro</span>
+            </span>
+          </button>
+        </figure>
+
+        <figure class="photo-card" data-category="macro" data-title="Macro - Écorce">
+          <button class="photo-btn" type="button" aria-label="Ouvrir : Macro - Écorce">
+            <img src="image/macro-08.webp" alt="Photo macro : écorce" loading="lazy" />
+            <span class="photo-overlay">
+              <span class="photo-title">Macro - Écorce</span>
+              <span class="photo-tags">Macro</span>
+            </span>
+          </button>
+        </figure>
+
+        <figure class="photo-card" data-category="macro" data-title="Macro - Givre">
+          <button class="photo-btn" type="button" aria-label="Ouvrir : Macro - Givre">
+            <img src="image/macro-09.webp" alt="Photo macro : givre" loading="lazy" />
+            <span class="photo-overlay">
+              <span class="photo-title">Macro - Givre</span>
+              <span class="photo-tags">Macro</span>
+            </span>
+          </button>
+        </figure>
+
+        <figure class="photo-card" data-category="macro" data-title="Macro - Détail">
+          <button class="photo-btn" type="button" aria-label="Ouvrir : Macro - Détail">
+            <img src="image/macro-10.webp" alt="Photo macro : détail" loading="lazy" />
+            <span class="photo-overlay">
+              <span class="photo-title">Macro - Détail</span>
+              <span class="photo-tags">Macro</span>
+            </span>
+          </button>
+        </figure>
+
+        <!-- ===================== -->
+        <!-- PORTRAIT (10) -->
+        <!-- ===================== -->
+        <figure class="photo-card" data-category="portrait" data-title="Portrait - Studio 01">
+          <button class="photo-btn" type="button" aria-label="Ouvrir : Portrait - Studio 01">
+            <img src="image/portrait-01.webp" alt="Portrait studio" loading="lazy" />
+            <span class="photo-overlay">
+              <span class="photo-title">Portrait - Studio 01</span>
               <span class="photo-tags">Portrait</span>
             </span>
           </button>
         </figure>
 
-        <figure class="photo-card" data-category="noirblanc urbain" data-title="Noir et blanc - rue">
-          <button class="photo-btn" type="button" aria-label="Ouvrir : Noir et blanc - rue">
-            <img src="image/Photo_print_7.webp" alt="Photo noir et blanc urbaine" loading="lazy">
+        <figure class="photo-card" data-category="portrait" data-title="Portrait - Studio 02">
+          <button class="photo-btn" type="button" aria-label="Ouvrir : Portrait - Studio 02">
+            <img src="image/portrait-02.webp" alt="Portrait studio" loading="lazy" />
             <span class="photo-overlay">
-              <span class="photo-title">Noir et blanc - rue</span>
-              <span class="photo-tags">Noir &amp; Blanc · Urbain</span>
+              <span class="photo-title">Portrait - Studio 02</span>
+              <span class="photo-tags">Portrait</span>
             </span>
           </button>
         </figure>
 
-        <figure class="photo-card" data-category="paysage" data-title="Paysage - nature">
-          <button class="photo-btn" type="button" aria-label="Ouvrir : Paysage - nature">
-            <img src="image/4Z8A5255-scaled.jpg.webp" alt="Paysage nature" loading="lazy">
+        <figure class="photo-card" data-category="portrait" data-title="Portrait - Lumière naturelle">
+          <button class="photo-btn" type="button" aria-label="Ouvrir : Portrait - Lumière naturelle">
+            <img src="image/portrait-03.webp" alt="Portrait en lumière naturelle" loading="lazy" />
             <span class="photo-overlay">
-              <span class="photo-title">Paysage - nature</span>
-              <span class="photo-tags">Paysage</span>
+              <span class="photo-title">Portrait - Lumière naturelle</span>
+              <span class="photo-tags">Portrait</span>
+            </span>
+          </button>
+        </figure>
+
+        <figure class="photo-card" data-category="portrait" data-title="Portrait - Ombres">
+          <button class="photo-btn" type="button" aria-label="Ouvrir : Portrait - Ombres">
+            <img src="image/portrait-04.webp" alt="Portrait avec ombres" loading="lazy" />
+            <span class="photo-overlay">
+              <span class="photo-title">Portrait - Ombres</span>
+              <span class="photo-tags">Portrait</span>
+            </span>
+          </button>
+        </figure>
+
+        <figure class="photo-card" data-category="portrait" data-title="Portrait - Regard">
+          <button class="photo-btn" type="button" aria-label="Ouvrir : Portrait - Regard">
+            <img src="image/portrait-05.webp" alt="Portrait : regard" loading="lazy" />
+            <span class="photo-overlay">
+              <span class="photo-title">Portrait - Regard</span>
+              <span class="photo-tags">Portrait</span>
+            </span>
+          </button>
+        </figure>
+
+        <figure class="photo-card" data-category="portrait" data-title="Portrait - Profil">
+          <button class="photo-btn" type="button" aria-label="Ouvrir : Portrait - Profil">
+            <img src="image/portrait-06.webp" alt="Portrait : profil" loading="lazy" />
+            <span class="photo-overlay">
+              <span class="photo-title">Portrait - Profil</span>
+              <span class="photo-tags">Portrait</span>
+            </span>
+          </button>
+        </figure>
+
+        <figure class="photo-card" data-category="portrait" data-title="Portrait - Sourire">
+          <button class="photo-btn" type="button" aria-label="Ouvrir : Portrait - Sourire">
+            <img src="image/portrait-07.webp" alt="Portrait : sourire" loading="lazy" />
+            <span class="photo-overlay">
+              <span class="photo-title">Portrait - Sourire</span>
+              <span class="photo-tags">Portrait</span>
+            </span>
+          </button>
+        </figure>
+
+        <figure class="photo-card" data-category="portrait" data-title="Portrait - Fond noir">
+          <button class="photo-btn" type="button" aria-label="Ouvrir : Portrait - Fond noir">
+            <img src="image/portrait-08.webp" alt="Portrait sur fond noir" loading="lazy" />
+            <span class="photo-overlay">
+              <span class="photo-title">Portrait - Fond noir</span>
+              <span class="photo-tags">Portrait</span>
+            </span>
+          </button>
+        </figure>
+
+        <figure class="photo-card" data-category="portrait" data-title="Portrait - Expression">
+          <button class="photo-btn" type="button" aria-label="Ouvrir : Portrait - Expression">
+            <img src="image/portrait-09.webp" alt="Portrait : expression" loading="lazy" />
+            <span class="photo-overlay">
+              <span class="photo-title">Portrait - Expression</span>
+              <span class="photo-tags">Portrait</span>
+            </span>
+          </button>
+        </figure>
+
+        <figure class="photo-card" data-category="portrait" data-title="Portrait - Studio 10">
+          <button class="photo-btn" type="button" aria-label="Ouvrir : Portrait - Studio 10">
+            <img src="image/portrait-10.webp" alt="Portrait studio" loading="lazy" />
+            <span class="photo-overlay">
+              <span class="photo-title">Portrait - Studio 10</span>
+              <span class="photo-tags">Portrait</span>
+            </span>
+          </button>
+        </figure>
+
+        <!-- ===================== -->
+        <!-- NOIR & BLANC (10) -->
+        <!-- ===================== -->
+        <figure class="photo-card" data-category="noirblanc" data-title="Noir & Blanc - Rue">
+          <button class="photo-btn" type="button" aria-label="Ouvrir : Noir & Blanc - Rue">
+            <img src="image/noirblanc-01.webp" alt="Photo noir et blanc : rue" loading="lazy" />
+            <span class="photo-overlay">
+              <span class="photo-title">Noir & Blanc - Rue</span>
+              <span class="photo-tags">Noir &amp; Blanc</span>
+            </span>
+          </button>
+        </figure>
+
+        <figure class="photo-card" data-category="noirblanc" data-title="Noir & Blanc - Portrait">
+          <button class="photo-btn" type="button" aria-label="Ouvrir : Noir & Blanc - Portrait">
+            <img src="image/noirblanc-02.webp" alt="Photo noir et blanc : portrait" loading="lazy" />
+            <span class="photo-overlay">
+              <span class="photo-title">Noir & Blanc - Portrait</span>
+              <span class="photo-tags">Noir &amp; Blanc</span>
+            </span>
+          </button>
+        </figure>
+
+        <figure class="photo-card" data-category="noirblanc" data-title="Noir & Blanc - Contraste">
+          <button class="photo-btn" type="button" aria-label="Ouvrir : Noir & Blanc - Contraste">
+            <img src="image/noirblanc-03.webp" alt="Photo noir et blanc : contraste" loading="lazy" />
+            <span class="photo-overlay">
+              <span class="photo-title">Noir & Blanc - Contraste</span>
+              <span class="photo-tags">Noir &amp; Blanc</span>
+            </span>
+          </button>
+        </figure>
+
+        <figure class="photo-card" data-category="noirblanc" data-title="Noir & Blanc - Ombres">
+          <button class="photo-btn" type="button" aria-label="Ouvrir : Noir & Blanc - Ombres">
+            <img src="image/noirblanc-04.webp" alt="Photo noir et blanc : ombres" loading="lazy" />
+            <span class="photo-overlay">
+              <span class="photo-title">Noir & Blanc - Ombres</span>
+              <span class="photo-tags">Noir &amp; Blanc</span>
+            </span>
+          </button>
+        </figure>
+
+        <figure class="photo-card" data-category="noirblanc" data-title="Noir & Blanc - Architecture">
+          <button class="photo-btn" type="button" aria-label="Ouvrir : Noir & Blanc - Architecture">
+            <img src="image/noirblanc-05.webp" alt="Photo noir et blanc : architecture" loading="lazy" />
+            <span class="photo-overlay">
+              <span class="photo-title">Noir & Blanc - Architecture</span>
+              <span class="photo-tags">Noir &amp; Blanc</span>
+            </span>
+          </button>
+        </figure>
+
+        <figure class="photo-card" data-category="noirblanc" data-title="Noir & Blanc - Pluie">
+          <button class="photo-btn" type="button" aria-label="Ouvrir : Noir & Blanc - Pluie">
+            <img src="image/noirblanc-06.webp" alt="Photo noir et blanc : pluie" loading="lazy" />
+            <span class="photo-overlay">
+              <span class="photo-title">Noir & Blanc - Pluie</span>
+              <span class="photo-tags">Noir &amp; Blanc</span>
+            </span>
+          </button>
+        </figure>
+
+        <figure class="photo-card" data-category="noirblanc" data-title="Noir & Blanc - Reflets">
+          <button class="photo-btn" type="button" aria-label="Ouvrir : Noir & Blanc - Reflets">
+            <img src="image/noirblanc-07.webp" alt="Photo noir et blanc : reflets" loading="lazy" />
+            <span class="photo-overlay">
+              <span class="photo-title">Noir & Blanc - Reflets</span>
+              <span class="photo-tags">Noir &amp; Blanc</span>
+            </span>
+          </button>
+        </figure>
+
+        <figure class="photo-card" data-category="noirblanc" data-title="Noir & Blanc - Silhouette">
+          <button class="photo-btn" type="button" aria-label="Ouvrir : Noir & Blanc - Silhouette">
+            <img src="image/noirblanc-08.webp" alt="Photo noir et blanc : silhouette" loading="lazy" />
+            <span class="photo-overlay">
+              <span class="photo-title">Noir & Blanc - Silhouette</span>
+              <span class="photo-tags">Noir &amp; Blanc</span>
+            </span>
+          </button>
+        </figure>
+
+        <figure class="photo-card" data-category="noirblanc" data-title="Noir & Blanc - Ligne">
+          <button class="photo-btn" type="button" aria-label="Ouvrir : Noir & Blanc - Ligne">
+            <img src="image/noirblanc-09.webp" alt="Photo noir et blanc : ligne" loading="lazy" />
+            <span class="photo-overlay">
+              <span class="photo-title">Noir & Blanc - Ligne</span>
+              <span class="photo-tags">Noir &amp; Blanc</span>
+            </span>
+          </button>
+        </figure>
+
+        <figure class="photo-card" data-category="noirblanc" data-title="Noir & Blanc - Rue 10">
+          <button class="photo-btn" type="button" aria-label="Ouvrir : Noir & Blanc - Rue 10">
+            <img src="image/noirblanc-10.webp" alt="Photo noir et blanc : rue" loading="lazy" />
+            <span class="photo-overlay">
+              <span class="photo-title">Noir & Blanc - Rue 10</span>
+              <span class="photo-tags">Noir &amp; Blanc</span>
             </span>
           </button>
         </figure>
 
       </div>
 
-      <p class="no-results" id="noResults" hidden="">Aucun résultat pour ce filtre / cette recherche.</p>
+      <p class="no-results" id="noResults" hidden>Aucun résultat pour ce filtre / cette recherche.</p>
     </section>
   </main>
 
@@ -159,7 +608,7 @@
       <button class="lightbox__nav lightbox__prev" type="button" aria-label="Photo précédente">‹</button>
 
       <figure class="lightbox__figure">
-        <img id="lightboxImg" src="" alt="">
+        <img id="lightboxImg" src="" alt="" />
         <figcaption id="lightboxCaption"></figcaption>
       </figure>
 
@@ -222,6 +671,7 @@
       cards.forEach((card) => {
         const cats = normalize(card.dataset.category).split(/\s+/).filter(Boolean);
         const title = normalize(card.dataset.title);
+
         const matchesFilter = (activeFilter === 'all') || cats.includes(activeFilter);
         const matchesSearch = !q || title.includes(q) || cats.join(' ').includes(q);
 
@@ -328,6 +778,5 @@
     // Initial
     applyFilters();
   </script>
-
-
-</body></html>
+</body>
+</html>
