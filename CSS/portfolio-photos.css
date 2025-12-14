@@ -16,12 +16,12 @@ img {
 }
 
 :root{
-  --bg: #;
+  --bg: #ffffff;
   --panel: #14141a;
-  --text: #f2f2f2;
-  --muted: rgba(242,242,242,0.72);
-  --line: rgba(255,255,255,0.12);
-  --accent: #ffffff;
+  --text: #000000;
+  --muted: rgba(0,0,0,0.72);
+  --line: rgba(0,0,0,0.12);
+  --accent: #000000;
 }
 
 body{
@@ -49,8 +49,8 @@ body.no-scroll { overflow: hidden; }
 .portfolio-hero{
   padding: 56px 16px 22px;
   background:
-    radial-gradient(1200px 400px at 30% 0%, rgba(255,255,255,0.08), transparent 60%),
-    radial-gradient(900px 400px at 70% 0%, rgba(255,255,255,0.06), transparent 60%);
+    radial-gradient(1200px 400px at 30% 0%, rgba(0,0,0,0.06), transparent 60%),
+    radial-gradient(900px 400px at 70% 0%, rgba(0,0,0,0.04), transparent 60%);
 }
 
 .portfolio-hero__inner{
@@ -63,7 +63,11 @@ body.no-scroll { overflow: hidden; }
   letter-spacing: 1px;
   font-size: clamp(32px, 4vw, 56px);
   margin: 0 0 10px;
+
   background: linear-gradient(to right, #ff7e5f, #feb47b);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .portfolio-hero p{
@@ -108,12 +112,12 @@ body.no-scroll { overflow: hidden; }
 
 .filter-btn:hover{
   transform: translateY(-1px);
-  border-color: rgba(255,255,255,0.25);
+  border-color: rgba(0,0,0,0.25);
 }
 
 .filter-btn.is-active{
-  background: rgba(255,255,255,0.14);
-  border-color: rgba(255,255,255,0.32);
+  background: rgba(0,0,0,0.08);
+  border-color: rgba(0,0,0,0.20);
 }
 
 .search-wrap{
@@ -124,7 +128,7 @@ body.no-scroll { overflow: hidden; }
 #portfolioSearch{
   width: min(360px, 78vw);
   border: 1px solid var(--line);
-  background: rgba(255,255,255,0.06);
+  background: rgba(0,0,0,0.04);
   color: var(--text);
   padding: 10px 12px;
   border-radius: 12px;
@@ -132,8 +136,8 @@ body.no-scroll { overflow: hidden; }
   font-family: "Arvo", serif;
 }
 
-#portfolioSearch::placeholder{ color: rgba(242,242,242,0.55); }
-#portfolioSearch:focus{ border-color: rgba(255,255,255,0.30); }
+#portfolioSearch::placeholder{ color: rgba(0,0,0,0.45); }
+#portfolioSearch:focus{ border-color: rgba(0,0,0,0.28); }
 
 /* ===== GRID ===== */
 .portfolio{
@@ -166,7 +170,7 @@ body.no-scroll { overflow: hidden; }
 }
 
 .photo-btn:focus-visible{
-  outline: 2px solid rgba(255,255,255,0.35);
+  outline: 2px solid rgba(0,0,0,0.25);
   outline-offset: 3px;
 }
 
@@ -200,14 +204,14 @@ body.no-scroll { overflow: hidden; }
 }
 
 .photo-title{
-  color: var(--text);
+  color: #ffffff;
   font-weight: 700;
   font-size: 16px;
 }
 
 .photo-tags{
   margin-top: 4px;
-  color: rgba(255,255,255,0.75);
+  color: rgba(255,255,255,0.78);
   font-size: 13px;
 }
 
@@ -240,8 +244,8 @@ body.no-scroll { overflow: hidden; }
   max-width: 1100px;
   margin: 40px auto;
   width: calc(100% - 24px);
-  background: rgba(20,20,26,0.78);
-  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.92);
+  border: 1px solid rgba(0,0,0,0.10);
   border-radius: 18px;
   padding: 14px;
   backdrop-filter: blur(10px);
@@ -261,13 +265,13 @@ body.no-scroll { overflow: hidden; }
   max-height: 72vh;
   object-fit: contain;
   border-radius: 12px;
-  border: 1px solid rgba(255,255,255,0.10);
-  background: rgba(0,0,0,0.30);
+  border: 1px solid rgba(0,0,0,0.10);
+  background: rgba(0,0,0,0.04);
 }
 
 #lightboxCaption{
   margin-top: 10px;
-  color: var(--muted);
+  color: rgba(0,0,0,0.72);
   font-size: 14px;
 }
 
@@ -275,8 +279,8 @@ body.no-scroll { overflow: hidden; }
   position: absolute;
   top: 10px;
   right: 10px;
-  border: 1px solid rgba(255,255,255,0.18);
-  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(0,0,0,0.14);
+  background: rgba(0,0,0,0.06);
   color: var(--text);
   border-radius: 12px;
   padding: 8px 10px;
@@ -284,8 +288,8 @@ body.no-scroll { overflow: hidden; }
 }
 
 .lightbox__nav{
-  border: 1px solid rgba(255,255,255,0.14);
-  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(0,0,0,0.12);
+  background: rgba(0,0,0,0.05);
   color: var(--text);
   height: 44px;
   width: 44px;
