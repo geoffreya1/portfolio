@@ -1,245 +1,210 @@
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
-
 body{
-  background:#fafafa;
-  color:#222;
-  line-height:1.6;
+  background:#f7f7f8;
 }
 
-/* ================= SECTION A PROPOS ================= */
-
-.apropos{
-  padding:80px 20px;
-  text-align:center;
+section{
+  position:relative;
 }
 
-.apropos p{
-  max-width:700px;
-  margin:10px auto 0;
-  opacity:.85;
+/* ===== TITRES ===== */
+
+.couleur-h2{
+  font-size:42px;
+  margin-bottom:10px;
 }
+
+.apropos > p{
+  opacity:.6;
+  font-size:18px;
+}
+
+/* ===== SECTION QUI SUIS-JE ===== */
 
 .box-apropos{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:60px;
-  padding:70px 0;
-  flex-wrap:wrap;
-}
-
-/* IMAGE */
-.left{
-  position:relative;
+  max-width:1200px;
+  margin:auto;
+  gap:80px;
 }
 
 .left img{
-  width:100%;
-  max-width:420px;
-  height:520px;
-  border-radius:30px;
-  object-fit:cover;
-  box-shadow:0 20px 40px rgba(0,0,0,0.12);
-  transition:transform .4s ease;
+  border-radius:28px;
+  box-shadow:0 25px 50px rgba(0,0,0,0.15);
+  transition:.4s ease;
 }
 
 .left img:hover{
-  transform:scale(1.02);
+  transform:scale(1.03);
 }
 
-/* TEXTE */
 .right{
-  max-width:520px;
-  text-align:left;
-  padding:30px;
   background:white;
-  border-radius:20px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.05);
+  border-radius:24px;
+  padding:40px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.05);
 }
 
 .right h3{
+  font-size:26px;
   margin-bottom:15px;
-  font-size:24px;
 }
 
-.right p{
-  opacity:.9;
-}
-
-/* ================= TITRES ================= */
+/* ===== TITRE GRADIENT ===== */
 
 .competences{
-  background:linear-gradient(to right,#ff7e5f,#feb47b);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-  font-size:34px;
-  text-align:center;
-  margin-top:60px;
+  font-size:38px;
+  margin-top:120px;
 }
 
-/* ================= TIMELINE ================= */
+/* ===== TIMELINE ULTRA CLEAN ===== */
 
 .timeline{
-  position:relative;
-  max-width:700px;
-  margin:80px auto;
-  padding-left:40px;
+  margin-top:80px;
 }
 
 .timeline::before{
-  content:"";
-  position:absolute;
-  width:3px;
   background:linear-gradient(to bottom,#ff7e5f,#feb47b);
-  top:0;
-  bottom:0;
-  left:22px;
+  width:3px;
 }
 
 .timeline-item{
-  position:relative;
-  margin-bottom:40px;
-  padding-left:50px;
+  margin-bottom:60px;
 }
 
 .timeline-icon{
-  width:42px;
-  height:42px;
   background:linear-gradient(to right,#ff7e5f,#feb47b);
-  color:white;
-  font-weight:bold;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  border-radius:50%;
-  position:absolute;
-  left:0;
-  top:5px;
-  box-shadow:0 5px 12px rgba(0,0,0,0.15);
+  box-shadow:0 8px 20px rgba(255,126,95,.4);
 }
 
 .timeline-content{
-  background:white;
-  padding:20px;
-  border-radius:14px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.05);
-  transition:.3s ease;
+  border-radius:18px;
+  padding:25px;
+  box-shadow:0 15px 30px rgba(0,0,0,0.05);
+  transition:.35s ease;
 }
 
 .timeline-content:hover{
-  transform:translateY(-4px);
+  transform:translateY(-6px);
 }
 
 .timeline-content h2{
-  margin-bottom:8px;
-  color:#ff7b54;
-  font-size:20px;
+  font-size:22px;
 }
 
-.timeline-content p{
-  color:#555;
-  font-size:15px;
-}
-
-/* ================= COMPETENCES ================= */
+/* ===== COMPETENCES STYLE AGENCE ===== */
 
 .mes-comp{
-  margin:100px 0;
+  margin-top:120px;
 }
 
 .maitrise{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:40px;
-  margin:70px auto 0;
   max-width:1200px;
-  padding:0 20px;
+  margin:80px auto 0;
+  gap:30px;
 }
 
 .maitrise2{
   background:white;
-  border-radius:20px;
-  padding:30px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  box-shadow:0 8px 20px rgba(0,0,0,0.05);
-  transition:.35s ease;
+  border-radius:22px;
+  padding:35px;
+  box-shadow:0 12px 25px rgba(0,0,0,0.06);
+  transition:.35s cubic-bezier(.2,.8,.2,1);
+  position:relative;
+  overflow:hidden;
+}
+
+/* Effet glow gradient */
+.maitrise2::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(120deg,#ff7e5f,#feb47b);
+  opacity:0;
+  transition:.4s;
+  z-index:0;
+}
+
+.maitrise2:hover::before{
+  opacity:.08;
 }
 
 .maitrise2:hover{
-  transform:translateY(-6px);
-  box-shadow:0 15px 30px rgba(0,0,0,0.08);
+  transform:translateY(-8px) scale(1.02);
+  box-shadow:0 20px 40px rgba(0,0,0,0.08);
 }
 
 .logo-maitrise{
-  width:80px;
-  height:80px;
-  object-fit:contain;
+  width:70px;
+  height:70px;
+  position:relative;
+  z-index:2;
 }
 
-/* ================= FOOTER ================= */
+/* ===== FOOTER PREMIUM ===== */
 
 .footer{
-  background:#111;
-  color:white;
-  padding:40px 20px;
-  margin-top:80px;
-}
-
-.footer-links{
-  display:flex;
-  gap:20px;
-  justify-content:center;
-  flex-wrap:wrap;
-  margin-bottom:15px;
+  background:#0f0f0f;
+  padding:60px 20px;
 }
 
 .footer-links a{
+  font-size:15px;
+  letter-spacing:.5px;
+}
+
+.footer-text{
+  opacity:.5;
+  margin-top:15px;
+}
+
+/* ===== BACK TO TOP ===== */
+
+.back-to-top{
+  position:fixed;
+  bottom:30px;
+  right:30px;
+  background:linear-gradient(to right,#ff7e5f,#feb47b);
+  border:none;
   color:white;
-  text-decoration:none;
-  opacity:.8;
+  border-radius:50%;
+  width:45px;
+  height:45px;
+  font-size:20px;
+  cursor:pointer;
+  opacity:0;
+  transform:translateY(20px);
   transition:.3s;
 }
 
-.footer-links a:hover{
+.back-to-top.show{
   opacity:1;
-  color:#ff7e5f;
+  transform:translateY(0);
 }
 
-/* ================= RESPONSIVE ================= */
+/* ===== RESPONSIVE PLUS PRO ===== */
 
-@media(max-width:1100px){
-  .maitrise{
-    grid-template-columns:repeat(3,1fr);
+@media(max-width:1000px){
+
+  .box-apropos{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .right{
+    text-align:center;
+  }
+
+  .couleur-h2{
+    font-size:32px;
   }
 }
 
-@media(max-width:850px){
+@media(max-width:700px){
+
   .maitrise{
-    grid-template-columns:repeat(2,1fr);
+    grid-template-columns:1fr !important;
   }
 
   .left img{
     height:420px;
-  }
-}
-
-@media(max-width:600px){
-
-  .box-apropos{
-    gap:30px;
-  }
-
-  .maitrise{
-    grid-template-columns:1fr;
-  }
-
-  .timeline{
-    padding-left:30px;
   }
 }
