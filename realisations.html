@@ -1,93 +1,82 @@
-/* ===== HEADER ===== */
+<!doctype html>
+<html lang="fr">
 
-.header{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:20px 40px;
-  position:relative;
-}
+<head>
+    <title>Réalisation Geoffrey Audouin</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
 
-.logo{
-  font-weight:700;
-}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Arvo:wght@400;700&display=swap" rel="stylesheet">
 
-/* ===== NAV ===== */
+    <link rel="stylesheet" href="CSS/realisation.css">
+</head>
 
-.nav ul{
-  display:flex;
-  gap:30px;
-  list-style:none;
-}
+<body>
 
-.nav a{
-  text-decoration:none;
-  color:#000;
-}
+<header class="header">
+    <a href="index.html"><p class="logo">GEOFFREY AUDOUIN</p></a>
 
-/* ===== BURGER ===== */
+    <nav class="nav">
+        <ul>
+            <li><a href="qui-suis-je.html">Qui suis-je</a></li>
+            <li><a href="realisations.html">Mes réalisations</a></li>
+            <li><a href="voyages.html">Mes voyages</a></li>
+            <li><a href="portfolio-photos.html">Galerie photo</a></li>
+        </ul>
+    </nav>
 
-.burger{
-  display:none;
-  background:none;
-  border:none;
-  cursor:pointer;
-  z-index:1001;
-}
+    <button class="burger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+</header>
 
-.burger span{
-  display:block;
-  width:28px;
-  height:3px;
-  background:#000;
-  margin:6px 0;
-  transition:.3s;
-}
+<section>
+    <div class="mes-realisations">
+        <h2>Mes réalisations</h2>
+        <p>Cette page est dédiée à mes réalisations en photographie, vidéo, print et projets digitaux</p>
+    </div>
+</section>
 
-/* BURGER ANIM */
-.burger.active span:nth-child(1){
-  transform:rotate(45deg) translate(6px,6px);
-}
+<!-- CONTENU -->
+<!-- (inchangé) -->
 
-.burger.active span:nth-child(2){
-  opacity:0;
-}
+<footer class="footer">
+    <div class="footer-links">
+        <a href="qui-suis-je.html">Qui je suis</a>
+        <a href="realisations.html">Mes réalisations</a>
+        <a href="voyages.html">Mes voyages</a>
+        <a href="portfolio-photos.html">Galerie photo</a>
+    </div>
+    <p class="footer-text">© Geoffrey Audouin - Tous droits réservés</p>
+</footer>
 
-.burger.active span:nth-child(3){
-  transform:rotate(-45deg) translate(6px,-6px);
-}
+<button id="backToTop" class="back-to-top">↑</button>
 
-/* ===== MOBILE ===== */
+<script>
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.nav');
 
-@media(max-width:900px){
+    burger.addEventListener('click', () => {
+        nav.classList.toggle('open');
+        burger.classList.toggle('active');
+    });
 
-  .burger{
-    display:block;
-  }
+    // Back to top
+    const backToTopButton = document.getElementById("backToTop");
 
-  .nav{
-    position:fixed;
-    inset:0;
-    background:#fff;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    transform:translateX(100%);
-    transition:.4s ease;
-    z-index:1000;
-  }
+    window.addEventListener("scroll", () => {
+        backToTopButton.classList.toggle("show", window.scrollY > 300);
+    });
 
-  .nav.open{
-    transform:translateX(0);
-  }
+    backToTopButton.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+</script>
 
-  .nav ul{
-    flex-direction:column;
-    gap:30px;
-    text-align:center;
-  }
-
-  .nav ul li a{
-    font-size:22px;
-  }
-}
+</body>
+</html>
