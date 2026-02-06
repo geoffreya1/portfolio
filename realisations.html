@@ -42,8 +42,47 @@
     </div>
 </section>
 
-<!-- CONTENU -->
-<!-- (inchangé) -->
+<!-- Exemple de contenu -->
+<div class="real-items">
+    <div>
+        <div class="cards">
+            <img src="image/photo.webp" alt="Photographie">
+            <div class="content-card">
+                <h3>Réalisation</h3>
+                <h2>Photos</h2>
+            </div>
+            <a href="portfolio-photos.html">
+                <button class="btn-real1">voir plus</button>
+            </a>
+        </div>
+    </div>
+
+    <div>
+        <div class="cards1">
+            <img src="image/video.webp" alt="Vidéo">
+            <div class="content-card">
+                <h3>Réalisation</h3>
+                <h2>Vidéos</h2>
+            </div>
+            <a href="videos.html">
+                <button class="btn-real2">voir plus</button>
+            </a>
+        </div>
+    </div>
+
+    <div>
+        <div class="cards">
+            <img src="image/infog.webp" alt="Print">
+            <div class="content-card">
+                <h3>Réalisation</h3>
+                <h2>Print</h2>
+            </div>
+            <a href="print.html">
+                <button class="btn-real2">voir plus</button>
+            </a>
+        </div>
+    </div>
+</div>
 
 <footer class="footer">
     <div class="footer-links">
@@ -57,25 +96,36 @@
 
 <button id="backToTop" class="back-to-top">↑</button>
 
+<!-- ===== SCRIPT JS ===== -->
 <script>
+document.addEventListener("DOMContentLoaded", function () {
+
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('.nav');
-
-    burger.addEventListener('click', () => {
-        nav.classList.toggle('open');
-        burger.classList.toggle('active');
-    });
-
-    // Back to top
     const backToTopButton = document.getElementById("backToTop");
 
+    // Menu burger mobile
+    if (burger && nav) {
+        burger.addEventListener('click', () => {
+            nav.classList.toggle('open');
+            burger.classList.toggle('active');
+        });
+    }
+
+    // Back to top
     window.addEventListener("scroll", () => {
-        backToTopButton.classList.toggle("show", window.scrollY > 300);
+        if(backToTopButton){
+            backToTopButton.classList.toggle("show", window.scrollY > 300);
+        }
     });
 
-    backToTopButton.addEventListener("click", () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
+    if(backToTopButton){
+        backToTopButton.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+
+});
 </script>
 
 </body>
