@@ -2,22 +2,21 @@
 <html lang="fr">
 
 <head>
-    <title>Réalisation Geoffrey Audouin</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="index, follow">
+    <title>Réalisation Geoffrey Audouin</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Arvo:wght@400;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="CSS/realisation.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="realisation.css">
 </head>
 
 <body>
 
 <header class="header">
-    <a href="index.html"><p class="logo">GEOFFREY AUDOUIN</p></a>
+    <a href="index.html" class="logo">GEOFFREY AUDOUIN</a>
 
     <nav class="nav">
         <ul>
@@ -35,55 +34,57 @@
     </button>
 </header>
 
+<!-- MES RÉALISATIONS -->
 <section>
-    <div class="mes-realisations">
-        <h2>Mes réalisations</h2>
-        <p>Cette page est dédiée à mes réalisations en photographie, vidéo, print et projets digitaux</p>
-    </div>
-</section>
+    <h2>Mes réalisations</h2>
+    <p>Cette page est dédiée à mes réalisations en photographie, vidéo, print et projets digitaux.</p>
 
-<!-- Exemple de contenu -->
-<div class="real-items">
-    <div>
+    <div class="real-items">
         <div class="cards">
-            <img src="image/photo.webp" alt="Photographie">
+            <img src="image/photo.webp" alt="Photos">
             <div class="content-card">
                 <h3>Réalisation</h3>
                 <h2>Photos</h2>
             </div>
-            <a href="portfolio-photos.html">
-                <button class="btn-real1">voir plus</button>
-            </a>
+            <a href="portfolio-photos.html"><button class="btn-real">Voir plus</button></a>
         </div>
-    </div>
-
-    <div>
-        <div class="cards1">
-            <img src="image/video.webp" alt="Vidéo">
+        <div class="cards">
+            <img src="image/video.webp" alt="Vidéos">
             <div class="content-card">
                 <h3>Réalisation</h3>
                 <h2>Vidéos</h2>
             </div>
-            <a href="videos.html">
-                <button class="btn-real2">voir plus</button>
-            </a>
+            <a href="videos.html"><button class="btn-real">Voir plus</button></a>
         </div>
-    </div>
-
-    <div>
         <div class="cards">
             <img src="image/infog.webp" alt="Print">
             <div class="content-card">
                 <h3>Réalisation</h3>
                 <h2>Print</h2>
             </div>
-            <a href="print.html">
-                <button class="btn-real2">voir plus</button>
-            </a>
+            <a href="print.html"><button class="btn-real">Voir plus</button></a>
         </div>
     </div>
-</div>
+</section>
 
+<!-- MES COMPÉTENCES -->
+<section>
+    <h2>Mes compétences</h2>
+    <p>Voici un aperçu de mes compétences techniques et créatives.</p>
+
+    <div class="maitrise">
+        <div class="maitrise2"><img class="logo-maitrise" src="image/icone1.png" alt="Compétence 1"><h3>Photoshop</h3></div>
+        <div class="maitrise2"><img class="logo-maitrise" src="image/icone2.png" alt="Compétence 2"><h3>Illustrator</h3></div>
+        <div class="maitrise2"><img class="logo-maitrise" src="image/icone3.png" alt="Compétence 3"><h3>Premiere Pro</h3></div>
+        <div class="maitrise2"><img class="logo-maitrise" src="image/icone4.png" alt="Compétence 4"><h3>After Effects</h3></div>
+        <div class="maitrise2"><img class="logo-maitrise" src="image/icone5.png" alt="Compétence 5"><h3>InDesign</h3></div>
+        <div class="maitrise2"><img class="logo-maitrise" src="image/icone6.png" alt="Compétence 6"><h3>Figma</h3></div>
+        <div class="maitrise2"><img class="logo-maitrise" src="image/icone7.png" alt="Compétence 7"><h3>HTML/CSS</h3></div>
+        <div class="maitrise2"><img class="logo-maitrise" src="image/icone8.png" alt="Compétence 8"><h3>JS</h3></div>
+    </div>
+</section>
+
+<!-- FOOTER -->
 <footer class="footer">
     <div class="footer-links">
         <a href="qui-suis-je.html">Qui je suis</a>
@@ -96,37 +97,20 @@
 
 <button id="backToTop" class="back-to-top">↑</button>
 
-<!-- ===== SCRIPT JS ===== -->
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-
+    // MENU BURGER MOBILE
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('.nav');
-    const backToTopButton = document.getElementById("backToTop");
 
-    // Menu burger mobile
-    if (burger && nav) {
-        burger.addEventListener('click', () => {
-            nav.classList.toggle('open');
-            burger.classList.toggle('active');
-        });
-    }
-
-    // Back to top
-    window.addEventListener("scroll", () => {
-        if(backToTopButton){
-            backToTopButton.classList.toggle("show", window.scrollY > 300);
-        }
+    burger.addEventListener('click', () => {
+        nav.classList.toggle('open');
+        burger.classList.toggle('active');
     });
 
-    if(backToTopButton){
-        backToTopButton.addEventListener("click", () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-    }
-
-});
-</script>
-
-</body>
-</html>
+    // BACK TO TOP
+    const backToTopButton = document.getElementById("backToTop");
+    window.addEventListener("scroll", () => {
+        backToTopButton.classList.toggle("show", window.scrollY > 300);
+    });
+    backToTopButton.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: '
