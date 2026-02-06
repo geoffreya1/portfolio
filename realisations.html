@@ -1,106 +1,229 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Réalisation Geoffrey Audouin</title>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Arvo:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="CSS/realisation.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="realisation.css">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3CH32N4V7L"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-3CH32N4V7L');
+    </script>
 </head>
+
 <body>
 
-<!-- HEADER -->
-<header class="header">
-    <a href="index.html" class="logo">GEOFFREY AUDOUIN</a>
-    <nav class="nav">
-        <ul>
-            <li><a href="qui-suis-je.html">Qui suis-je</a></li>
-            <li><a href="realisations.html">Mes réalisations</a></li>
-            <li><a href="voyages.html">Mes voyages</a></li>
-            <li><a href="portfolio-photos.html">Galerie photo</a></li>
-        </ul>
-    </nav>
-    <button class="burger" aria-label="Menu">
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
-</header>
+    <header>
+        <a href="index.html"><p class="logo">GEOFFREY AUDOUIN</p></a>
 
-<!-- MES RÉALISATIONS -->
-<section class="section-center">
-    <h2>Mes réalisations</h2>
-    <p>Découvrez mes projets en photographie, vidéo, print et digital.</p>
+        <nav class="nav">
+            <ul>
+                <li><a href="qui-suis-je.html">Qui suis-je</a></li>
+                <li><a href="realisations.html">Mes réalisations</a></li>
+                <li><a href="voyages.html">Mes voyages</a></li>
+                <li><a href="portfolio-photos">Galerie photo</a></li>
+            </ul>
+        </nav>
+        <button class="burger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <section>
+        <div class="mes-realisations">
+            <h2>Mes réalisations</h2>
+            <p>Cette page est dédiée à mes réalisations en photographie, vidéo, print et autres projets digitaux menés</p>
+        </div>
+    </section>
+
     <div class="real-items">
-        <div class="card">
-            <img src="image/photo.webp" alt="Photos">
-            <h3>Photos</h3>
-            <a href="portfolio-photos.html" class="btn-real">Voir plus</a>
+        <div>
+            <div class="cards">
+                <img src="image/photo.webp" alt="Photographie">
+                <div class="content-card">
+                    <h3>Réalisation</h3>
+                    <h2>Photos</h2>
+                </div>
+                <a href="portfolio-photos.html">
+                    <button class="btn-real1">voir plus</button>
+                </a>
+            </div>
         </div>
-        <div class="card">
-            <img src="image/video.webp" alt="Vidéos">
-            <h3>Vidéos</h3>
-            <a href="videos.html" class="btn-real">Voir plus</a>
+
+        <div>
+            <div class="cards1">
+                <img src="image/video.webp" alt="Vidéo">
+                <div class="content-card">
+                    <h3>Réalisation</h3>
+                    <h2>Vidéos</h2>
+                </div>
+                <a href="videos.html">
+                    <button class="btn-real2">voir plus</button>
+                </a>
+            </div>
         </div>
-        <div class="card">
-            <img src="image/infog.webp" alt="Print">
-            <h3>Print</h3>
-            <a href="print.html" class="btn-real">Voir plus</a>
+
+        <div>
+            <div class="cards">
+                <img src="image/infog.webp" alt="Print">
+                <div class="content-card">
+                    <h3>Réalisation</h3>
+                    <h2>Print</h2>
+                </div>
+                <a href="print.html">
+                    <button class="btn-real2">voir plus</button>
+                </a>
+            </div>
         </div>
     </div>
-</section>
 
-<!-- MES COMPÉTENCES -->
-<section class="section-center">
-    <h2>Mes compétences</h2>
-    <p>Voici mes compétences techniques et créatives.</p>
-    <div class="skills-grid">
-        <div class="skill"><img src="image/icone1.png" alt=""><h3>Photoshop</h3></div>
-        <div class="skill"><img src="image/icone2.png" alt=""><h3>Illustrator</h3></div>
-        <div class="skill"><img src="image/icone3.png" alt=""><h3>Premiere Pro</h3></div>
-        <div class="skill"><img src="image/icone4.png" alt=""><h3>After Effects</h3></div>
-        <div class="skill"><img src="image/icone5.png" alt=""><h3>InDesign</h3></div>
-        <div class="skill"><img src="image/icone6.png" alt=""><h3>Figma</h3></div>
-        <div class="skill"><img src="image/icone7.png" alt=""><h3>HTML/CSS</h3></div>
-        <div class="skill"><img src="image/icone8.png" alt=""><h3>JS</h3></div>
-    </div>
-</section>
+    <section>
+        <div class="real-video">
+            <div class="titre-video">
+                <h2>Publicité pour la marque Dumatos Bio</h2>
+                <p>Lors de ma dernière année de Mastère, nous avons travaillé sur la conception et la réalisation
+                    d'une publicité vidéo pour Dumatos Bio, une marque engagée dans le bio et le naturel. L'objectif
+                    principal était de mettre en avant la boisson phare de la marque, en valorisant ses atouts
+                    uniques à travers une approche créative et impactante.<br><br>
 
-<!-- FOOTER -->
-<footer class="footer">
-    <div class="footer-links">
-        <a href="qui-suis-je.html">Qui je suis</a>
-        <a href="realisations.html">Mes réalisations</a>
-        <a href="voyages.html">Mes voyages</a>
-        <a href="portfolio-photos.html">Galerie photo</a>
-    </div>
-    <p class="footer-text">© Geoffrey Audouin - Tous droits réservés</p>
-</footer>
+                    Ce projet nous a permis d'explorer plusieurs aspects de la communication et du marketing, de la
+                    conception du scénario au tournage, en passant par le montage et l'optimisation du message
+                    publicitaire. Une expérience enrichissante qui nous a permis de mettre en pratique nos
+                    compétences et d'appréhender concrètement les enjeux du branding vidéo.</p>
+            </div>
+            <div class="video">
+                <iframe width="620" height="315" src="https://www.youtube.com/embed/zl3Wh5CWz2s?si=bbuKpp0vWxjo7H5Y/" allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </section>
 
-<!-- BACK TO TOP -->
-<button id="backToTop" class="back-to-top">↑</button>
+    <section>
+        <div class="photos">
+            <div class="ph-left">
+                <h2>Ma passion pour la photographie</h2>
+                <p>Depuis 2019, la photographie est bien plus qu'un simple passe-temps pour moi : c'est une véritable
+                    passion. Autodidacte, j'ai appris à maîtriser la composition, la lumière et les réglages au fil des
+                    expériences, en explorant différents styles et techniques. Chaque cliché est pour moi une occasion
+                    de raconter une histoire, de capturer une émotion ou un instant unique. Que ce soit en portrait, en
+                    paysage ou en photographie urbaine, je cherche toujours à perfectionner mon regard et à repousser
+                    mes limites pour retranscrire ma vision du monde à travers l'image.</p>
+            </div>
+        </div>
+        <div class="ph-right">
+            <div class="grille-photo">
+                <div>
+                    <img class="grille-ph" src="image/4Z8A5255-scaled.jpg.webp" alt="Photo 1">
+                </div>
+                <div>
+                    <img class="grille-ph" src="image/Photo_print_5.webp" alt="Photo 2">
+                </div>
+                <div>
+                    <img class="grille-ph" src="image/Photo_print_7.webp" alt="Photo 3">
+                </div>
+                <div>
+                    <img class="grille-ph" src="image/lune6.webp" alt="Photo 4">
+                </div>
+                <div>
+                    <img class="grille-ph" src="image/IMG_2450.webp" alt="Photo 5">
+                </div>
+                <div>
+                    <img class="grille-ph" src="image/fleur.webp" alt="Photo 6">
+                </div>
+            </div>
+        </div>
 
-<!-- SCRIPT -->
-<script>
-    // Burger menu mobile
-    const burger = document.querySelector('.burger');
-    const nav = document.querySelector('.nav');
+        <div class="btn-real">
+            <a href="portfolio-photos.html/"><button class="boutons">Voir plus</button></a>
+        </div>
+    </section>
 
-    burger.addEventListener('click', () => {
-        nav.classList.toggle('open');
-        burger.classList.toggle('active');
-    });
+    <section class="mes-infog">
+        <div class="titre-infog">
+            <h2>Mes illustrations et infographies</h2>
+            <p>Voici une sélection d'infographies réalisées dans le cadre de projets de cours ainsi qu'en entreprise. Ces créations reflètent mon approche visuelle pour communiquer des informations de manière simple et attrayante, tout en répondant aux besoins spécifiques de chaque projet</p>
+        </div>
 
-    // Back to top
-    const backToTopButton = document.getElementById("backToTop");
-    window.addEventListener("scroll", () => {
-        backToTopButton.classList.toggle("show", window.scrollY > 300);
-    });
-    backToTopButton.addEventListener("click", () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-</script>
+        <div class="infographie">
+            <div class="calameo-block">
+                <a href="https://www.calameo.com/books/0079298407e0e08e28c8b" target="_blank">Curcus</a>
+                <iframe src="//v.calameo.com/?bkcode=0079298407e0e08e28c8b&mode=mini"
+                    width="480" height="300"
+                    frameborder="0" scrolling="no"
+                    allowtransparency allowfullscreen></iframe>
+            </div>
+
+            <div class="calameo-block">
+                <a href="https://www.calameo.com/books/00792984071b9501225d8" target="_blank">Plaquette Prévention Suicide</a>
+                <iframe src="//v.calameo.com/?bkcode=00792984071b9501225d8&mode=mini"
+                    width="480" height="300"
+                    frameborder="0" scrolling="no"
+                    allowtransparency allowfullscreen></iframe>
+            </div>
+
+            <div class="calameo-block">
+                <a href="https://www.calameo.com/books/007929840794181cde3ab" target="_blank">Alerte du Smur</a>
+                <iframe src="//v.calameo.com/?bkcode=007929840794181cde3ab&mode=mini"
+                    width="480" height="300"
+                    frameborder="0" scrolling="no"
+                    allowtransparency allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-links">
+                <a href="qui-suis-je.html">Qui je suis</a>
+                <a href="realisations.html">Mes réalisations</a>
+                <a href="voyages.html">Mes voyages</a>
+                <a href="portfolio-photos">Galerie photo</a>
+            </div>
+            <p class="footer-text">© Geoffrey Audouin - Tous droits réservés</p>
+        </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top">↑</button>
+
+    <script>
+        // Burger menu
+        const burger = document.querySelector('.burger');
+        const nav = document.querySelector('.nav');
+
+        burger.addEventListener('click', () => {
+            nav.classList.toggle('open');
+        });
+
+        // Back to top button
+        const backToTopButton = document.getElementById("backToTop");
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 300) {
+                backToTopButton.classList.add("show");
+            } else {
+                backToTopButton.classList.remove("show");
+            }
+        });
+
+        backToTopButton.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
 
 </body>
-</html>
 
+</html>
