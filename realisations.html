@@ -1,23 +1,17 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
-
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Réalisation Geoffrey Audouin</title>
-
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Arvo:wght@400;700&display=swap" rel="stylesheet">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="CSS/realisation.css">
+    <link rel="stylesheet" href="realisation.css">
 </head>
-
 <body>
 
+<!-- HEADER -->
 <header class="header">
     <a href="index.html" class="logo">GEOFFREY AUDOUIN</a>
-
     <nav class="nav">
         <ul>
             <li><a href="qui-suis-je.html">Qui suis-je</a></li>
@@ -26,7 +20,6 @@
             <li><a href="portfolio-photos.html">Galerie photo</a></li>
         </ul>
     </nav>
-
     <button class="burger" aria-label="Menu">
         <span></span>
         <span></span>
@@ -35,52 +28,41 @@
 </header>
 
 <!-- MES RÉALISATIONS -->
-<section>
+<section class="section-center">
     <h2>Mes réalisations</h2>
-    <p>Cette page est dédiée à mes réalisations en photographie, vidéo, print et projets digitaux.</p>
-
+    <p>Découvrez mes projets en photographie, vidéo, print et digital.</p>
     <div class="real-items">
-        <div class="cards">
+        <div class="card">
             <img src="image/photo.webp" alt="Photos">
-            <div class="content-card">
-                <h3>Réalisation</h3>
-                <h2>Photos</h2>
-            </div>
-            <a href="portfolio-photos.html"><button class="btn-real">Voir plus</button></a>
+            <h3>Photos</h3>
+            <a href="portfolio-photos.html" class="btn-real">Voir plus</a>
         </div>
-        <div class="cards">
+        <div class="card">
             <img src="image/video.webp" alt="Vidéos">
-            <div class="content-card">
-                <h3>Réalisation</h3>
-                <h2>Vidéos</h2>
-            </div>
-            <a href="videos.html"><button class="btn-real">Voir plus</button></a>
+            <h3>Vidéos</h3>
+            <a href="videos.html" class="btn-real">Voir plus</a>
         </div>
-        <div class="cards">
+        <div class="card">
             <img src="image/infog.webp" alt="Print">
-            <div class="content-card">
-                <h3>Réalisation</h3>
-                <h2>Print</h2>
-            </div>
-            <a href="print.html"><button class="btn-real">Voir plus</button></a>
+            <h3>Print</h3>
+            <a href="print.html" class="btn-real">Voir plus</a>
         </div>
     </div>
 </section>
 
 <!-- MES COMPÉTENCES -->
-<section>
+<section class="section-center">
     <h2>Mes compétences</h2>
-    <p>Voici un aperçu de mes compétences techniques et créatives.</p>
-
-    <div class="maitrise">
-        <div class="maitrise2"><img class="logo-maitrise" src="image/icone1.png" alt="Compétence 1"><h3>Photoshop</h3></div>
-        <div class="maitrise2"><img class="logo-maitrise" src="image/icone2.png" alt="Compétence 2"><h3>Illustrator</h3></div>
-        <div class="maitrise2"><img class="logo-maitrise" src="image/icone3.png" alt="Compétence 3"><h3>Premiere Pro</h3></div>
-        <div class="maitrise2"><img class="logo-maitrise" src="image/icone4.png" alt="Compétence 4"><h3>After Effects</h3></div>
-        <div class="maitrise2"><img class="logo-maitrise" src="image/icone5.png" alt="Compétence 5"><h3>InDesign</h3></div>
-        <div class="maitrise2"><img class="logo-maitrise" src="image/icone6.png" alt="Compétence 6"><h3>Figma</h3></div>
-        <div class="maitrise2"><img class="logo-maitrise" src="image/icone7.png" alt="Compétence 7"><h3>HTML/CSS</h3></div>
-        <div class="maitrise2"><img class="logo-maitrise" src="image/icone8.png" alt="Compétence 8"><h3>JS</h3></div>
+    <p>Voici mes compétences techniques et créatives.</p>
+    <div class="skills-grid">
+        <div class="skill"><img src="image/icone1.png" alt=""><h3>Photoshop</h3></div>
+        <div class="skill"><img src="image/icone2.png" alt=""><h3>Illustrator</h3></div>
+        <div class="skill"><img src="image/icone3.png" alt=""><h3>Premiere Pro</h3></div>
+        <div class="skill"><img src="image/icone4.png" alt=""><h3>After Effects</h3></div>
+        <div class="skill"><img src="image/icone5.png" alt=""><h3>InDesign</h3></div>
+        <div class="skill"><img src="image/icone6.png" alt=""><h3>Figma</h3></div>
+        <div class="skill"><img src="image/icone7.png" alt=""><h3>HTML/CSS</h3></div>
+        <div class="skill"><img src="image/icone8.png" alt=""><h3>JS</h3></div>
     </div>
 </section>
 
@@ -95,10 +77,12 @@
     <p class="footer-text">© Geoffrey Audouin - Tous droits réservés</p>
 </footer>
 
+<!-- BACK TO TOP -->
 <button id="backToTop" class="back-to-top">↑</button>
 
+<!-- SCRIPT -->
 <script>
-    // MENU BURGER MOBILE
+    // Burger menu mobile
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('.nav');
 
@@ -107,11 +91,15 @@
         burger.classList.toggle('active');
     });
 
-    // BACK TO TOP
+    // Back to top
     const backToTopButton = document.getElementById("backToTop");
     window.addEventListener("scroll", () => {
         backToTopButton.classList.toggle("show", window.scrollY > 300);
     });
     backToTopButton.addEventListener("click", () => {
-        window.scrollTo({ top: 0, behavior: '
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+</script>
 
+</body>
+</html>
