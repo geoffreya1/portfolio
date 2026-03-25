@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Geoffrey Audouin — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --blanc:    #faf8f5;
+      --creme:    #f2ede6;
+      --gris-clair: #e8e2d9;
+      --texte:    #1a1815;
+      --texte-doux: #7a756e;
+      --accent:   #e07a45;
+      --accent2:  #5b9ea0;
+      --serif: 'DM Serif Display', Georgia, serif;
+      --sans:  'DM Sans', system-ui, sans-serif;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--blanc);
+      color: var(--texte);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    /* === HEADER === */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--blanc);
+      border-bottom: 1px solid var(--gris-clair);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 64px;
+      height: 68px;
+    }
+
+    .logo {
+      font-family: var(--serif);
+      font-size: 20px;
+      color: var(--texte);
+      text-decoration: none;
+      letter-spacing: -0.01em;
+    }
+
+    nav {
+      display: flex;
+      gap: 36px;
+      align-items: center;
+    }
+
+    nav a {
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--texte-doux);
+      text-decoration: none;
+      letter-spacing: 0.01em;
+      transition: color 0.2s;
+    }
+    nav a:hover { color: var(--texte); }
+
+    nav .btn-nav {
+      background: var(--texte);
+      color: var(--blanc);
+      padding: 9px 22px;
+      border-radius: 100px;
+      font-size: 13px;
+      font-weight: 500;
+      transition: background 0.2s, opacity 0.2s;
+    }
+    nav .btn-nav:hover { background: var(--accent); color: var(--blanc); }
+
+    /* === HERO === */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: calc(100vh - 68px);
+      max-height: 760px;
+    }
+
+    .hero-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 80px 64px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--creme);
+      border: 1px solid var(--gris-clair);
+      border-radius: 100px;
+      padding: 6px 14px 6px 10px;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--texte-doux);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 32px;
+      width: fit-content;
+    }
+    .hero-badge::before {
+      content: '';
+      width: 6px; height: 6px;
+      background: var(--accent);
+      border-radius: 50%;
+    }
+
+    h1 {
+      font-family: var(--serif);
+      font-size: clamp(44px, 5vw, 68px);
+      font-weight: 400;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      margin-bottom: 24px;
+      color: var(--texte);
+    }
+    h1 em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .hero-desc {
+      font-size: 17px;
+      color: var(--texte-doux);
+      line-height: 1.75;
+      max-width: 420px;
+      margin-bottom: 44px;
+    }
+
+    .hero-ctas {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+      padding: 14px 32px;
+      border-radius: 100px;
+      font-size: 15px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: opacity 0.2s, transform 0.15s;
+      display: inline-block;
+    }
+    .btn-primary:hover { opacity: 0.88; transform: translateY(-1px); }
+
+    .btn-ghost {
+      color: var(--texte);
+      font-size: 14px;
+      font-weight: 400;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border-bottom: 1px solid var(--gris-clair);
+      padding-bottom: 2px;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .btn-ghost:hover { border-color: var(--texte); }
+
+    .hero-right {
+      background: var(--creme);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Photo placeholder avec composition */
+    .hero-img-placeholder {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(160deg, #e8e2d9 0%, #d4cbbf 100%);
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-start;
+      padding: 40px;
+    }
+
+    /* Silhouette stylisée */
+    .hero-img-placeholder::before {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 50%; transform: translateX(-50%);
+      width: 280px; height: 480px;
+      background: linear-gradient(180deg, #c5bfb5 0%, #b8b0a4 100%);
+      border-radius: 50% 50% 0 0 / 30% 30% 0 0;
+      opacity: 0.5;
+    }
+
+    .hero-img-tag {
+      position: absolute;
+      bottom: 40px;
+      right: 40px;
+      background: white;
+      border-radius: 16px;
+      padding: 16px 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      z-index: 2;
+    }
+    .hero-img-tag strong {
+      font-family: var(--serif);
+      font-size: 22px;
+      font-weight: 400;
+      line-height: 1;
+    }
+    .hero-img-tag span {
+      font-size: 12px;
+      color: var(--texte-doux);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      font-weight: 400;
+    }
+
+    /* Scroll indicator */
+    .hero-scroll {
+      position: absolute;
+      bottom: 40px;
+      left: -68px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--texte-doux);
+      transform: rotate(-90deg);
+    }
+    .hero-scroll::after {
+      content: '';
+      width: 40px; height: 1px;
+      background: var(--gris-clair);
+    }
+
+    /* === STATS BAND === */
+    .stats-band {
+      border-top: 1px solid var(--gris-clair);
+      border-bottom: 1px solid var(--gris-clair);
+      display: flex;
+      align-items: stretch;
+    }
+    .stat {
+      flex: 1;
+      padding: 36px 40px;
+      border-right: 1px solid var(--gris-clair);
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .stat:last-child { border-right: none; }
+    .stat strong {
+      font-family: var(--serif);
+      font-size: 36px;
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      line-height: 1;
+    }
+    .stat span {
+      font-size: 13px;
+      color: var(--texte-doux);
+      font-weight: 400;
+    }
+
+    /* === RUBRIQUES === */
+    .section-header {
+      padding: 80px 64px 40px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+    }
+    .section-tag {
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--texte-doux);
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+    .section-header h2 {
+      font-family: var(--serif);
+      font-size: clamp(34px, 3.5vw, 48px);
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+    }
+    .section-header h2 em { font-style: italic; color: var(--accent); }
+
+    .voir-tout {
+      font-size: 14px;
+      color: var(--texte-doux);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border-bottom: 1px solid var(--gris-clair);
+      padding-bottom: 2px;
+      white-space: nowrap;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .voir-tout:hover { color: var(--texte); border-color: var(--texte); }
+
+    /* Grille réalisations */
+    .grid-reals {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: 280px 280px;
+      gap: 16px;
+      padding: 0 64px 80px;
+    }
+
+    .real-card {
+      border-radius: 20px;
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .real-card:hover { transform: scale(0.985); }
+
+    .real-card:nth-child(1) { grid-column: 1 / 6; grid-row: 1 / 3; }
+    .real-card:nth-child(2) { grid-column: 6 / 10; }
+    .real-card:nth-child(3) { grid-column: 10 / 13; }
+    .real-card:nth-child(4) { grid-column: 6 / 9; }
+    .real-card:nth-child(5) { grid-column: 9 / 13; }
+
+    .card-bg {
+      position: absolute;
+      inset: 0;
+    }
+
+    /* Couleurs représentatives de chaque catégorie */
+    .bg-photo  { background: linear-gradient(150deg, #c8d5d8 0%, #8fa8ad 100%); }
+    .bg-video  { background: linear-gradient(150deg, #d8c8b8 0%, #b09070 100%); }
+    .bg-print  { background: linear-gradient(150deg, #c8d0c0 0%, #8aa080 100%); }
+    .bg-web    { background: linear-gradient(150deg, #c8c0d8 0%, #9080b0 100%); }
+    .bg-social { background: linear-gradient(150deg, #d8c0c0 0%, #b07878 100%); }
+
+    .card-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(26,24,21,0.75) 0%, rgba(26,24,21,0.1) 60%, transparent 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 28px;
+    }
+
+    .card-num {
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 6px;
+    }
+    .card-title {
+      font-family: var(--serif);
+      font-size: 24px;
+      color: white;
+      font-weight: 400;
+      line-height: 1.1;
+    }
+    .real-card:nth-child(1) .card-title { font-size: 34px; }
+
+    .card-tag {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: rgba(255,255,255,0.18);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: white;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      padding: 5px 12px;
+      border-radius: 100px;
+    }
+
+    /* Hover arrow indicator */
+    .card-arrow {
+      position: absolute;
+      bottom: 28px;
+      right: 28px;
+      width: 36px; height: 36px;
+      background: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transform: translateY(6px);
+      transition: opacity 0.25s, transform 0.25s;
+      font-size: 16px;
+    }
+    .real-card:hover .card-arrow { opacity: 1; transform: translateY(0); }
+
+    /* === À PROPOS === */
+    .apropos {
+      background: var(--creme);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+    }
+
+    .apropos-left {
+      padding: 80px 64px;
+      border-right: 1px solid var(--gris-clair);
+    }
+
+    .apropos-photo {
+      background: var(--gris-clair);
+      border-radius: 20px;
+      aspect-ratio: 4/5;
+      max-width: 400px;
+      margin-top: 40px;
+      position: relative;
+      overflow: hidden;
+    }
+    .apropos-photo::before {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 50%; transform: translateX(-50%);
+      width: 220px; height: 380px;
+      background: linear-gradient(180deg, #c5bfb5 0%, #a8a09a 100%);
+      border-radius: 50% 50% 0 0 / 30% 30% 0 0;
+      opacity: 0.6;
+    }
+
+    .apropos-right {
+      padding: 80px 64px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .apropos-right h2 {
+      font-family: var(--serif);
+      font-size: clamp(32px, 3vw, 44px);
+      font-weight: 400;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin: 12px 0 24px;
+    }
+    .apropos-right h2 em { font-style: italic; color: var(--accent); }
+
+    .apropos-right p {
+      font-size: 16px;
+      color: var(--texte-doux);
+      line-height: 1.8;
+      margin-bottom: 16px;
+    }
+
+    .apropos-skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 32px;
+    }
+    .skill {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      color: var(--texte);
+      background: white;
+      border: 1px solid var(--gris-clair);
+      border-radius: 100px;
+      padding: 7px 16px;
+    }
+
+    /* === CONTACT === */
+    .contact {
+      padding: 100px 64px;
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .contact h2 {
+      font-family: var(--serif);
+      font-size: clamp(36px, 4vw, 56px);
+      font-weight: 400;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin: 12px 0 16px;
+    }
+    .contact h2 em { font-style: italic; color: var(--accent); }
+
+    .contact > p {
+      font-size: 16px;
+      color: var(--texte-doux);
+      margin-bottom: 52px;
+    }
+
+    .form-contact {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      text-align: left;
+    }
+
+    .form-row-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .form-contact input,
+    .form-contact textarea {
+      width: 100%;
+      background: var(--creme);
+      border: 1px solid var(--gris-clair);
+      border-radius: 12px;
+      padding: 16px 18px;
+      font-family: var(--sans);
+      font-size: 15px;
+      color: var(--texte);
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .form-contact input:focus,
+    .form-contact textarea:focus {
+      border-color: var(--accent);
+    }
+    .form-contact input::placeholder,
+    .form-contact textarea::placeholder {
+      color: var(--texte-doux);
+    }
+    .form-contact textarea {
+      height: 130px;
+      resize: none;
+    }
+
+    .btn-form {
+      background: var(--texte);
+      color: white;
+      border: none;
+      border-radius: 100px;
+      padding: 16px 40px;
+      font-family: var(--sans);
+      font-size: 15px;
+      font-weight: 500;
+      cursor: pointer;
+      align-self: center;
+      margin-top: 8px;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-form:hover { background: var(--accent); transform: translateY(-1px); }
+
+    /* === FOOTER === */
+    footer {
+      background: var(--texte);
+      color: rgba(255,255,255,0.5);
+      padding: 40px 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    footer p { font-size: 13px; }
+    footer nav { gap: 28px; display: flex; }
+    footer nav a { font-size: 13px; color: rgba(255,255,255,0.4); text-decoration: none; transition: color 0.2s; }
+    footer nav a:hover { color: white; }
+
+    .footer-logo {
+      font-family: var(--serif);
+      font-size: 18px;
+      color: white;
+      opacity: 0.8;
+    }
+
+    /* === SCROLL ANIMATIONS === */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.in { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <a href="#" class="logo">Geoffrey Audouin</a>
+  <nav>
+    <a href="#realisations">Réalisations</a>
+    <a href="#apropos">À propos</a>
+    <a href="#">Galerie photo</a>
+    <a href="#contact" class="btn-nav">Me contacter</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-badge">Marketing Digital &amp; Création</div>
+    <h1>
+      Stratégie,<br>
+      création,<br>
+      <em>impact.</em>
+    </h1>
+    <p class="hero-desc">
+      Diplômé d'un Master en Marketing Digital, je conçois des expériences visuelles et des stratégies qui renforcent votre présence en ligne.
+    </p>
+    <div class="hero-ctas">
+      <a href="#realisations" class="btn-primary">Voir mes réalisations</a>
+      <a href="#apropos" class="btn-ghost">En savoir plus →</a>
+    </div>
+    <div class="hero-scroll" style="position:relative;left:0;bottom:0;margin-top:48px;transform:none;">Scroll</div>
+  </div>
+
+  <div class="hero-right">
+    <div class="hero-img-placeholder"></div>
+    <div class="hero-img-tag">
+      <strong>24 ans</strong>
+      <span>La Rochelle</span>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAND -->
+<div class="stats-band">
+  <div class="stat reveal">
+    <strong>+2 ans</strong>
+    <span>d'expérience pro</span>
+  </div>
+  <div class="stat reveal reveal-delay-1">
+    <strong>Bac+5</strong>
+    <span>Master Marketing Digital</span>
+  </div>
+  <div class="stat reveal reveal-delay-2">
+    <strong>Photo</strong>
+    <span>Vidéo · Print · Web</span>
+  </div>
+  <div class="stat reveal reveal-delay-3">
+    <strong>La Rochelle</strong>
+    <span>Disponible en remote</span>
+  </div>
+</div>
+
+<!-- RÉALISATIONS -->
+<div id="realisations">
+  <div class="section-header">
+    <div>
+      <p class="section-tag">Portfolio</p>
+      <h2>Mes <em>réalisations</em></h2>
+    </div>
+    <a href="#" class="voir-tout">Tout voir →</a>
+  </div>
+
+  <div class="grid-reals">
+    <div class="real-card reveal">
+      <div class="card-bg bg-photo"></div>
+      <div class="card-overlay">
+        <span class="card-num">01 — Galerie</span>
+        <h3 class="card-title">Photographie</h3>
+      </div>
+      <span class="card-tag">Portrait · Paysage</span>
+      <div class="card-arrow">→</div>
+    </div>
+
+    <div class="real-card reveal reveal-delay-1">
+      <div class="card-bg bg-video"></div>
+      <div class="card-overlay">
+        <span class="card-num">02</span>
+        <h3 class="card-title">Vidéo & Motion</h3>
+      </div>
+      <div class="card-arrow">→</div>
+    </div>
+
+    <div class="real-card reveal reveal-delay-2">
+      <div class="card-bg bg-print"></div>
+      <div class="card-overlay">
+        <span class="card-num">03</span>
+        <h3 class="card-title">Print</h3>
+      </div>
+      <div class="card-arrow">→</div>
+    </div>
+
+    <div class="real-card reveal reveal-delay-1">
+      <div class="card-bg bg-web"></div>
+      <div class="card-overlay">
+        <span class="card-num">04</span>
+        <h3 class="card-title">Web & Intégration</h3>
+      </div>
+      <div class="card-arrow">→</div>
+    </div>
+
+    <div class="real-card reveal reveal-delay-2">
+      <div class="card-bg bg-social"></div>
+      <div class="card-overlay">
+        <span class="card-num">05</span>
+        <h3 class="card-title">Réseaux sociaux</h3>
+      </div>
+      <div class="card-arrow">→</div>
+    </div>
+  </div>
+</div>
+
+<!-- À PROPOS -->
+<section class="apropos" id="apropos">
+  <div class="apropos-left reveal">
+    <p class="section-tag">À propos</p>
+    <div class="apropos-photo"></div>
+  </div>
+  <div class="apropos-right reveal reveal-delay-1">
+    <p class="section-tag">Qui suis-je</p>
+    <h2>Curieux,<br><em>créatif,</em><br>engagé.</h2>
+    <p>Je m'appelle Geoffrey, j'ai 24 ans et je suis diplômé d'un Master en Marketing Digital. Spécialisé en stratégie digitale, création de contenu et gestion de projets web.</p>
+    <p>Ma passion pour la photographie et la vidéo enrichit ma vision globale de la communication digitale — où technique et sensibilité se rencontrent.</p>
+    <div class="apropos-skills">
+      <span class="skill">Stratégie digitale</span>
+      <span class="skill">Photo & Vidéo</span>
+      <span class="skill">SEO</span>
+      <span class="skill">HTML / CSS</span>
+      <span class="skill">Print</span>
+      <span class="skill">Réseaux sociaux</span>
+      <span class="skill">Gestion de projet</span>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <p class="section-tag" style="text-align:center">Contact</p>
+  <h2>Travaillons<br><em>ensemble.</em></h2>
+  <p>Un projet, une idée, une collaboration ? Je suis disponible et à l'écoute.</p>
+  <form class="form-contact">
+    <div class="form-row-2">
+      <input type="text" placeholder="Nom"/>
+      <input type="text" placeholder="Prénom"/>
+    </div>
+    <div class="form-row-2">
+      <input type="email" placeholder="Email"/>
+      <input type="text" placeholder="Objet"/>
+    </div>
+    <textarea placeholder="Votre message…"></textarea>
+    <button type="submit" class="btn-form">Envoyer le message</button>
+  </form>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span class="footer-logo">Geoffrey Audouin</span>
+  <nav>
+    <a href="#">Réalisations</a>
+    <a href="#">Galerie</a>
+    <a href="#">Contact</a>
+  </nav>
+  <p>© 2025 — Tous droits réservés</p>
+</footer>
+
+<script>
+  // Scroll reveal
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
