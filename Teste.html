@@ -581,6 +581,15 @@
       opacity: 0.8;
     }
 
+
+.real-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+
+    
     /* === SCROLL ANIMATIONS === */
     .reveal {
       opacity: 0;
@@ -663,14 +672,19 @@
     <a href="portfolio-photos" class="voir-tout">Tout voir →</a>
   </div>
 
- <div class="grid-reals">
-   <div class="real-card reveal">
-   <div class="card-bg bg-photo">
-   </div> <div class="card-overlay"> 
-     <span class="card-num">01 — Galerie</span>
-     <h3 class="card-title">Toutes mes photos</h3> 
-   </div> <span class="card-tag">Tout voir</span>
-     <div class="card-arrow">→</div> </div>
+<a href="page-cible.html" class="real-card-link">
+  <div class="grid-reals">
+    <div class="real-card reveal">
+      <div class="card-bg bg-photo"></div>
+      <div class="card-overlay">
+        <span class="card-num">01 — Galerie</span>
+        <h3 class="card-title">Toutes mes photos</h3>
+      </div>
+      <span class="card-tag">Tout voir</span>
+      <div class="card-arrow">→</div>
+    </div>
+  </div>
+</a>
 
     <div class="real-card reveal reveal-delay-1">
       <div class="card-bg bg-video"></div>
