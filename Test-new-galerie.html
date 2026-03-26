@@ -34,8 +34,10 @@ header{
   top:0;
   background:var(--blanc);
   border-bottom:1px solid var(--gris-clair);
-  padding:20px 64px;
+  padding:0 64px;
+  height:68px;
   display:flex;
+  align-items:center;
   justify-content:space-between;
 }
 
@@ -46,7 +48,18 @@ header{
   color:var(--texte);
 }
 
-/* HERO MINI */
+nav{
+  display:flex;
+  gap:32px;
+}
+
+nav a{
+  text-decoration:none;
+  color:var(--texte-doux);
+  font-size:14px;
+}
+
+/* HERO */
 .page-hero{
   padding:80px 64px 40px;
 }
@@ -54,15 +67,18 @@ header{
 .page-hero h1{
   font-family:var(--serif);
   font-size:56px;
+  line-height:1.1;
 }
 
-.page-hero em{color:var(--accent);}
+.page-hero em{
+  color:var(--accent);
+}
 
 /* FILTERS */
 .filters{
   padding:0 64px 40px;
   display:flex;
-  gap:12px;
+  gap:10px;
   flex-wrap:wrap;
 }
 
@@ -82,7 +98,7 @@ header{
   color:white;
 }
 
-/* MASONRY */
+/* GALLERY MASONRY */
 .gallery{
   column-count:3;
   column-gap:16px;
@@ -98,21 +114,22 @@ header{
 
 .gallery-item img{
   width:100%;
+  height:auto; /* IMPORTANT : garde ratio naturel */
   border-radius:16px;
   display:block;
-  transition:0.3s;
+  transition:0.3s ease;
 }
 
 .gallery-item:hover img{
-  opacity:0.9;
   transform:scale(0.98);
+  opacity:0.9;
 }
 
 /* LIGHTBOX */
 .lightbox{
   position:fixed;
   inset:0;
-  background:rgba(0,0,0,0.9);
+  background:rgba(0,0,0,0.92);
   display:none;
   align-items:center;
   justify-content:center;
@@ -128,13 +145,31 @@ header{
 .lightbox.active{
   display:flex;
 }
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .gallery{
+    column-count:2;
+  }
+}
+
+@media(max-width:600px){
+  .gallery{
+    column-count:1;
+  }
+}
 </style>
 </head>
 
 <body>
 
 <header>
-  <a href="#" class="logo">Geoffrey Audouin</a>
+  <a href="index.html" class="logo">Geoffrey Audouin</a>
+  <nav>
+    <a href="index.html#realisations">Réalisations</a>
+    <a href="index.html#apropos">À propos</a>
+    <a href="galerie.html">Galerie</a>
+  </nav>
 </header>
 
 <section class="page-hero">
@@ -152,19 +187,55 @@ header{
 <!-- GALLERY -->
 <div class="gallery">
 
-  <!-- 12 images -->
-  <div class="gallery-item" data-cat="voyage"><img src="https://picsum.photos/500/700?1"></div>
-  <div class="gallery-item" data-cat="portrait"><img src="https://picsum.photos/500/600?2"></div>
-  <div class="gallery-item" data-cat="nature"><img src="https://picsum.photos/500/800?3"></div>
-  <div class="gallery-item" data-cat="voyage"><img src="https://picsum.photos/500/650?4"></div>
-  <div class="gallery-item" data-cat="portrait"><img src="https://picsum.photos/500/500?5"></div>
-  <div class="gallery-item" data-cat="nature"><img src="https://picsum.photos/500/750?6"></div>
-  <div class="gallery-item" data-cat="voyage"><img src="https://picsum.photos/500/620?7"></div>
-  <div class="gallery-item" data-cat="portrait"><img src="https://picsum.photos/500/720?8"></div>
-  <div class="gallery-item" data-cat="nature"><img src="https://picsum.photos/500/680?9"></div>
-  <div class="gallery-item" data-cat="voyage"><img src="https://picsum.photos/500/600?10"></div>
-  <div class="gallery-item" data-cat="portrait"><img src="https://picsum.photos/500/770?11"></div>
-  <div class="gallery-item" data-cat="nature"><img src="https://picsum.photos/500/640?12"></div>
+  <!-- Portrait -->
+  <div class="gallery-item" data-cat="portrait">
+    <img src="https://picsum.photos/500/800?1">
+  </div>
+
+  <!-- Paysage -->
+  <div class="gallery-item" data-cat="voyage">
+    <img src="https://picsum.photos/800/500?2">
+  </div>
+
+  <div class="gallery-item" data-cat="nature">
+    <img src="https://picsum.photos/500/700?3">
+  </div>
+
+  <div class="gallery-item" data-cat="voyage">
+    <img src="https://picsum.photos/900/500?4">
+  </div>
+
+  <div class="gallery-item" data-cat="portrait">
+    <img src="https://picsum.photos/500/750?5">
+  </div>
+
+  <div class="gallery-item" data-cat="nature">
+    <img src="https://picsum.photos/600/600?6">
+  </div>
+
+  <div class="gallery-item" data-cat="voyage">
+    <img src="https://picsum.photos/800/520?7">
+  </div>
+
+  <div class="gallery-item" data-cat="portrait">
+    <img src="https://picsum.photos/500/780?8">
+  </div>
+
+  <div class="gallery-item" data-cat="nature">
+    <img src="https://picsum.photos/700/900?9">
+  </div>
+
+  <div class="gallery-item" data-cat="voyage">
+    <img src="https://picsum.photos/850/500?10">
+  </div>
+
+  <div class="gallery-item" data-cat="portrait">
+    <img src="https://picsum.photos/500/720?11">
+  </div>
+
+  <div class="gallery-item" data-cat="nature">
+    <img src="https://picsum.photos/650/800?12">
+  </div>
 
 </div>
 
@@ -174,7 +245,7 @@ header{
 </div>
 
 <script>
-// FILTER
+// FILTERS
 const filters = document.querySelectorAll('.filter-btn');
 const items = document.querySelectorAll('.gallery-item');
 
