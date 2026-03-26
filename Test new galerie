@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Galerie — Geoffrey Audouin</title>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --blanc:#faf8f5;
+  --creme:#f2ede6;
+  --gris-clair:#e8e2d9;
+  --texte:#1a1815;
+  --texte-doux:#7a756e;
+  --accent:#e07a45;
+  --serif:'DM Serif Display', serif;
+  --sans:'DM Sans', sans-serif;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+  background:var(--blanc);
+  font-family:var(--sans);
+  color:var(--texte);
+}
+
+/* HEADER */
+header{
+  position:sticky;
+  top:0;
+  background:var(--blanc);
+  border-bottom:1px solid var(--gris-clair);
+  padding:20px 64px;
+  display:flex;
+  justify-content:space-between;
+}
+
+.logo{
+  font-family:var(--serif);
+  font-size:20px;
+  text-decoration:none;
+  color:var(--texte);
+}
+
+/* HERO MINI */
+.page-hero{
+  padding:80px 64px 40px;
+}
+
+.page-hero h1{
+  font-family:var(--serif);
+  font-size:56px;
+}
+
+.page-hero em{color:var(--accent);}
+
+/* FILTERS */
+.filters{
+  padding:0 64px 40px;
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.filter-btn{
+  border:1px solid var(--gris-clair);
+  background:white;
+  padding:8px 18px;
+  border-radius:100px;
+  font-size:13px;
+  cursor:pointer;
+  transition:0.2s;
+}
+
+.filter-btn.active,
+.filter-btn:hover{
+  background:var(--texte);
+  color:white;
+}
+
+/* MASONRY */
+.gallery{
+  column-count:3;
+  column-gap:16px;
+  padding:0 64px 80px;
+}
+
+.gallery-item{
+  break-inside:avoid;
+  margin-bottom:16px;
+  cursor:pointer;
+  position:relative;
+}
+
+.gallery-item img{
+  width:100%;
+  border-radius:16px;
+  display:block;
+  transition:0.3s;
+}
+
+.gallery-item:hover img{
+  opacity:0.9;
+  transform:scale(0.98);
+}
+
+/* LIGHTBOX */
+.lightbox{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.9);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:200;
+}
+
+.lightbox img{
+  max-width:90%;
+  max-height:90%;
+  border-radius:12px;
+}
+
+.lightbox.active{
+  display:flex;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <a href="#" class="logo">Geoffrey Audouin</a>
+</header>
+
+<section class="page-hero">
+  <h1>Galerie <em>photo</em></h1>
+</section>
+
+<!-- FILTERS -->
+<div class="filters">
+  <button class="filter-btn active" data-filter="all">Tout</button>
+  <button class="filter-btn" data-filter="voyage">Voyage</button>
+  <button class="filter-btn" data-filter="portrait">Portrait</button>
+  <button class="filter-btn" data-filter="nature">Nature</button>
+</div>
+
+<!-- GALLERY -->
+<div class="gallery">
+
+  <!-- 12 images -->
+  <div class="gallery-item" data-cat="voyage"><img src="https://picsum.photos/500/700?1"></div>
+  <div class="gallery-item" data-cat="portrait"><img src="https://picsum.photos/500/600?2"></div>
+  <div class="gallery-item" data-cat="nature"><img src="https://picsum.photos/500/800?3"></div>
+  <div class="gallery-item" data-cat="voyage"><img src="https://picsum.photos/500/650?4"></div>
+  <div class="gallery-item" data-cat="portrait"><img src="https://picsum.photos/500/500?5"></div>
+  <div class="gallery-item" data-cat="nature"><img src="https://picsum.photos/500/750?6"></div>
+  <div class="gallery-item" data-cat="voyage"><img src="https://picsum.photos/500/620?7"></div>
+  <div class="gallery-item" data-cat="portrait"><img src="https://picsum.photos/500/720?8"></div>
+  <div class="gallery-item" data-cat="nature"><img src="https://picsum.photos/500/680?9"></div>
+  <div class="gallery-item" data-cat="voyage"><img src="https://picsum.photos/500/600?10"></div>
+  <div class="gallery-item" data-cat="portrait"><img src="https://picsum.photos/500/770?11"></div>
+  <div class="gallery-item" data-cat="nature"><img src="https://picsum.photos/500/640?12"></div>
+
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <img src="" id="lightbox-img">
+</div>
+
+<script>
+// FILTER
+const filters = document.querySelectorAll('.filter-btn');
+const items = document.querySelectorAll('.gallery-item');
+
+filters.forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    filters.forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+
+    const filter = btn.dataset.filter;
+
+    items.forEach(item=>{
+      if(filter === "all" || item.dataset.cat === filter){
+        item.style.display="block";
+      } else {
+        item.style.display="none";
+      }
+    });
+  });
+});
+
+// LIGHTBOX
+const lightbox = document.getElementById('lightbox');
+const lightImg = document.getElementById('lightbox-img');
+
+items.forEach(item=>{
+  item.addEventListener('click',()=>{
+    const img = item.querySelector('img').src;
+    lightImg.src = img;
+    lightbox.classList.add('active');
+  });
+});
+
+lightbox.addEventListener('click',()=>{
+  lightbox.classList.remove('active');
+});
+</script>
+
+</body>
+</html>
