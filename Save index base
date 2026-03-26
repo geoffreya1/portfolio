@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <title>Geoffrey Audouin</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <meta name="title" content="Mon portfolio - Geoffrey Audouin">
+    <meta name="description" content="Découvrez le portfolio / CV de Geoffrey Audouin répertoriant son parcours et ses réalisations">
+    <meta name="keywords" content="portfolio, marketing, communication, la rochelle, rochelle, geoffrey, audouin">    
+    <meta name="google-site-verification" content="Siw_5dRMvwORdQl1lMdvsqAet3Ocf3QhBbohpYWukG0" />
+    <meta name="robots" content="index, follow">
+
+
+    <title>Mon portfolio - Geoffrey Audouin</title>
+    <link rel="stylesheet" href="CSS/accueil.css">
+    <link rel="stylesheet" href="CSS/main.css">
+    <script src="script.js"></script>
+
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3CH32N4V7L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3CH32N4V7L');
+</script>
+
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3CH32N4V7L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3CH32N4V7L');
+</script>
+    
+    
+   <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NGPLW9B6');</script>
+<!-- End Google Tag Manager -->
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NGPLW9B6"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+    
+    <header>
+      <a href="index.html"><p class="logo">GEOFFREY AUDOUIN</p></a>
+        <nav class="nav">
+            <ul>
+                  <!--    <li><a href="qui-suis-je.html">Qui suis-je</a></li> -->
+            <li><a href="realisations.html">Mes réalisations</a></li>
+          <!--     <li><a href="voyages.html">Mes voyages</a></li> -->
+           <!--  <li><a href="Voypass.html">Mes passions</a></li> -->
+            <li><a href="portfolio-photos">Galerie photo</a></li>
+                <li><a href="Accueil-Geoffrey-Audouin-Photographe.html">test</a></li>
+            </ul>
+        </nav>
+        <button class="burger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <script>
+        const burger = document.querySelector('.burger');
+        const nav = document.querySelector('.nav');
+    
+        burger.addEventListener('click', () => {
+            nav.classList.toggle('open');
+        });
+    </script>
+    
+
+
+    <section>
+        <div class="banniere">
+            <div class="header-left">
+                <h1 class="titre-header">
+                    Mon portfolio
+                </h1>
+                <p class="soustitre-header">
+Bienvenue sur mon portfolio, conçu et développé par mes soins en HTML, CSS et JavaScript.<br>
+Vous y découvrirez mon parcours en marketing digital, mes réalisations (web, photo, vidéo, print) et mes compétences en stratégie digitale, création de contenu et gestion de projets.                </p>
+            </div>
+
+            <div class="header-right">
+                <img src="image/visuel-header.webp" alt="">
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <section class="cardlist">
+        <!-- <h2 class="test">Test</h2> -->
+        <div id="cards">
+    <div <a id="card1" class="categ" href="portfolio-photos.html#people">
+
+            </div>
+            <div id="card2" class="categ">
+                
+            </div>
+            <div id="card3" class="categ">
+                
+            </div>
+            <div id="card4" class="categ">
+                
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <section class="apropos">
+
+        <h2 class="couleur-h2">A propos</h2>
+        <p>Quelques mots sur qui je suis !</p>
+
+        <div class="box-apropos">
+
+            <div class="left">
+
+                <img src="image/moi.webp">
+
+            </div>
+            <div class="right">
+
+                <h3>Qui suis-je</h3>
+                <p>Je m'appelle Geoffrey, j'ai 24 ans et je suis diplômé d'un Master en Marketing Digital. Spécialisé en stratégie digitale, création de contenu et gestion de projets web, je mets mes compétences au service des entreprises pour renforcer leur présence en ligne et atteindre leurs objectifs marketing. Curieux et créatif, je nourris également une passion pour la photographie et la vidéo, qui enrichit ma vision globale de la communication digitale </p>
+               
+
+
+          <!--      <div bouton-apropos>
+
+                    <a href="qui-suis-je.html" class="btn-apropos">
+                        En voir plus <span class="arrow">→</span>
+                    </a>
+
+                </div> -->
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+
+
+
+
+    <!-- <section>
+    <h2 class="ref">reference</h2>
+</section>
+ -->
+
+
+
+
+
+ <section class="me-contacter">
+  <form class="contact-form" onsubmit="sendEmail(); return false;">
+    <div class="input-group">
+      <div class="form-row">
+        <input id="nom" type="text" placeholder="Nom" required>
+        <input id="prenom" type="text" placeholder="Prénom" required>
+      </div>
+      <div class="form-row">
+        <input id="email" type="email" placeholder="Mail" required>
+        <input id="objet" type="text" placeholder="Objet" required>
+      </div>
+      <div class="form-row">
+        <textarea id="message" placeholder="Votre message" required></textarea>
+      </div>
+      <div class="form-row">
+        <button class="btn-contact" type="submit">Envoyer</button>
+      </div>
+    </div>
+  </form>
+
+  <script>
+    function sendEmail() {
+      const nom = document.getElementById('nom').value;
+      const prenom = document.getElementById('prenom').value;
+      const email = document.getElementById('email').value;
+      const objet = document.getElementById('objet').value;
+      const message = document.getElementById('message').value;
+
+      const body = `Nom: ${nom}\nPrénom: ${prenom}\nEmail: ${email}\n\nMessage:\n${message}`;
+      const mailtoLink = `mailto:geoffreyaudouin2@gmail.com?subject=${encodeURIComponent(objet)}&body=${encodeURIComponent(body)}`;
+
+      window.location.href = mailtoLink;
+    }
+  </script>
+</section>
+
+
+
+
+
+
+
+
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-links">
+      <a href="qui-suis-je.html">Qui je suis</a>
+      <a href="realisations.html">Mes réalisations</a>
+      <a href="voyages.html">Mes voyages</a>
+      <a href="https://lafocalelibre.fr/galerie/">Galerie photo</a>
+    </div>
+    <p class="footer-text">© Geoffrey Audouin - Tous droits réservés</p>
+  </div>
+</footer>
+
+
+
+    
+    <button id="backToTop" class="back-to-top">↑</button>
+<script>
+  const backToTopButton = document.getElementById("backToTop");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      backToTopButton.classList.add("show");
+    } else {
+      backToTopButton.classList.remove("show");
+    }
+  });
+
+  backToTopButton.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+
+
+
+</body>
+
+</html>
+
+<!-- infographie / photos / vidéos / sites wex / emailing / réseaux sociaux -->
+
+
+
+
